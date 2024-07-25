@@ -29,7 +29,7 @@ export default function HeroLandingPage() {
                         </Box>
                     </span> your business with only $89.99/month</Typography>
 
-                    <Typography variant='body1' sx={{ mb: 2 }}>Unlock your business's full potential with our comprehensive suite of Social Media and Web Design services, including expertly crafted posts, stories, reels, logos, and websites.</Typography>
+                    <Typography variant='body1' sx={{ mb: 2 }}>Unlock your business&apos;s full potential with our comprehensive suite of Social Media and Web Design services, including expertly crafted posts, stories, reels, logos, and websites.</Typography>
                     <Box sx={{ display: 'flex', gap: 2, mb: 8 }}>
                         <Button size='large' variant='contained'>Get started</Button>
                         <Button size='large' variant='outlined'>How it works?</Button>

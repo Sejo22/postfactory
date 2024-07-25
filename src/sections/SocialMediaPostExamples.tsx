@@ -9,7 +9,7 @@ export default function SocialMediaPostExamples() {
                 Social Media Post Examples
             </Typography>
             <Typography variant='body1' sx={{ pb: 8 }} gutterBottom>
-                Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.
+                Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand&apos;s message across platforms.
             </Typography>
             <SocialMediaPostImage />
             <Button sx={{ mt: 8 }} variant='contained' size='large'>See more</Button>
