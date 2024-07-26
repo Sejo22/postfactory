@@ -91,7 +91,7 @@ export default function Header() {
         <>
             <Container maxWidth='lg'>
                 <AppBar component="nav" sx={{ background: 'rgba(255,255,255,.3)', backdropFilter: 'blur(10px)', borderRadius: 4, boxShadow: 'none', border: 'solid 1px #eee', mt: 4, position: 'inherit' }} position='fixed'>
-                    <Toolbar sx={{ justifyContent: 'space-between' }}>
+                    <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
                         <Box
                             component='img'
                             src='./assets/headerLogo.png'
@@ -124,7 +124,7 @@ export default function Header() {
                         <Drawer anchor='right' open={openDrawer} onClose={toggleDrawer(false)}>
                             {DrawerList}
                         </Drawer>
-                        <Box onClick={(e) => toggleDrawer(true)(e)} sx={{ display: { lg: 'none' } }}>
+                        <Box onClick={(e) => toggleDrawer(true)(e)} sx={{ display: { xs: 'grid', lg: 'none' }, placeContent: 'center' }}>
                             <MenuRoundedIcon sx={{ cursor: 'pointer', color: theme.palette.primary.main }} />
                         </Box>
                     </Toolbar>
