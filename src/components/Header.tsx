@@ -10,12 +10,14 @@ import {
     MenuItem,
     ListItemIcon,
     ListItemText,
-    Typography
+    Typography,
+    Drawer
 } from '@mui/material';
 import { useTheme } from '@mui/material';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import DiamondOutlinedIcon from '@mui/icons-material/DiamondOutlined';
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const navItems = [
     { title: 'Home', link: '#' },
@@ -24,8 +26,14 @@ const navItems = [
     { title: 'Examples', link: '#' },
     { title: 'Pricing', link: '#' }];
 
+interface DrawerListProps {
+    toggleDrawer: (open: boolean) => void;
+    handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
 export default function Header() {
     const theme = useTheme()
+    const [openDrawer, setOpenDrawer] = useState(false);
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
     const handleClick = (event: MouseEvent<HTMLElement>) => {
@@ -35,6 +43,47 @@ export default function Header() {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    const toggleDrawer = (newOpen: boolean) => (e: MouseEvent<HTMLElement>) => {
+        setOpenDrawer(newOpen);
+    }
+
+    const DrawerList = (
+        <Box sx={{ width: 300 }} role="presentation" >
+            <Typography variant='h5'>Logo</Typography>
+            <Box sx={{ display: { xs: 'flex', lg: 'none', flexDirection: 'column' } }}>
+                {navItems.map((item) => (
+                    <Button
+                        variant='text'
+                        key={item.title}
+                        href={item.link}
+                        // onClick={item.title === 'Services' ? handleClick : undefined}
+                        onClick={(event) => {
+                            if (item.title === 'Services') {
+                                handleClick(event);
+                                event.stopPropagation();
+                            } else {
+                                toggleDrawer(false)(event);
+                            }
+                        }}
+                        sx={{
+                            paddingInline: 2,
+                            color: theme.palette.primary.main
+
+                        }}
+                    >
+                        {item.title}
+                    </Button>
+                ))}
+                <Button onClick={(event) => toggleDrawer(false)(event)} variant='contained' sx={{
+                    background: theme.palette.primary.accentGradient, ml: 1, px: 4, transition: 'unset',
+                    '&:hover': {
+                        background: theme.palette.primary.main
+                    }
+                }}>Login</Button>
+            </Box>
+        </Box>
+    )
 
     const open = Boolean(anchorEl);
 
@@ -47,9 +96,9 @@ export default function Header() {
                             component='img'
                             src='./assets/headerLogo.png'
                             alt="Logo"
-                            sx={{ maxHeight: 56 }}
+                            sx={{ maxHeight: { xs: 36, sm: 40, md: 48, lg: 56 }, transition: 'max-height ease .2s' }}
                         />
-                        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
                             {navItems.map((item) => (
                                 <Button
                                     variant='text'
@@ -71,6 +120,12 @@ export default function Header() {
                                     background: theme.palette.primary.main
                                 }
                             }}>Login</Button>
+                        </Box>
+                        <Drawer anchor='right' open={openDrawer} onClose={toggleDrawer(false)}>
+                            {DrawerList}
+                        </Drawer>
+                        <Box onClick={(e) => toggleDrawer(true)(e)} sx={{ display: { lg: 'none' } }}>
+                            <MenuRoundedIcon sx={{ cursor: 'pointer', color: theme.palette.primary.main }} />
                         </Box>
                     </Toolbar>
                 </AppBar>
@@ -97,7 +152,7 @@ export default function Header() {
                     <ListItemText>
                         Social Posts
                         <br />
-                        <Typography variant='body2'>We create best Social Posts in the world.</Typography>
+                        <Typography sx={{ wordWrap: 'break-word', whiteSpace: 'collapse' }} variant='body2'>We create best Social Posts in the world.</Typography>
                     </ListItemText>
 
                 </MenuItem>
@@ -113,7 +168,7 @@ export default function Header() {
                     <ListItemText>
                         Logo Design
                         <br />
-                        <Typography variant='body2'>We create best Logo Design in the world.</Typography>
+                        <Typography sx={{ wordWrap: 'break-word', whiteSpace: 'collapse' }} variant='body2'>We create best Logo Design in the world.</Typography>
                     </ListItemText>
                 </MenuItem>
 
@@ -128,7 +183,7 @@ export default function Header() {
                     <ListItemText>
                         Web Design
                         <br />
-                        <Typography variant='body2'>We create best Web Design in the world.</Typography>
+                        <Typography sx={{ wordWrap: 'break-word', whiteSpace: 'collapse' }} variant='body2'>We create best Web Design in the world.</Typography>
                     </ListItemText>
                 </MenuItem>
             </Menu >

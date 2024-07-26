@@ -56,14 +56,14 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc 
 
             </Box>
             <Box sx={{
-                width: '100%', background: '#fff', display: 'flex', justifyContent: 'space-between'
+                width: '100%', background: '#fff', display: 'flex', justifyContent: { xs: 'center', sm: 'space-between' }
             }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, p: 2 }}>
+                <Box sx={{ flex: { xs: 1, sm: 'auto' }, display: 'flex', alignItems: 'center', justifyContent: { xs: 'space-between', sm: 'flex-start' }, gap: { xs: 0, sm: 2 }, p: 2 }}>
                     <FavoriteIcon sx={{ color: '#eb2027' }} />
                     <ChatBubbleOutlineIcon />
                     <SendIcon />
                 </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center', p: 2 }}>
+                <Box sx={{ display: { xs: 'none', sm: 'flex' }, justifyContent: 'center', p: 2 }}>
                     <TurnedInNotIcon />
                 </Box>
 
