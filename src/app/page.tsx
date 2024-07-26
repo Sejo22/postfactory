@@ -7,32 +7,34 @@ import TrustedBy from '@/sections/TrustedBy';
 import SocialMediaPostExamples from '@/sections/SocialMediaPostExamples';
 import axios from "axios";
 import { useState, useEffect } from "react"
+import Plans from '@/sections/Plans';
 
 const Home: React.FC = () => {
 
-  const [data, setData] = useState(null)
+  // const [data, setData] = useState(null)
 
-  useEffect(() => {
-    const options = {
-      method: 'GET',
-      url: "http://localhost:3000",
-    }
-    axios.request(options)
-      .then(function (response) {
-        setData(response.data.data)
-      })
-      .catch(function (error) {
-        console.error(error);
-      })
-  }, [])
+  // useEffect(() => {
+  //   const options = {
+  //     method: 'GET',
+  //     url: "https://postfactory.vercel.app/",
+  //   }
+  //   axios.request(options)
+  //     .then(function (response) {
+  //       setData(response.data.data)
+  //     })
+  //     .catch(function (error) {
+  //       console.error(error);
+  //     })
+  // }, [])
 
-  console.log(data)
+  // console.log(data)
   return (
     <MainLayout>
       {/* <Container maxWidth='lg'> */}
       <HeroLandingPage />
       <TrustedBy />
       <SocialMediaPostExamples />
+      <Plans />
       {/* </Container> */}
     </MainLayout>
   );

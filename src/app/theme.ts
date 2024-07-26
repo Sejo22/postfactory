@@ -7,11 +7,13 @@ declare module "@mui/material/styles" {
   interface PaletteColor {
     accentGradient?: string;
     iconColor?: string;
+    text?: string;
   }
 
   interface SimplePaletteColorOptions {
     accentGradient?: string;
     iconColor?: string;
+    text?: string;
   }
 }
 
@@ -22,6 +24,7 @@ export const themeOptions: ThemeOptions = {
       main: "#09050e",
       accentGradient: "linear-gradient(90deg,#4285F4, #7832D1)",
       iconColor: "#4285F4",
+      text: "#666",
     },
     secondary: {
       main: "#f50057",
@@ -32,22 +35,71 @@ export const themeOptions: ThemeOptions = {
     h1: {
       color: "#160C28",
       fontSize: 48,
-      lineHeight: "64px",
+      lineHeight: "1.4em",
       fontWeight: 700,
       "@media (max-width:600px)": {
         fontSize: 32,
-        lineHeight: "48px",
+        lineHeight: "1.4em",
       },
     },
     h2: {
       color: "#160C28",
       fontSize: 40,
-      lineHeight: "56px",
+      lineHeight: "1.4em",
       fontWeight: 700,
       "@media (max-width:600px)": {
         fontSize: 28,
-        lineHeight: "36px",
+        lineHeight: "1.4em",
       },
+    },
+    h3: {
+      color: "#160C28",
+      fontSize: 32,
+      lineHeight: "1.4em",
+      fontWeight: 700,
+      "@media (max-width:600px)": {
+        fontSize: 24,
+        lineHeight: "1.4em",
+      },
+    },
+    h4: {
+      color: "#160C28",
+      fontSize: 28,
+      lineHeight: "1.4em",
+      fontWeight: 700,
+      "@media (max-width:600px)": {
+        fontSize: 22,
+        lineHeight: "1.4em",
+      },
+    },
+    h5: {
+      color: "#160C28",
+      fontSize: 24,
+      lineHeight: "1.4em",
+      fontWeight: 700,
+      "@media (max-width:600px)": {
+        fontSize: 20,
+        lineHeight: "1.4em",
+      },
+    },
+    h6: {
+      color: "#160C28",
+      fontSize: 20,
+      lineHeight: "1.4em",
+      fontWeight: 700,
+      "@media (max-width:600px)": {
+        fontSize: 18,
+        lineHeight: "1.4em",
+      },
+    },
+    body1: {
+      color: "#666",
+    },
+    body2: {
+      color: "#666",
+    },
+    caption: {
+      color: "#666",
     },
   },
   components: {
