@@ -31,7 +31,7 @@ export default function Footer() {
                 <Grid container spacing={3}>
                     <Grid item xs={12} lg={3}>
                         <Box component={'img'} src='assets/footerLogo.png' sx={{ maxWidth: '80%' }} />
-                        <Typography variant='body2' sx={{ mt: 3 }}>Post Factory excels in boosting your business's online presence through expert social media management, professional logo design, and innovative website design.</Typography>
+                        <Typography variant='body2' sx={{ mt: 3 }}>Post Factory excels in boosting your business&apos;s online presence through expert social media management, professional logo design, and innovative website design.</Typography>
                         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mt: 3 }}>
                             {socialLinks.map((socialLink, index) => (
                                 <Link href={socialLink.link} key={index}>
