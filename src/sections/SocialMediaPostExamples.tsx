@@ -4,20 +4,36 @@ import SocialMediaPostImage from '@/components/SocialMediaPostImage'
 
 const cardsDetails = [
     {
-        image: 'https://postfactory.co/wp-content/uploads/elementor/thumbs/2-45-qoiyeh9pnnnnknkk4efwlj5wwlkyj1wu91p02pbov4.webp',
+        image: 'assets/post1.webp',
         modalTitle: 'This is Title for card 1',
         modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
     },
     {
-        image: 'https://postfactory.co/wp-content/uploads/elementor/thumbs/2-45-qoiyeh9pnnnnknkk4efwlj5wwlkyj1wu91p02pbov4.webp',
+        image: 'assets/post2.webp',
         modalTitle: 'This is Title for card 2',
         modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
     },
     {
-        image: 'https://postfactory.co/wp-content/uploads/elementor/thumbs/2-45-qoiyeh9pnnnnknkk4efwlj5wwlkyj1wu91p02pbov4.webp',
+        image: 'assets/post3.webp',
+        modalTitle: 'This is Title for card 3',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+    },
+    {
+        image: 'assets/post4.webp',
+        modalTitle: 'This is Title for card 3',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+    },
+    {
+        image: 'assets/post5.webp',
+        modalTitle: 'This is Title for card 3',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+    },
+    {
+        image: 'assets/post6.webp',
         modalTitle: 'This is Title for card 3',
         modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
     }
+
 ]
 export default function SocialMediaPostExamples() {
     const theme = useTheme();

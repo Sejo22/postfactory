@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Button, Grid, Container, useTheme } from '@mui/material'
+import { Box, Typography, Button, Grid, Container, useTheme, Divider } from '@mui/material'
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -36,14 +36,12 @@ export default function HeroLandingPage() {
                             <Button size='large' variant='outlined'>How it works?</Button>
                         </Box>
 
-                        <Box>
-
-                            <StarIcon sx={{ color: 'orange' }} />
-                            <StarIcon sx={{ color: 'orange' }} />
-                            <StarIcon sx={{ color: 'orange' }} />
-                            <StarIcon sx={{ color: 'orange' }} />
-                            <StarIcon sx={{ color: 'orange' }} />
+                        <Box sx={{ background: 'rgba(255,255,255,.4)', borderRadius: 4, p: 2, backdropFilter: 'blur(20px)', border: 'solid 1px rgba(0,0,0,.12)' }}>
+                            {Array.from({ length: 5 }).map((_, index) => (
+                                <StarIcon sx={{ color: 'orange' }} key={index} />
+                            ))}
                             <Typography variant='body2' sx={{ mb: 2, fontStyle: 'italic' }}>&apos;Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, ratione. Sapiente, eaque vero similique aperiam blanditiis accusamus modi excepturi necessitatibus eius minus, cum, quod inventore?&apos;</Typography>
+                            <Divider sx={{ my: 2 }} />
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexDirection: 'row' }}>
                                 <Box sx={{ width: 64, background: 'url(/assets/heroReview.jpg)', height: 64, borderRadius: 64, backgroundSize: 'cover' }} />
 

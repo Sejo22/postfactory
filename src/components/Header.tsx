@@ -11,7 +11,8 @@ import {
     ListItemIcon,
     ListItemText,
     Typography,
-    Drawer
+    Drawer,
+    Divider
 } from '@mui/material';
 import { useTheme } from '@mui/material';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
@@ -49,9 +50,15 @@ export default function Header() {
     }
 
     const DrawerList = (
-        <Box sx={{ width: 300 }} role="presentation" >
-            <Typography variant='h5'>Logo</Typography>
-            <Box sx={{ display: { xs: 'flex', lg: 'none', flexDirection: 'column' } }}>
+        <Box sx={{ width: 300, p: 2 }} role="presentation" >
+            <Box
+                component='img'
+                src='./assets/headerLogo.png'
+                alt="Logo"
+                sx={{ maxHeight: 48, transition: 'max-height ease .2s' }}
+            />
+            <Divider sx={{ my: 2 }} />
+            <Box sx={{ display: { xs: 'flex', lg: 'none', flexDirection: 'column', alignItems: 'flex-start', gap: 4 } }}>
                 {navItems.map((item) => (
                     <Button
                         variant='text'

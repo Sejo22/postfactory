@@ -8,6 +8,9 @@ import SocialMediaPostExamples from '@/sections/SocialMediaPostExamples';
 import axios from "axios";
 import { useState, useEffect } from "react"
 import Plans from '@/sections/Plans';
+import Services from '@/sections/Services';
+import FaqLandingPage from '@/sections/FaqLandingPage';
+import CTA from '@/components/CTA';
 
 const Home: React.FC = () => {
 
@@ -35,6 +38,9 @@ const Home: React.FC = () => {
       <TrustedBy />
       <SocialMediaPostExamples />
       <Plans />
+      <Services />
+      <FaqLandingPage />
+      <CTA />
       {/* </Container> */}
     </MainLayout>
   );

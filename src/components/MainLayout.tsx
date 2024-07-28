@@ -1,6 +1,8 @@
 
 import React from 'react';
 import Header from './Header';
+import Footer from './Footer'
+import BottomFooter from './BottomFooter';
 
 interface MainLayoutProps {
     children: React.ReactNode;
@@ -11,7 +13,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div style={{ position: 'relative', overflow: 'hidden' }}>
             <Header />
             <main>{children}</main>
-            {/* <Footer /> */}
+            <Footer />
+            <BottomFooter />
         </div>
     );
 };
