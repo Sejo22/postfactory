@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent, CardActions, Button, Typography, Divider, useTheme } from '@mui/material';
+import { Card, CardContent, CardActions, Button, Typography, Divider, useTheme, Box } from '@mui/material';
 
 interface ServiceCardProps {
     serviceTitle: string;
@@ -13,8 +13,8 @@ export default function ServiceCard({ serviceTitle, servicePrice, serviceDesc, s
     const theme = useTheme();
     return (
         <>
-            <Card variant='outlined' sx={{ transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
-                <CardContent>
+            <Card variant='outlined' sx={{ position: 'relative', transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
+                <CardContent >
                     <Typography variant='h6' gutterBottom>{serviceTitle}</Typography>
                     <Typography variant='caption' gutterBottom>Starting at</Typography>
                     <Typography component={'div'} sx={{ display: 'flex', alignItems: 'center', gap: .7 }} variant='h5'>
@@ -34,6 +34,9 @@ export default function ServiceCard({ serviceTitle, servicePrice, serviceDesc, s
                         }
                     }} variant='contained' href={serviceLink}>Get Started</Button>
                 </CardActions>
+                {serviceTitle === "Soical Media Management" && (
+                    <Box sx={{ position: 'absolute', display: 'grid', placeContent: 'center', py: 1, width: 120, background: theme.palette.primary.accentGradient, right: -30, top: 14, transform: 'rotate(45deg)', color: '#fff', fontSize: 14 }}>Best seller</Box>
+                )}
             </Card>
         </>
     )
