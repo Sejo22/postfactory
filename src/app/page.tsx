@@ -8,19 +8,10 @@ import Plans from '@/sections/Plans';
 import Services from '@/sections/Services';
 import FaqLandingPage from '@/sections/FaqLandingPage';
 import CTA from '@/components/CTA';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import blankPage from '@/pages/blankPage';
-import AllMyLinks from '@/components/AllLinks';
 
 const Home: React.FC = () => {
   return (
     <MainLayout>
-      <Router>
-        <Switch>
-          <Route path="/blank-page" component={blankPage} />
-        </Switch>
-      </Router>
-      <AllMyLinks />
       <HeroLandingPage />
       <TrustedBy />
       <SocialMediaPostExamples />
