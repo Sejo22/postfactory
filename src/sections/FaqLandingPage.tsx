@@ -43,7 +43,7 @@ const faqs = [
 export default function FaqLandingPage() {
     return (
         <Box sx={{ mt: 4 }}>
-            <Container maxWidth='lg' sx={{ py: 8 }}>
+            <Container maxWidth='xl' sx={{ py: 8 }}>
                 <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }}>Frequently Asked Questions</Typography>
                 <Typography variant='body1' textAlign={'center'} gutterBottom>If you can&apos;t find the answer you&apos;re looking for in our FAQ section, please don&apos;t hesitate to reach out via the contact form below. We&apos;re here to help with any additional inquiries you may have!
 

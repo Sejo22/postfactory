@@ -5,7 +5,7 @@ export default function Services() {
     const theme = useTheme();
     return (
         <Box sx={{ mt: 4 }}>
-            <Container maxWidth='lg'>
+            <Container maxWidth='xl' >
                 <Grid container rowSpacing={1} columnSpacing={6} sx={{ mb: { xs: 6, md: 'inherit' }, alignItems: 'center', minHeight: '80vh', flexDirection: { xs: 'column-reverse', sm: 'row' } }}>
                     <Grid item xs={12} sm={6}>
                         <Typography variant='h3' sx={{ mb: 3 }}>Logo Design</Typography>

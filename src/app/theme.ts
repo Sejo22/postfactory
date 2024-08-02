@@ -1,7 +1,5 @@
 "use client";
-import { LineWeight } from "@mui/icons-material";
 import { createTheme, ThemeOptions } from "@mui/material/styles";
-import { Breakpoint } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface PaletteColor {

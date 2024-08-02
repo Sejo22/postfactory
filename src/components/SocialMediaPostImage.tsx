@@ -30,7 +30,7 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc 
         p: { xs: 2, md: 4 },
     };
     return (<>
-        <Card className='card__wrapper' sx={{ maxWidth: 345, position: 'relative', boxShadow: '0 4px 24px -4px rgba(0,0,0,.2)', borderRadius: 4 }}>
+        <Card className='card__wrapper' sx={{ position: 'relative', boxShadow: '0 4px 24px -4px rgba(0,0,0,.2)', borderRadius: 4 }}>
             <CardMedia
                 component={'img'}
                 // height={{ xs: '345', md: '30' }}

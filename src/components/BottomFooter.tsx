@@ -14,7 +14,7 @@ export default function BottomFooter() {
     const today = new Date();
     return (
         <Box sx={{ backgroundColor: '#F5F5F5', py: 3 }}>
-            <Container maxWidth='lg'>
+            <Container maxWidth='xl'>
                 <Grid container sx={{ alignItems: 'center' }}>
                     <Grid item xs={12} md={6}>
                         <Typography variant='body2' sx={{ textAlign: { xs: 'center', md: 'left' }, mb: { xs: 3, md: 'inherit' } }}>Copyright {today.getFullYear()} - Post Factory LLC</Typography>

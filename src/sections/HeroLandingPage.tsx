@@ -14,8 +14,8 @@ export default function HeroLandingPage() {
     const theme = useTheme()
     return (
         <Box sx={{ mt: 4 }}>
-            <Container maxWidth='lg'>
-                <Grid container sx={{ alignItems: 'center', minHeight: '100vh' }}>
+            <Container maxWidth='xl' >
+                <Grid container sx={{ alignItems: 'center', minHeight: '100vh' }} columnSpacing={12}>
                     <Grid item xs={12} md={6}>
                         <Typography variant='h1' sx={{ mb: 2 }} >Start <span style={{
                             // background: 'linear-gradient(90deg,#4285F4, #7832D1)',
@@ -36,7 +36,7 @@ export default function HeroLandingPage() {
                             <Button size='large' variant='outlined'>How it works?</Button>
                         </Box>
 
-                        <Box sx={{ background: 'rgba(255,255,255,.4)', borderRadius: 4, p: 2, backdropFilter: 'blur(20px)', border: 'solid 1px rgba(0,0,0,.12)' }}>
+                        <Box sx={{ background: 'rgba(255,255,255,.4)', borderRadius: 4, p: 2, backdropFilter: 'blur(20px)', border: 'solid 1px rgba(0,0,0,.12)', maxWidth: '65%' }}>
                             {Array.from({ length: 5 }).map((_, index) => (
                                 <StarIcon sx={{ color: 'orange' }} key={index} />
                             ))}
@@ -74,7 +74,7 @@ export default function HeroLandingPage() {
                     </Grid>
                 </Grid>
                 <Box className='linear-gradient__bg-effect' sx={{
-                    background: 'linear-gradient(45deg, #fff 10%, #4285F4, #fff, #7832D1, #fff 80%)', position: 'absolute', width: '100%', height: '100%', maxHeight: '100vh', borderRadius: 256, top: 0, left: 0, zIndex: -1, filter: 'blur(120px)', opacity: .35
+                    background: 'linear-gradient(45deg, #fff 10%, #4285F4, #fff, #7832D1, #fff 80%)', position: 'absolute', width: '100%', height: '100%', maxHeight: '100vh', borderRadius: 256, top: 0, left: 0, zIndex: -1, filter: 'blur(120px)', opacity: .2
                 }} />
             </Container>
         </Box>
