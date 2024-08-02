@@ -115,8 +115,8 @@ export default function PricingTabs() {
                     <Grid container spacing={4}  >
                         <Grid item xs={12} md={8}>
                             {reelsPlans.map((reels, index) => (
-                                <Box sx={{ mb: 4 }}>
-                                    <SocialPostsAdditonal serviceDescription={reels.description} servicePrice={reels.price} serviceTitle={reels.title} key={index} />
+                                <Box sx={{ mb: 4 }} key={index} >
+                                    <SocialPostsAdditonal serviceDescription={reels.description} servicePrice={reels.price} serviceTitle={reels.title} />
                                 </Box>
 
                             ))}
@@ -137,8 +137,8 @@ export default function PricingTabs() {
                     <Grid container spacing={4}  >
                         <Grid item xs={12} md={8}>
                             {storiesPlans.map((stories, index) => (
-                                <Box sx={{ mb: 4 }}>
-                                    <SocialPostsAdditonal serviceDescription={stories.description} servicePrice={stories.price} serviceTitle={stories.title} key={index} />
+                                <Box sx={{ mb: 4 }} key={index}>
+                                    <SocialPostsAdditonal serviceDescription={stories.description} servicePrice={stories.price} serviceTitle={stories.title} />
                                 </Box>
 
                             ))}
@@ -159,8 +159,8 @@ export default function PricingTabs() {
                     <Grid container spacing={4}  >
                         <Grid item xs={12} md={8}>
                             {carouselPlans.map((carousel, index) => (
-                                <Box sx={{ mb: 4 }}>
-                                    <SocialPostsAdditonal serviceDescription={carousel.description} servicePrice={carousel.price} serviceTitle={carousel.title} key={index} />
+                                <Box sx={{ mb: 4 }} key={index}>
+                                    <SocialPostsAdditonal serviceDescription={carousel.description} servicePrice={carousel.price} serviceTitle={carousel.title} />
                                 </Box>
 
                             ))}
