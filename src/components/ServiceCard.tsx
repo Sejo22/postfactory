@@ -35,7 +35,7 @@ export default function ServiceCard({ serviceTitle, servicePrice, serviceDesc, s
                     }} variant='contained' href={serviceLink}>Get Started</Button>
                 </CardActions>
                 {serviceTitle === "Soical Media Management" && (
-                    <Box sx={{ position: 'absolute', display: 'grid', placeContent: 'center', py: 1, width: 120, background: theme.palette.primary.accentGradient, right: -30, top: 14, transform: 'rotate(45deg)', color: '#fff', fontSize: 14 }}>Best seller</Box>
+                    <Box sx={{ position: 'absolute', display: 'grid', placeContent: 'center', py: 3, width: 160, background: theme.palette.primary.accentGradient, right: -48, top: 0, transform: 'rotate(45deg)', color: '#fff', fontSize: 14, boxShadow: '0 8px 24px rgba(0,0,120,.1)' }}>Bestseller</Box>
                 )}
             </Card>
         </>

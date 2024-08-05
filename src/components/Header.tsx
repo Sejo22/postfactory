@@ -23,12 +23,13 @@ import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import routes from '../app/routes';
 import { useRouter } from 'next/router';
+import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 
 const navItems = [
     { title: 'Home', link: routes.home },
-    { title: 'Services', link: '' },
-    { title: 'How it works', link: routes.howItWorks },
+    { title: <Box sx={{ display: 'flex', alignItems: 'center', gap: .5 }}>Services <KeyboardArrowDownRoundedIcon /></Box>, link: '' },
     { title: 'Examples', link: routes.examples },
+    { title: 'How it works', link: routes.howItWorks },
     { title: 'Pricing', link: routes.pricing }
 ];
 
@@ -105,13 +106,13 @@ export default function Header() {
             />
             <Divider sx={{ my: 2 }} />
             <Box sx={{ display: { xs: 'flex', lg: 'none', flexDirection: 'column', alignItems: 'flex-start', gap: 4 } }}>
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                     <Button
                         variant='text'
-                        key={item.title}
+                        key={index}
                         href={item.link}
                         onClick={(event) => {
-                            if (item.title === 'Services') {
+                            if (index === 1) {
                                 handleClick(event);
                                 event.stopPropagation();
                             } else {
@@ -161,12 +162,12 @@ export default function Header() {
                             sx={{ maxHeight: { xs: 36, sm: 40, md: 48, lg: 56 }, transition: 'max-height ease .2s' }}
                         />
                         <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
-                            {navItems.map((item) => (
+                            {navItems.map((item, index) => (
                                 <Button
                                     variant='text'
-                                    key={item.title}
+                                    key={index}
                                     href={item.link}
-                                    onClick={item.title === 'Services' ? handleClick : undefined}
+                                    onClick={index === 1 ? handleClick : undefined}
                                     sx={{
                                         paddingInline: 2,
                                         color: theme.palette.primary.main

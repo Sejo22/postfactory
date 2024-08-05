@@ -28,7 +28,7 @@ export default function Plans() {
 
     return (
         <Box sx={{ backgroundColor: '#f7f0ff' }}>
-            <Container maxWidth='xl' sx={{ mt: 8, paddingBlock: 8 }}>
+            <Container maxWidth='xl' sx={{ paddingBlock: 16 }}>
                 <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
                     Pick a Plan
                 </Typography>

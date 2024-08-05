@@ -2,7 +2,7 @@ import SocialPostsFeature from '@/components/serviceFeatures/SocialPostsFeature'
 import ServicesHero from '@/sections/ServicesHero'
 import React from 'react'
 import CTA from '@/components/CTA'
-import FaqSocialPosts from '@/sections/faqs/FaqSocialPosts'
+import FaqLogoDesign from '@/sections/faqs/FaqLogoDesign'
 import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
 import FormatPaintOutlinedIcon from '@mui/icons-material/FormatPaintOutlined';
 import LayersOutlinedIcon from '@mui/icons-material/LayersOutlined';
@@ -137,7 +137,7 @@ export default function SocialPosts() {
                 </Grid>
             </Container>
 
-            <FaqSocialPosts />
+            <FaqLogoDesign />
             <CTA />
 
         </>

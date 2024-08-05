@@ -3,15 +3,16 @@ import { Box, Typography, Button, Grid, Container, useTheme } from '@mui/materia
 
 interface ServicesHeroProps {
     title: string;
-    description: string;
+    description: any;
     link: string;
-    image: string;
+    image?: string;
+    video?: boolean;
 }
 
-export default function ServicesHero({ title, description, link, image }: ServicesHeroProps) {
+export default function ServicesHero({ title, description, link, image, video }: ServicesHeroProps) {
     const theme = useTheme()
     return (
-        <Box sx={{ mt: 4 }}>
+        <Box sx={{ mt: 4, minHeight: '60svh', alignItems: 'center', display: 'flex' }}>
             <Container maxWidth='xl' >
                 <Grid container columnSpacing={18} sx={{ alignItems: 'center' }}>
                     <Grid item xs={12} md={6}>
@@ -25,13 +26,17 @@ export default function ServicesHero({ title, description, link, image }: Servic
                         <Button size='large' variant='contained' sx={{ background: theme.palette.primary.accentGradient }} href={link}>Get started</Button>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ justifyContent: 'center', alignItems: 'center' }}>
-                        <Box
-                            component={'img'}
-                            src={image}
-                            sx={{
-                                maxWidth: '100%'
-                            }}
-                        />
+                        {video ? (
+                            <iframe width="625" height="351" src="https://www.youtube.com/embed/DPt7tZrjl40" title="How It Works: Your Guide to Buying and Using Our Services ┃www.postfactory.co" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameBorder={0} allowFullScreen></iframe>
+                        ) : (
+                            <Box
+                                component={'img'}
+                                src={image}
+                                sx={{
+                                    maxWidth: '100%'
+                                }}
+                            />
+                        )}
                     </Grid>
                 </Grid>
             </Container>

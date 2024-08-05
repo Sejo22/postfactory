@@ -4,39 +4,39 @@ import FaqAccordion from '@/components/FaqAccordion'
 
 const faqs = [
     {
-        question: "What services does Post Factory offer?",
-        answer: 'Post Factory specializes in social media management, logo design, and website design. We provide comprehensive solutions to elevate your brand’s online presence and visual identity.'
+        question: "What does your social media management service include?",
+        answer: 'Our service includes the creation of customized content, writing engaging captions and hashtags, and scheduling posts. Depending on your chosen package, we can also manage interactions and provide analytics reports.'
     },
     {
-        question: "How does the process work?",
-        answer: 'Once you select a service and complete the payment process, we’ll send you a brief to fill out. This helps us better understand your specific needs and expectations. Based on your input, we move on to the design or content creation phase. After creating initial drafts, we send them to you for review and approval. Our goal is to ensure your complete satisfaction with the final product.'
+        question: "How do I get started with your services?",
+        answer: 'Getting started is easy! Simply register on our website to select your preferred social media management package. Once registered, you can fill out a brief form to specify your needs and preferences, and we’ll guide you through the onboarding process to kickstart your campaign.'
     },
     {
-        question: "How can I get a quote for my project?",
-        answer: 'Our pricing is transparently listed on our website to help you choose the best option for your needs. If you require further customization or have specific requirements, please contact us through the form on our website. We’ll get back to you promptly to discuss your project in detail and provide any additional information you need.'
+        question: "How long does it take to create content once I've filled out the brief?",
+        answer: 'After you submit your brief, we aim to deliver your customized social media content within 5 working days. This timeline allows us to ensure that every post meets our high standards and aligns perfectly with your goals.'
     },
     {
-        question: "What is the turnaround time for a project?",
-        answer: 'Turnaround times vary depending on the service and project complexity. Generally, social media content is ready within 5 working days after the brief is completed, while logo and website design projects may take longer. We strive to meet your timelines and will discuss specific deadlines during the consultation phase.'
+        question: "Who will I be in contact with regarding my social media management?",
+        answer: 'Each customer is assigned their own dedicated social media manager who will be your point of contact for any requests or assistance you need. You and your social media manager will communicate through our specialized application, ensuring a seamless and efficient interaction.'
     },
     {
-        question: "How are revisions handled?",
-        answer: 'We offer revisions to ensure your complete satisfaction with our work. The number of revisions allowed may vary by service and package, but we always work closely with you to achieve the desired outcome.'
+        question: "How often will you post on our social media accounts?",
+        answer: 'The frequency of posts varies by package. Our Essential Suite includes 10 posts per month, our Executive Package offers 20 posts, and our Elite Portfolio provides 30 posts. Custom schedules can be arranged to meet your specific needs.'
     },
     {
-        question: "Is ongoing support available after project completion?",
-        answer: 'Yes, we offer ongoing support and maintenance services for website design projects and continuous management options for social media accounts to ensure your digital assets remain up-to-date and effective.'
+        question: "Can I approve posts before they are published?",
+        answer: 'Yes, absolutely! All content is sent for your approval before posting. We ensure that you have full control over what goes live on your social media channels.'
     },
     {
-        question: "What makes Post Factory different from other agencies?",
-        answer: 'Our commitment to affordability and quality sets us apart. We offer some of the most competitive pricing in the industry without compromising on the quality of our services. Each client receives personalized attention and customized solutions tailored to their unique brand needs.'
+        question: "What platforms do you manage?",
+        answer: 'We manage a wide range of platforms including Facebook, Instagram, Twitter or X, LinkedIn, Google Business and more. Let us know your specific needs, and we can tailor our services accordingly.'
     },
     {
-        question: "Can I cancel or pause my subscription?",
-        answer: 'Yes, you can cancel or pause your month-to-month subscription at any time. Please notify us at least 7 days before your next billing cycle to avoid further charges. This allows us to manage your account changes smoothly and ensure that you are not billed for the next period.'
+        question: "How do I choose the right package for my business?",
+        answer: 'Consider your goals, budget, and the level of engagement you want to maintain. Our team can also help assess your needs and recommend the best package to maximize your social media presence.'
     }, {
-        question: "What is your refund policy?",
-        answer: 'Due to the nature of our work and the commitment we put into each project to fulfill the specifications outlined in your brief, we do not offer refunds. We strive to meet your expectations with every project and encourage open communication throughout the process to ensure your satisfaction.'
+        question: "What results can I expect from your social media management?",
+        answer: 'While results vary, typical benefits include increased follower growth, higher engagement rates, and improved brand visibility. We focus on strategic content that aligns with your marketing goals. Anyways, there are much more factors that affect all of the above, because of which we cannot guarantee with certainty what results you can expect'
     },
 ]
 

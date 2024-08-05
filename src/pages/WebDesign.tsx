@@ -138,7 +138,7 @@ export default function SocialPosts() {
                 </Grid>
             </Container>
 
-            <FaqSocialPosts />
+            {/* <FaqSocialPosts /> */}
             <CTA />
 
         </>
