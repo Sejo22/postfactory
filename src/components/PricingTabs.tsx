@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Tabs, Tab, Container, Grid, Typography, Button, useTheme } from '@mui/material'
+import { Box, Tabs, Tab, Container, Grid, Typography, Button, useTheme, useMediaQuery } from '@mui/material'
 import SocialPostsAdditonal from './SocialPostsAdditonal';
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -89,6 +89,8 @@ export default function PricingTabs() {
     const [value, setValue] = React.useState(0);
     const theme = useTheme();
 
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
@@ -104,8 +106,14 @@ export default function PricingTabs() {
                     </Typography>
                 </Box>
 
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs value={value} onChange={handleChange} variant='fullWidth' aria-label="basic tabs example">
+                <Box>
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        variant={isMobile ? 'scrollable' : undefined}
+                        aria-label="basic tabs example"
+                        centered={!isMobile}
+                    >
                         <Tab iconPosition='start' icon={<SlideshowIcon />} label="Reels" {...a11yProps(0)} />
                         <Tab iconPosition='start' icon={<WebStoriesOutlinedIcon />} label="Stories" {...a11yProps(1)} />
                         <Tab iconPosition='start' icon={<ViewCarouselOutlinedIcon />} label="Carousels" {...a11yProps(2)} />

@@ -113,6 +113,41 @@ export const themeOptions: ThemeOptions = {
         },
       },
     },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          "& .MuiTabs-indicator": {
+            display: "none",
+          },
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          textTransform: "none",
+          borderRadius: 8,
+          transition: "all 0.3s ease",
+          paddingBlock: 12,
+          paddingInline: 32,
+          fontSize: 16,
+          lineHeight: "24px",
+          "&.Mui-selected": {
+            backgroundColor: theme.palette.primary.iconColor,
+            color: "#fff",
+            transition: "background-color 0.3s ease, color 0.3s ease",
+          },
+          "&:not(.Mui-selected)": {
+            backgroundColor: "transparent",
+            color: theme.palette.primary.main,
+            transition: "background-color 0.3s ease, color 0.3s ease",
+          },
+          "&.MuiButtonBase-root": {
+            minHeight: "unset",
+          },
+        }),
+      },
+    },
   },
 };
 

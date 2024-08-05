@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent, Typography, Button, Divider, CardActions, Box, useTheme } from '@mui/material'
+import { Card, CardContent, Typography, Box, useTheme } from '@mui/material'
 
 interface SocialPostsAdditonalProps {
     serviceTitle: string;
@@ -23,14 +23,7 @@ function SocialPostsAdditonal({ serviceTitle, servicePrice, serviceDescription }
                         </Typography>
                     </Box>
                 </CardContent>
-                {/* <CardActions>
-                    <Button target='_blank' rel='noreferrer' size='large' sx={{
-                        background: theme.palette.primary.accentGradient, px: 4, transition: 'unset',
-                        '&:hover': {
-                            background: theme.palette.primary.main
-                        }
-                    }} variant='contained' href={serviceLink}>Get Started</Button>
-                </CardActions> */}
+
             </Card>
         </>
     )

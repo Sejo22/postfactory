@@ -7,7 +7,9 @@ import FaqSocialPosts from '@/sections/faqs/FaqSocialPosts'
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import BrushIcon from '@mui/icons-material/Brush';
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
-import { Grid, Container, Box, useTheme } from '@mui/material'
+import { Grid, Container, Box, useTheme, Typography } from '@mui/material'
+import PricingWithFeatures from '@/components/PricingWithFeatures'
+
 
 const styles =
 {
@@ -46,6 +48,47 @@ const serviceFeatureDetails = [
         icon: <PaidOutlinedIcon sx={styles.icon} />,
     },
 ]
+const pricingPlans = [
+    {
+        title: 'Web Design Starter',
+        price: '199.99',
+        features: [
+            'Up to 5 pages',
+            'Up to 2 revisions per page',
+            'Basic wireframe prototyping',
+            'Static design elements',
+            'Basic user flow mapping',
+        ],
+        link: '#',
+        isStrikethrough: false,
+    },
+    {
+        title: 'Web Design Standard',
+        price: '349.99',
+        features: [
+            'Up to 10 pages',
+            'Up to 4 revisions per page',
+            'Interactive prototypes',
+            'Basic animations/transitions',
+            'Usability testing',
+        ],
+        link: '#',
+        isStrikethrough: false,
+    },
+    {
+        title: 'Web Design Premium',
+        price: '699.99',
+        features: [
+            'Unlimited pages',
+            'Up to 8 revisions per page',
+            'Advanced interactive prototypes',
+            'Advanced animations/effects',
+            'Comprehensive user testing and feedback',
+        ],
+        link: '#',
+        isStrikethrough: false
+    }
+]
 
 
 
@@ -76,6 +119,24 @@ export default function SocialPosts() {
                     </Grid>
                 </Container>
             </Box>
+            <Container maxWidth='xl'>
+                <Box sx={{ textAlign: 'center', my: 8 }}>
+                    <Typography variant='h3' gutterBottom>Choose your web design package</Typography>
+                    <Typography variant='body1' sx={{ maxWidth: { xs: 'inherit', md: '75%' }, mx: 'auto' }}>
+                        Find the perfect fit with our range of budget-friendly web design packages. Each plan is designed to maximize your online visibility and engagement. Start saving time and boosting your brand today!
+                    </Typography>
+                </Box>
+                <Grid container columnSpacing={4} rowSpacing={{ xs: 4, md: 0 }} sx={{
+                    alignItems: 'center',
+                    py: 6,
+                }} >
+                    {pricingPlans.map((item, index) => (
+                        <Grid item xs={12} sm={4} key={index}>
+                            <PricingWithFeatures serviceLink={item.link} servicePrice={item.price} serviceFeatures={item.features} serviceTitle={item.title} isStrikethrough={item.isStrikethrough} />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
 
             <FaqSocialPosts />
             <CTA />
