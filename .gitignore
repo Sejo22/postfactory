@@ -37,3 +37,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# next-video
+./assets/videos/*
+!./assets/videos/*.json
+!./assets/videos/*.js
+!./assets/videos/*.ts
+public/_next-video

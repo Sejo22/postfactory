@@ -12,9 +12,12 @@ interface CardDetails {
     cardImage: string;
     modalTitle: string;
     modalDesc: string;
+    categoryName?: string;
+    disableBottomBar?: boolean;
+    isStory?: boolean;
 }
 
-export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc }: CardDetails) {
+export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc, disableBottomBar, isStory }: CardDetails) {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -24,13 +27,18 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc 
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: { xs: 300, md: 400 },
+        maxWidth: { xs: 300, md: isStory ? 400 : 600 },
         bgcolor: 'background.paper',
         borderRadius: { xs: 2, md: 4 },
         p: { xs: 2, md: 4 },
+        maxHeight: '80svh',
+        overflowY: 'scroll',
+        '&::-webkit-scrollbar': {
+            display: 'none'
+        }
     };
     return (<>
-        <Card className='card__wrapper' sx={{ position: 'relative', boxShadow: '0 4px 24px -4px rgba(0,0,0,.2)', borderRadius: 4 }}>
+        <Card className='card__wrapper' sx={{ position: 'relative', boxShadow: '0 4px 24px -4px rgba(0,0,0,.2)', borderRadius: 4, aspectRatio: isStory ? 9 / 16 : undefined }}>
             <CardMedia
                 component={'img'}
                 // height={{ xs: '345', md: '30' }}
@@ -39,7 +47,7 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc 
                 alt='img'
             />
             <Box sx={{
-                display: 'grid', position: 'absolute', top: '0', left: '0', width: '100%', height: 'calc(100% - 56px)', background: 'rgba(66,133,244,.8)', placeContent: 'center', pointerEvents: 'none', opacity: 0, transition: 'all ease .2s',
+                display: 'grid', position: 'absolute', top: '0', left: '0', width: '100%', height: disableBottomBar ? '100%' : 'calc(100% - 56px)', background: 'rgba(66,133,244,.8)', placeContent: 'center', pointerEvents: 'none', opacity: 0, transition: 'all ease .2s',
                 '.card__wrapper:hover &': {
                     opacity: 1,
                     pointerEvents: 'all',
@@ -56,7 +64,7 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc 
 
             </Box>
             <Box sx={{
-                width: '100%', background: '#fff', display: 'flex', justifyContent: { xs: 'center', sm: 'space-between' }
+                width: '100%', background: '#fff', display: disableBottomBar ? 'none' : 'flex', justifyContent: { xs: 'center', sm: 'space-between' }
             }}>
                 <Box sx={{ flex: { xs: 1, sm: 'auto' }, display: 'flex', alignItems: 'center', justifyContent: { xs: 'space-between', sm: 'flex-start' }, gap: { xs: 0, sm: 2 }, p: 2 }}>
                     <FavoriteIcon sx={{ color: '#eb2027' }} />
@@ -70,13 +78,21 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc 
             </Box>
         </Card >
         <Modal open={open} onClose={handleClose} >
-            <Box sx={style}>
-                <Box onClick={handleClose} sx={{ position: 'absolute', top: -20, right: -20, color: '#fff', background: '#000', borderRadius: 8, border: '2px solid #fff', width: 20, height: 20, p: 1, display: 'grid', placeContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,.4)' }}><CloseRoundedIcon /></Box>
-                <Box component={'img'} sx={{ maxWidth: '100%', mb: 2, borderRadius: { xs: 2, md: 4 }, }} src={cardImage} />
-                <Typography variant='h6' gutterBottom>{modalTitle}</Typography>
-                <Typography variant='body1'>{modalDesc}</Typography>
+            <Box>
+                {/* <Box onClick={handleClose} sx={{ position: 'fixed', top: -10, right: -10, color: '#fff', background: '#000', borderRadius: 8, border: '2px solid #fff', width: 20, height: 20, p: 1, display: 'grid', placeContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,.4)' }}><CloseRoundedIcon /></Box> */}
+
+                <Box sx={style}>
+                    <Box sx={{ position: 'relative', display: 'grid', placeContent: 'center' }}>
+                        <Box component={'img'} sx={{ maxWidth: '100%', mb: 2, borderRadius: { xs: 2, md: 4 }, }} src={cardImage} />
+                        <Box onClick={handleClose} sx={{ position: 'absolute', top: -30, right: -30, color: '#fff', background: '#000', borderRadius: 8, border: '2px solid #fff', width: 20, height: 20, p: 1, display: 'grid', placeContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,.4)' }}><CloseRoundedIcon /></Box>
+                    </Box>
+
+                    <Typography variant='h6' gutterBottom>{modalTitle}</Typography>
+                    <Typography variant='body1'>{modalDesc}</Typography>
+                </Box>
             </Box>
-        </Modal>
+
+        </Modal >
     </>
 
     )

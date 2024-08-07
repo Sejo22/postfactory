@@ -2,6 +2,10 @@ import React from 'react'
 import { Container, Typography, Box, Button } from '@mui/material'
 import ServiceCard from '@/components/ServiceCard'
 
+interface PlansProps {
+    isBgWhite?: boolean;
+}
+
 const cards = [
     {
         title: 'Soical Media Management',
@@ -24,10 +28,10 @@ const cards = [
 ]
 
 
-export default function Plans() {
+export default function Plans({ isBgWhite }: PlansProps) {
 
     return (
-        <Box sx={{ backgroundColor: '#f7f0ff' }}>
+        <Box sx={{ backgroundColor: isBgWhite === true ? '#fff' : '#f7f0ff' }}>
             <Container maxWidth='xl' sx={{ paddingBlock: 16 }}>
                 <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
                     Pick a Plan

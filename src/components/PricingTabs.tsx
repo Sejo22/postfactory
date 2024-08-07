@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, Tabs, Tab, Container, Grid, Typography, Button, useTheme, useMediaQuery } from '@mui/material'
 import SocialPostsAdditonal from './SocialPostsAdditonal';
+import SlideshowIcon from '@mui/icons-material/Slideshow';
+import WebStoriesOutlinedIcon from '@mui/icons-material/WebStoriesOutlined';
+import ViewCarouselOutlinedIcon from '@mui/icons-material/ViewCarouselOutlined';
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
     value: number;
 }
-import SlideshowIcon from '@mui/icons-material/Slideshow';
-import WebStoriesOutlinedIcon from '@mui/icons-material/WebStoriesOutlined';
-import ViewCarouselOutlinedIcon from '@mui/icons-material/ViewCarouselOutlined';
 
 function CustomTabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
