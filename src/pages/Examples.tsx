@@ -30,7 +30,7 @@ const styles =
 
 
 const serviceHeroDetails = {
-    title: 'Social Media Management from Just $89.99/Month!',
+    title: 'Social Media Management from Just $99/Month!',
     description: 'Expertly Crafted Static Posts, Stories, and Reels Tailored to Boost Your Social Media Engagement and Brand Visibility.',
     link: '#',
     image: './assets/socialPostsGIF.gif'

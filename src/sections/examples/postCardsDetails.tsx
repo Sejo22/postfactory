@@ -1,7 +1,7 @@
 export const postCardsDetails = [
     {
         image: 'assets/products1.webp',
-        modalTitle: 'This is Title for card 1',
+        modalTitle: 'Adnan testira',
         modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
         categoryName: 'Products'
     },
