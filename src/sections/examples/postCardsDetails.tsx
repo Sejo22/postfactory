@@ -1,37 +1,74 @@
 export const postCardsDetails = [
     {
+        image: 'assets/social-media-visual-featured-1.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "testiranje opcija targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Featured'
+    },
+    {
+        image: 'assets/social-media-visual-featured-2.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Featured'
+    },
+    {
+        image: 'assets/social-media-visual-featured-3.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Featured'
+    },
+    {
+        image: 'assets/social-media-visual-featured-4.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Featured'
+    },
+    {
+        image: 'assets/social-media-visual-featured-5.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Featured'
+    },
+    {
+        image: 'assets/social-media-visual-featured-6.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Featured'
+    },
+    //---- Products
+    {
         image: 'assets/products1.webp',
-        modalTitle: 'Adnan testira',
+        modalTitle: 'Caption:',
         modalDesc: "testiranje opcija targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
         categoryName: 'Products'
     },
     {
-        image: 'assets/products2.webp',
-        modalTitle: 'This is Title for card 1',
+        image: 'assets/social-media-visual-example-ring-jewellery-gold-6.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Products'
+    },
+    {
+        image: 'assets/social-media-visual-example-cashew-3.webp',
+        modalTitle: 'Caption:',
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        categoryName: 'Products'
+    },
+    {
+        image: 'assets/social-media-visual-example-water-bottle-4.webp',
+        modalTitle: 'Caption:',
         modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
         categoryName: 'Products'
     },
     {
         image: 'assets/products3.webp',
-        modalTitle: 'This is Title for card 1',
+        modalTitle: 'Caption:',
         modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
         categoryName: 'Products'
     },
     {
-        image: 'assets/products4.webp',
-        modalTitle: 'This is Title for card 1',
-        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
-        categoryName: 'Products'
-    },
-    {
-        image: 'assets/products5.webp',
-        modalTitle: 'This is Title for card 1',
-        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
-        categoryName: 'Products'
-    },
-    {
-        image: 'assets/products6.webp',
-        modalTitle: 'This is Title for card 1',
+        image: 'assets/social-media-visual-example-boy-wash-5.webp',
+        modalTitle: 'Caption:',
         modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
         categoryName: 'Products'
     },

@@ -14,7 +14,7 @@ export default function HeroLandingPage() {
     const theme = useTheme()
     return (
         <Box sx={{ mt: 4 }}>
-            <Container maxWidth='xl' >
+            <Container maxWidth='lg' >
                 <Grid container sx={{ alignItems: 'center', minHeight: '100vh' }} columnSpacing={12}>
                     <Grid item xs={12} md={6}>
                         <Typography variant='h1' sx={{ mb: 2 }} >Start <span style={{

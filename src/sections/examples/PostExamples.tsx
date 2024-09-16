@@ -33,16 +33,17 @@ function a11yProps(index: number) {
 }
 
 const categories = [
-    { name: 'Products', id: 0 },
-    { name: 'Professional Services', id: 1 },
-    { name: 'Home Services', id: 2 },
-    { name: 'Beauty & Salons', id: 3 },
-    { name: 'Marketing Agencies', id: 4 },
-    { name: 'Health & Wellness', id: 5 },
-    { name: 'SaaS & Tech', id: 6 },
-    { name: 'Travel & Tourism', id: 7 },
-    { name: 'Education & Sport', id: 8 },
-    { name: 'Other', id: 9 }
+    { name: 'Featured', id: 0 },
+    { name: 'Products', id: 1 },
+    { name: 'Professional Services', id: 2 },
+    { name: 'Home Services', id: 3 },
+    { name: 'Beauty & Salons', id: 4 },
+    { name: 'Marketing Agencies', id: 5 },
+    { name: 'Health & Wellness', id: 6 },
+    { name: 'SaaS & Tech', id: 7 },
+    { name: 'Travel & Tourism', id: 8 },
+    { name: 'Education & Sport', id: 9 },
+    { name: 'Other', id: 10 }
 ]
 
 const cardsDetails = postCardsDetails;
@@ -58,10 +59,10 @@ function PostExamples() {
     };
     return (
         <Box>
-            <Container maxWidth='xl'>
+            <Container maxWidth='lg'>
                 <Box sx={{ margin: '64px auto 0 auto', maxWidth: { xs: '100%', md: '75%' }, pb: 2 }}>
                     <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
-                        Post Examples
+                    Social Media Post Examples
                     </Typography>
                     <Typography variant='body1' textAlign={'center'} gutterBottom>
                         Browse our static post examples: see how our streamlined hashtags and captions save you time and simplify your social media strategy.

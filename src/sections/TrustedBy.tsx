@@ -30,7 +30,7 @@ function TrustedBy() {
 
     return (
         <Box component={'section'} sx={{ overflow: 'hidden', background: theme.palette.primary.main, paddingBlock: 8 }}>
-            <Container maxWidth='xl' >
+            <Container maxWidth='lg' >
                 <Typography variant='h2' sx={{ textAlign: 'center', marginBottom: 4, color: '#fff', pb: 4 }}>Trusted by 100+ Brands</Typography>
                 <Box
                     sx={{
