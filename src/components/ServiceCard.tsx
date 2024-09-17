@@ -13,7 +13,7 @@ export default function ServiceCard({ serviceTitle, servicePrice, serviceDesc, s
     const theme = useTheme();
     return (
         <>
-            <Card variant='outlined' sx={{ position: 'relative', transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
+            <Card variant='outlined' sx={{ display: 'flex', flexDirection: 'column', position: 'relative', transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
                 <CardContent >
                     <Typography variant='h6' gutterBottom>{serviceTitle}</Typography>
                     <Typography variant='caption' gutterBottom>Starting at</Typography>
@@ -26,17 +26,18 @@ export default function ServiceCard({ serviceTitle, servicePrice, serviceDesc, s
                     <Divider sx={{ my: 2 }} />
                     <Typography variant='body2'>{serviceDesc}</Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions sx={{ flexDirection: 'column', gap: 1 }}>
                     <Button target='_blank' rel='noreferrer' size='large' sx={{
-                        background: theme.palette.primary.accentGradient, px: 4, transition: 'unset',
+                        background: theme.palette.primary.accentGradient, px: 4, transition: 'unset', width: '100%',
                         '&:hover': {
                             background: theme.palette.primary.main
                         }
                     }} variant='contained' href={serviceLink}>Get Started</Button>
+                    <Button variant='text' sx={{ width: '100%' }}>Learn more</Button>
                 </CardActions>
-                {serviceTitle === "Soical Media Management" && (
+                {/* {serviceTitle === "Soical Media Management" && (
                     <Box sx={{ position: 'absolute', display: 'grid', placeContent: 'center', py: 3, width: 160, background: theme.palette.primary.accentGradient, right: -48, top: 0, transform: 'rotate(45deg)', color: '#fff', fontSize: 14, boxShadow: '0 8px 24px rgba(0,0,120,.1)' }}>Bestseller</Box>
-                )}
+                )} */}
             </Card>
         </>
     )

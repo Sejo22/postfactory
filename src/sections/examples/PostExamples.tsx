@@ -89,7 +89,7 @@ function PostExamples() {
                             {cardsDetails
                                 .filter(detail => detail.categoryName === category.name)
                                 .map((detail, index) => (
-                                    <SocialMediaPostImage key={index} categoryName={category.name} cardImage={detail.image} modalTitle={detail.modalTitle} modalDesc={detail.modalDesc} />
+                                    <SocialMediaPostImage key={index} categoryName={category.name} cardImage={detail.image} modalDesc={detail.modalDesc} />
                                 ))}
                         </Box>
                     </CustomTabPanel>

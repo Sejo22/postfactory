@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Card, CardMedia, Box, Typography, Modal } from '@mui/material'
+import { Card, CardMedia, Box, Typography, Modal, Grid, Divider } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
@@ -10,14 +10,13 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 interface CardDetails {
     cardImage: string;
-    modalTitle: string;
     modalDesc: string;
     categoryName?: string;
     disableBottomBar?: boolean;
     isStory?: boolean;
 }
 
-export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc, disableBottomBar, isStory }: CardDetails) {
+export default function SocialMediaPostImage({ cardImage, modalDesc, disableBottomBar, isStory }: CardDetails) {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -26,13 +25,12 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc,
         position: 'absolute' as 'absolute',
         top: '50%',
         left: '50%',
+        display: 'flex',
+        alignItems: 'center',
         transform: 'translate(-50%, -50%)',
-        maxWidth: { xs: 300, md: isStory ? 400 : 600 },
+        width: { xs: 320, sm: 400, md: 800, lg: 1080 },
         bgcolor: 'background.paper',
         borderRadius: { xs: 2, md: 4 },
-        p: { xs: 2, md: 4 },
-        maxHeight: '80svh',
-        overflowY: 'scroll',
         '&::-webkit-scrollbar': {
             display: 'none'
         }
@@ -77,21 +75,33 @@ export default function SocialMediaPostImage({ cardImage, modalTitle, modalDesc,
 
             </Box>
         </Card >
+
         <Modal open={open} onClose={handleClose} >
-            <Box>
-                {/* <Box onClick={handleClose} sx={{ position: 'fixed', top: -10, right: -10, color: '#fff', background: '#000', borderRadius: 8, border: '2px solid #fff', width: 20, height: 20, p: 1, display: 'grid', placeContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,.4)' }}><CloseRoundedIcon /></Box> */}
+            <Box sx={style}>
+                <Box onClick={handleClose} sx={{
+                    position: 'absolute', top: -44, right: -44, color: '#fff', background: 'transparent', borderRadius: 8, border: '2px solid #fff', width: 20, height: 20, p: 1, display: 'grid', placeContent: 'center', cursor: 'pointer'
+                }}><CloseRoundedIcon /></Box>
 
-                <Box sx={style}>
-                    <Box sx={{ position: 'relative', display: 'grid', placeContent: 'center' }}>
-                        <Box component={'img'} sx={{ maxWidth: '100%', mb: 2, borderRadius: { xs: 2, md: 4 }, }} src={cardImage} />
-                        <Box onClick={handleClose} sx={{ position: 'absolute', top: -30, right: -30, color: '#fff', background: '#000', borderRadius: 8, border: '2px solid #fff', width: 20, height: 20, p: 1, display: 'grid', placeContent: 'center', cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,.4)' }}><CloseRoundedIcon /></Box>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: { xs: 'column', md: 'row' }
+                }
+                } >
+                    <Box sx={{ position: 'relative', flex: 3 }}>
+                        <Box component={'img'} sx={{ width: '100%', height: '100%', borderRadius: { xs: 2, md: 4 }, }} src={cardImage} />
                     </Box>
+                    <Box sx={{ p: 2, flex: 4 }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <Box component={'img'} src='assets/PFlogo.jpg' sx={{ maxWidth: 32, border: 'solid 1px #000', borderRadius: 32 }} />
+                            <Typography variant='body2' sx={{ fontWeight: 700 }}>PostFactory</Typography>
 
-                    <Typography variant='h6' gutterBottom>{modalTitle}</Typography>
-                    <Typography variant='body1'>{modalDesc}</Typography>
+                        </Box>
+                        <Divider sx={{ my: 2 }} />
+                        <Typography variant='body2' sx={{ fontWeight: 700 }} gutterBottom>Caption</Typography>
+                        <Typography variant='body1'>{modalDesc}</Typography>
+                    </Box>
                 </Box>
             </Box>
-
         </Modal >
     </>
 

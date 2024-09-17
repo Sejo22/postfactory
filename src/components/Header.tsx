@@ -142,7 +142,7 @@ export default function Header() {
 
     return (
         <>
-            <Container maxWidth='xl'>
+            <Container maxWidth='lg'>
                 <AppBar component="nav" sx={{
                     mt: 4,
                     background: 'rgba(255,255,255,.75)',

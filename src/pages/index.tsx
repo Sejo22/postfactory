@@ -7,7 +7,7 @@ import Plans from '@/sections/Plans';
 import Services from '@/sections/Services';
 import FaqLandingPage from '@/sections/FaqLandingPage';
 import CTA from '@/components/CTA';
-
+import Reviews from '@/sections/Reviews';
 const Home: React.FC = () => {
     return (
         <>
@@ -15,7 +15,8 @@ const Home: React.FC = () => {
             <TrustedBy />
             <SocialMediaPostExamples />
             <Plans />
-            <Services />
+            {/* <Services /> */}
+            <Reviews />
             <FaqLandingPage />
             <CTA />
         </>

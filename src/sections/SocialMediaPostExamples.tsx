@@ -47,9 +47,9 @@ export default function SocialMediaPostExamples() {
             <Typography variant='body1' sx={{ pb: 8 }} gutterBottom>
                 Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand&apos;s message across platforms.
             </Typography>
-            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', md: '1fr 1fr 1fr 1fr' }, gap: 4 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr 1fr', md: '1fr 1fr 1fr' }, gap: 4 }}>
                 {cardsDetails.map((detail, index) => (
-                    <SocialMediaPostImage key={index} cardImage={detail.image} modalTitle={detail.modalTitle} modalDesc={detail.modalDesc} />
+                    <SocialMediaPostImage key={index} cardImage={detail.image} modalDesc={detail.modalDesc} />
                 ))}
             </Box>
 
