@@ -62,7 +62,7 @@ function LogoExamples() {
                 <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', md: '1fr 1fr 1fr 1fr' }, gap: 4 }}>
 
                     {logos.map((logo, index) => (
-                        <SocialMediaPostImage key={index} isStory={false} disableBottomBar cardImage={logo.image} modalDesc={logo.modalDesc} modalTitle={logo.modalTitle} />
+                        <SocialMediaPostImage key={index} isStory={false} disableBottomBar cardImage={logo.image} modalDesc={logo.modalDesc} />
                     ))}
                 </Box>
             </Container>

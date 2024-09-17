@@ -61,7 +61,7 @@ function StoryExamples() {
                 <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', md: '1fr 1fr 1fr 1fr' }, gap: 4 }}>
 
                     {stories.map((story, index) => (
-                        <SocialMediaPostImage key={index} isStory={true} disableBottomBar cardImage={story.image} modalDesc={story.modalDesc} modalTitle={story.modalTitle} />
+                        <SocialMediaPostImage key={index} isStory={true} disableBottomBar cardImage={story.image} modalDesc={story.modalDesc} />
                     ))}
                 </Box>
             </Container>

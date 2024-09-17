@@ -11,6 +11,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 interface CardDetails {
     cardImage: string;
     modalDesc: string;
+    modalTitle?: string;
     categoryName?: string;
     disableBottomBar?: boolean;
     isStory?: boolean;
