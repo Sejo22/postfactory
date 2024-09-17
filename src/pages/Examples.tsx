@@ -61,12 +61,12 @@ export default function Examples() {
     return (
         <>
 
-            <ServicesHero
+            {/* <ServicesHero
                 title={serviceHeroDetails.title}
                 description={serviceHeroDetails.description}
                 link={serviceHeroDetails.link}
                 image={serviceHeroDetails.image}
-            />
+            /> */}
             <PostExamples />
             <StoryExamples />
             <LogoExamples />

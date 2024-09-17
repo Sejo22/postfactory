@@ -40,7 +40,7 @@ export default function SocialMediaPostExamples() {
 
 
     return (
-        <Container maxWidth='xl' sx={{ textAlign: 'center', mt: 8, paddingBlock: 8 }}>
+        <Container maxWidth='lg' sx={{ textAlign: 'center', mt: 8, paddingBlock: 8 }}>
             <Typography variant='h2' sx={{ pb: 2 }} >
                 Social Media Post Examples
             </Typography>
