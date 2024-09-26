@@ -30,7 +30,7 @@ function WebsiteExamples() {
 
     return (
         <Box>
-            <Container maxWidth='xl'>
+            <Container maxWidth='lg'>
                 <Box sx={{ margin: '64px auto 0 auto', maxWidth: { xs: '100%', md: '75%' }, py: 8 }}>
                     <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
                         Web Design Examples

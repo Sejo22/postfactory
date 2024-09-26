@@ -27,7 +27,7 @@ export default function Footer() {
     const theme = useTheme()
     return (
         <footer style={{ borderTop: '1px solid rgba(0,0,0,.12)', paddingBlock: 64, marginTop: 88 }}>
-            <Container maxWidth='xl'>
+            <Container maxWidth='lg'>
                 <Grid container spacing={3}>
                     <Grid item xs={12} lg={3}>
                         <Box component={'img'} src='assets/footerLogo.png' sx={{ maxWidth: '80%' }} />
