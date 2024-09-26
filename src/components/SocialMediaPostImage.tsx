@@ -7,6 +7,7 @@ import SendIcon from '@mui/icons-material/Send';
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import { useTheme } from '@mui/material/styles';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import parse from 'html-react-parser';
 
 interface CardDetails {
     cardImage: string;
@@ -98,8 +99,8 @@ export default function SocialMediaPostImage({ cardImage, modalDesc, disableBott
 
                         </Box>
                         <Divider sx={{ my: 2 }} />
-                        <Typography variant='body2' sx={{ fontWeight: 700 }} gutterBottom>Caption</Typography>
-                        <Typography variant='body1'>{modalDesc}</Typography>
+                        <Typography variant='body2' sx={{ fontWeight: 700 }} gutterBottom>Caption:</Typography>
+                        <Typography variant='body1' > {parse(modalDesc)}</Typography>
                     </Box>
                 </Box>
             </Box>
