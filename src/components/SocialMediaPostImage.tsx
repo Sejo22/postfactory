@@ -30,7 +30,7 @@ export default function SocialMediaPostImage({ cardImage, modalDesc, disableBott
         display: 'flex',
         alignItems: 'center',
         transform: 'translate(-50%, -50%)',
-        width: { xs: 320, sm: 400, md: 800, lg: 1080 },
+        width: isStory === true ? 'inherit' : { xs: 320, sm: 400, md: 800, lg: 1080 },
         bgcolor: 'background.paper',
         borderRadius: { xs: 2, md: 4 },
         '&::-webkit-scrollbar': {
@@ -86,17 +86,18 @@ export default function SocialMediaPostImage({ cardImage, modalDesc, disableBott
 
                 <Box sx={{
                     display: 'flex',
-                    flexDirection: { xs: 'column', md: 'row' }
+                    flexDirection: { xs: 'column', md: 'row' },
+                    maxHeight: '80vh',
+                    aspectRatio: isStory === true ? 9 / 16 : 'inherit'
                 }
                 } >
-                    <Box sx={{ position: 'relative', flex: 3 }}>
+                    <Box sx={{ position: 'relative', flex: 3, aspectRatio: isStory === true ? 9 / 16 : 1 / 1, minHeight: '66vh' }}>
                         <Box component={'img'} sx={{ width: '100%', height: '100%', borderRadius: { xs: 2, md: 4 }, }} src={cardImage} />
                     </Box>
-                    <Box sx={{ p: 2, flex: 4 }}>
+                    <Box sx={{ p: 2, flex: 4, display: isStory === true ? 'none' : 'block' }}>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                             <Box component={'img'} src='assets/PFlogo.jpg' sx={{ maxWidth: 32, border: 'solid 1px #000', borderRadius: 32 }} />
                             <Typography variant='body2' sx={{ fontWeight: 700 }}>PostFactory</Typography>
-
                         </Box>
                         <Divider sx={{ my: 2 }} />
                         <Typography variant='body2' sx={{ fontWeight: 700 }} gutterBottom>Caption:</Typography>
