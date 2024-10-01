@@ -13,7 +13,7 @@ export default function ServiceCard({ serviceTitle, servicePrice, serviceDesc, s
     const theme = useTheme();
     return (
         <>
-            <Card variant='outlined' sx={{ display: 'flex', flexDirection: 'column', position: 'relative', transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
+            <Card variant='outlined' sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column', position: 'relative', transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
                 <CardContent >
                     <Typography variant='h6' gutterBottom>{serviceTitle}</Typography>
                     <Typography variant='caption' gutterBottom>Starting at</Typography>

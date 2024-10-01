@@ -93,7 +93,7 @@ export default function Plans({ isBgWhite }: PlansProps) {
                         style={{ overflow: 'unset', alignItems: 'stretch' }}
                     >
                         {cards.map((card, index) => (
-                            <SwiperSlide key={index} style={{ display: 'flex', height: '100%' }}>
+                            <SwiperSlide key={index} style={{ display: 'flex', height: 'auto' }}>
                                 <ServiceCard serviceTitle={card.title} serviceDesc={card.desc} servicePrice={card.price} serviceLink={card.link} />
                             </SwiperSlide>
                         ))}
