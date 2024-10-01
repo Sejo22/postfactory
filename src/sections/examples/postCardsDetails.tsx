@@ -1,7 +1,7 @@
 export const postCardsDetails = [
     {
         image: 'assets/social-media-visual-featured-1.webp',
-        modalDesc: 'Success isn&apos;t about waiting for the perfect moment, it&apos;s about making the moment perfect through hard work! 📚 <br /> <br /> Whether it&apos;s finishing that book you&apos;ve been meaning to read or reaching a new personal goal, the power to achieve it is in YOUR hands.<br /><br /> What&apos;s one thing you&apos;re working hard on this week? Drop it in the comments!👇<br /><br /> #Goodreaders #BookLovers #MotivationMonday #WorkForIt #GoalGetter',
+        modalDesc: "Success isn&apos;t about waiting for the perfect moment, it&apos;s about making the moment perfect through hard work! 📚 <br /> <br /> Whether it&apos;s finishing that book you&apos;ve been meaning to read or reaching a new personal goal, the power to achieve it is in YOUR hands.<br /><br /> What&apos;s one thing you&apos;re working hard on this week? Drop it in the comments!👇<br /><br /> #Goodreaders #BookLovers #MotivationMonday #WorkForIt #GoalGetter",
         categoryName: 'Featured'
     },
     {
