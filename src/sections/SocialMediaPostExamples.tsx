@@ -4,9 +4,9 @@ import SocialMediaPostImage from '@/components/SocialMediaPostImage'
 
 const cardsDetails = [
     {
-        image: 'assets/post1.webp',
+        image: 'assets/social-media-visual-featured-1.webp',
         modalTitle: 'This is Title for card 1',
-        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
+        modalDesc: "Success isn&apos;t about waiting for the perfect moment, it&apos;s about making the moment perfect through hard work! 📚 <br /> <br /> Whether it&apos;s finishing that book you&apos;ve been meaning to read or reaching a new personal goal, the power to achieve it is in YOUR hands.<br /><br /> What&apos;s one thing you&apos;re working hard on this week? Drop it in the comments!👇<br /><br /> #Goodreaders #BookLovers #MotivationMonday #WorkForIt #GoalGetter",
     },
     {
         image: 'assets/post2.webp',
