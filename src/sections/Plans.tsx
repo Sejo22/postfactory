@@ -27,35 +27,51 @@ const cards = [
     {
         title: 'Soical Media Management',
         price: '99.99',
-        desc: 'Enhance your online presence with our expert Social Media Management services, where we craft engaging posts, stories, and reels to captivate your audience and drive engagement on all major platforms.',
+        desc: 'Highly engaging social media posts for your socials.',
         link: 'https://postfactory.spp.io/order/E24M70',
         category: 'Social Media',
         icon: <PhotoIcon sx={iconStyle} />
     },
     {
-        title: 'Business Growth',
-        price: '1999.99',
-        desc: "SEO-optimized blog posts can help you get more traffic, engage your audience, and drive more conversions. Our professionals develop custom content that places high in search engines and gives you the opportunity to grow your business.",
-        link: 'https://postfactory.spp.io/order/E7RJ93',
-        category: 'Business',
-        icon: <BusinessCenterIcon sx={iconStyle} />
+        title: 'Short-Form Videos',
+        price: '99.99',
+        desc: 'Short, engaging 15-60 second videos designed for TikTok, Reels, and Shorts.',
+        link: 'https://postfactory.spp.io/order/Y70O96',
+        category: 'Social Media',
+        icon: <PreviewIcon sx={iconStyle} />
     },
     {
         title: 'SEO Blog Posts',
         price: '59.99',
-        desc: 'SEO-optimized blog posts can help you get more traffic, engage your audience, and drive more conversions. Our professionals develop custom content that places high in search engines and gives you the opportunity to grow your business.',
+        desc: 'Completely SEO-optimized blog posts tailored for your website.',
         link: 'https://postfactory.spp.io/order/Y70O96',
-        category: 'Blog',
+        category: 'SEO Optimization',
+        icon: <PreviewIcon sx={iconStyle} />
+    },
+    {
+        title: 'UGC Videos',
+        price: '99.99',
+        desc: 'Authentic video content crafted by real users to boost genuine brand promotion.',
+        link: 'https://postfactory.spp.io/order/Y70O96',
+        category: 'Social Media',
         icon: <PreviewIcon sx={iconStyle} />
     },
     {
         title: 'Web Design',
         price: '199.99',
-        desc: 'Transform your digital footprint with our innovative Web Design services, designed to create visually stunning and highly functional websites that attract and retain customers.',
+        desc: 'Expert web design services that create stunning, mobile-friendly, and SEO- optimized websites.',
         link: 'https://postfactory.spp.io/order/Y70O96',
         category: 'Design',
         icon: <DashboardIcon sx={iconStyle} />
-    }
+    },
+    {
+        title: 'Business Growth',
+        price: '1999.99',
+        desc: "Accelerate your brand's growth with expert social media strategies, content creation, lead generation, and community management.",
+        link: 'https://postfactory.spp.io/order/E7RJ93',
+        category: 'Business',
+        icon: <BusinessCenterIcon sx={iconStyle} />
+    },
 ]
 
 const SwiperButtons = () => {
@@ -91,10 +107,11 @@ export default function Plans({ isBgWhite }: PlansProps) {
 
             <Container maxWidth='lg' sx={{ paddingBlock: 16, }}>
                 <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
-                    Pick a Plan
+                All Services
                 </Typography>
                 <Typography variant='body1' textAlign={'center'} gutterBottom>
-                    Decide the best path to elevate your brand: choose our Social Media Management to engage your audience, Logo Design to forge a memorable identity, or Website Design to optimize your online presence.
+                Get your creative and marketing tasks done efficiently without the hassle of unreliable freelancers or overpriced agencies. Benefit from a fixed, predictable monthly rate—no contracts, hidden fees, or surprises.
+
                 </Typography>
                 <Box sx={{ overflow: 'hidden', py: 4 }}>
                     <Swiper

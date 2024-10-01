@@ -16,7 +16,7 @@ export const postCardsDetails = [
     },
     {
         image: 'assets/social-media-visual-featured-4.webp',
-        modalDesc: "Whether it&apos;s a big night out or a cozy night in, NEZ&apos;s Date Ready is your secret weapon for feeling fresh and confident!<br /><br /> With a smoky blend of spiced bergamot, black peppercorn, fig, and tobacco flower, it sets the perfect mood. Infused with charcoal powder and bentonite clay to absorb sweat, plus skin-loving shea butter and coconut oil, you&apos;ll feel smooth and hydrated all night long. <br /><br /> Check link in the bio and order today!<br /><br />#NEZ #DateReady #Confidence #Deodorant #AluminumFree #Health #Skin",
+        modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
         categoryName: 'Featured'
     },
     {
