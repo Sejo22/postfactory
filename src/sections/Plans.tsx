@@ -7,9 +7,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import PhotoIcon from '@mui/icons-material/Photo';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import PreviewIcon from '@mui/icons-material/Preview';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+
 
 interface PlansProps {
     isBgWhite?: boolean;
+}
+const iconStyle = {
+    border: '2px solid rgba(0,0,0,.12)',
+    borderRadius: .5,
+    p: .25,
+    color: '#333'
 }
 
 const cards = [
@@ -17,25 +28,33 @@ const cards = [
         title: 'Soical Media Management',
         price: '99.99',
         desc: 'Enhance your online presence with our expert Social Media Management services, where we craft engaging posts, stories, and reels to captivate your audience and drive engagement on all major platforms.',
-        link: 'https://postfactory.spp.io/order/E24M70'
+        link: 'https://postfactory.spp.io/order/E24M70',
+        category: 'Social Media',
+        icon: <PhotoIcon sx={iconStyle} />
     },
     {
         title: 'Business Growth',
         price: '1999.99',
         desc: "SEO-optimized blog posts can help you get more traffic, engage your audience, and drive more conversions. Our professionals develop custom content that places high in search engines and gives you the opportunity to grow your business.",
-        link: 'https://postfactory.spp.io/order/E7RJ93'
+        link: 'https://postfactory.spp.io/order/E7RJ93',
+        category: 'Business',
+        icon: <BusinessCenterIcon sx={iconStyle} />
     },
     {
         title: 'SEO Blog Posts',
         price: '59.99',
         desc: 'SEO-optimized blog posts can help you get more traffic, engage your audience, and drive more conversions. Our professionals develop custom content that places high in search engines and gives you the opportunity to grow your business.',
-        link: 'https://postfactory.spp.io/order/Y70O96'
+        link: 'https://postfactory.spp.io/order/Y70O96',
+        category: 'Blog',
+        icon: <PreviewIcon sx={iconStyle} />
     },
     {
         title: 'Web Design',
         price: '199.99',
         desc: 'Transform your digital footprint with our innovative Web Design services, designed to create visually stunning and highly functional websites that attract and retain customers.',
-        link: 'https://postfactory.spp.io/order/Y70O96'
+        link: 'https://postfactory.spp.io/order/Y70O96',
+        category: 'Design',
+        icon: <DashboardIcon sx={iconStyle} />
     }
 ]
 
@@ -68,7 +87,7 @@ const SwiperButtons = () => {
 export default function Plans({ isBgWhite }: PlansProps) {
 
     return (
-        <Box sx={{ backgroundColor: isBgWhite === true ? '#fff' : '#f7f0ff' }}>
+        <Box sx={{ backgroundColor: isBgWhite === true ? '#fff' : 'rgba(76,118,237,.05)' }}>
 
             <Container maxWidth='lg' sx={{ paddingBlock: 16, }}>
                 <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
@@ -94,7 +113,7 @@ export default function Plans({ isBgWhite }: PlansProps) {
                     >
                         {cards.map((card, index) => (
                             <SwiperSlide key={index} style={{ display: 'flex', height: 'auto' }}>
-                                <ServiceCard serviceTitle={card.title} serviceDesc={card.desc} servicePrice={card.price} serviceLink={card.link} />
+                                <ServiceCard serviceCategory={card.category} serviceIcon={card.icon} serviceTitle={card.title} serviceDesc={card.desc} servicePrice={card.price} serviceLink={card.link} />
                             </SwiperSlide>
                         ))}
                         <SwiperButtons />
