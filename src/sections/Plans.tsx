@@ -80,7 +80,15 @@ export default function Plans({ isBgWhite }: PlansProps) {
                 <Box sx={{ overflow: 'hidden', py: 4 }}>
                     <Swiper
                         spaceBetween={16}
-                        slidesPerView={3}
+                        slidesPerView={1}
+                        breakpoints={{
+                            576: {
+                                slidesPerView: 2
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        }}
                         loop={true}
                         style={{ overflow: 'unset', alignItems: 'stretch' }}
                     >
@@ -96,7 +104,7 @@ export default function Plans({ isBgWhite }: PlansProps) {
 
 
 
-            </Container>
-        </Box>
+            </Container >
+        </Box >
     )
 }
