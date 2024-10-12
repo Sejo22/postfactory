@@ -24,6 +24,8 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import routes from '../app/routes';
 import { useRouter } from 'next/router';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const navItems = [
     { title: 'Home', link: routes.home },
@@ -75,16 +77,22 @@ export default function Header() {
 
     const servicesItems = [
         {
-            title: 'Social Posts',
+            title: 'Social Media Management',
             icon: <AccountBoxOutlinedIcon sx={iconStyle} />,
             description: 'We are the best at Social Posts',
             link: routes.services.socialPosts
         },
         {
-            title: 'Logo Design',
-            icon: <DiamondOutlinedIcon sx={iconStyle} />,
-            description: 'We are the best at Logo Design',
-            link: routes.services.logoDesign
+            title: 'Business Growth Package',
+            icon: <TrendingUpIcon sx={iconStyle} />,
+            description: 'We are the best at Business Growth',
+            link: routes.services.businessGrowth
+        },
+        {
+            title: 'SEO Blog Posts',
+            icon: <ArticleOutlinedIcon sx={iconStyle} />,
+            description: 'We are the best at SEO Blog Posts',
+            link: routes.services.seoBlogs
         },
         {
             title: 'Web Design',

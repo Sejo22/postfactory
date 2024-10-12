@@ -35,6 +35,12 @@ body {
 
 }
 
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;

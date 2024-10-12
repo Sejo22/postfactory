@@ -2,7 +2,8 @@ const routes = {
   home: "/",
   services: {
     socialPosts: "/SocialPosts",
-    logoDesign: "/LogoDesign",
+    businessGrowth: "/BusinessGrowth",
+    seoBlogs: "/SEOBlogs",
     webDesign: "/WebDesign",
   },
   howItWorks: "/HowItWorks",

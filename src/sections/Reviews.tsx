@@ -7,13 +7,13 @@ const reviews = [
         text: 'Our SEO efforts have changed significantly as a result of working with Post Factory. Their professional advice and SEO-optimized blogs have helped us achieve amazing outcomes. We are ecstatic about the explosive increase in organic traffic to our website!',
         author: 'Ethan S.',
         position: 'Chief Marketing Officer',
-        image: '/assets/ethan.jpg'
+        image: '/assets/Ethan.jpg'
     },
     {
         text: 'Post Factorys social media management services have transformed how our socials look with their stunning, beautifully created posts. I highly recommend them!',
         author: 'Liam H.',
         position: 'Founder & CEO',
-        image: '/assets/liam.jpg'
+        image: '/assets/Liam.jpg'
     },
     {
         text: 'Their expertise and creativity have helped us grow our brand and reach new customers effectively. From managing our social media presence to executing their business package, their efforts have consistently delivered great results. The team is professional, responsive, and genuinely invested in the success of our business. We highly recommend Post Factory for anyone looking for top-notch marketing services!',
@@ -31,13 +31,13 @@ const reviews = [
         text: 'Working with Post Factory has been my best decision in a while! The UGC videos they created not only showcased our products in a relatable way, but also resonated deeply with our audience. Since implementing these videos into our marketing strategy, we have seen a remarkable increase in customer engagement and sales.',
         author: 'Mia B.',
         position: 'Founder & CEO',
-        image: '/assets/mia.jpg'
+        image: '/assets/Mia.jpg'
     },
     {
         text: 'Post Factory has completely transformed our marketing with their exceptional reel video content! The creative and engaging videos they have produced have captured our brands essence perfectly and have led to increased visibility on social media.',
         author: 'Zoe W.',
         position: 'Founder',
-        image: '/assets/zoe.jpg'
+        image: '/assets/Zoe.jpg'
     }
 ];
 
@@ -57,7 +57,7 @@ function Reviews() {
                     <Box sx={{ width: 48, background: 'url(./assets/heroReview.jpg)', height: 48, borderRadius: 48, backgroundSize: 'cover' }} />
                     <Box>
                         <Typography sx={{ fontWeight: 600, color: theme.palette.primary.main }} variant='body2' gutterBottom>
-                        David S.
+                            David S.
                         </Typography>
                         <Typography variant='body2' gutterBottom>
                             CEO at NLC Logistics

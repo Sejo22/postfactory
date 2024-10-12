@@ -6,7 +6,7 @@ interface VideoProps {
 
 export default function Video({ path }: VideoProps) {
     return (
-        <video width={345} controls preload='metadata' disablePictureInPicture controlsList='nodownload nofullscreen noremoteplayback' muted>
+        <video style={{ maxHeight: '100%' }} controls preload='metadata' disablePictureInPicture controlsList='nodownload nofullscreen noremoteplayback' muted>
             <source src={path} type='video/mp4' />
         </video>
     )

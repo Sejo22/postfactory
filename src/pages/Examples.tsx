@@ -13,7 +13,6 @@ import FaqLandingPage from '@/sections/FaqLandingPage'
 import Plans from '@/sections/Plans'
 import PostExamples from '@/sections/examples/PostExamples'
 import StoryExamples from '@/sections/examples/StoryExamples'
-import LogoExamples from '@/sections/examples/LogoExamples'
 import ReelsExamples from '@/sections/examples/ReelsExamples'
 import WebsiteExamples from '@/sections/examples/WebDesignExamples'
 
@@ -69,7 +68,6 @@ export default function Examples() {
             /> */}
             <PostExamples />
             <StoryExamples />
-            <LogoExamples />
             <ReelsExamples />
             <WebsiteExamples />
             <CTA />

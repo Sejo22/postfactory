@@ -8,11 +8,13 @@ import Services from '@/sections/Services';
 import FaqLandingPage from '@/sections/FaqLandingPage';
 import CTA from '@/components/CTA';
 import Reviews from '@/sections/Reviews';
+import Masonry from '@/sections/Masonry';
 const Home: React.FC = () => {
     return (
         <>
             <HeroLandingPage />
             <TrustedBy />
+            <Masonry />
             <SocialMediaPostExamples />
             <Plans />
             {/* <Services /> */}
