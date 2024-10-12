@@ -42,12 +42,12 @@ export default function SocialMediaPostExamples() {
     return (
         <Container maxWidth='lg' sx={{ textAlign: 'center', mt: 8, paddingBlock: 8 }}>
             <Typography variant='h2' sx={{ pb: 2 }} >
-            Affordable Creative Solutionss
+                Affordable Creative Solutionss
             </Typography>
             <Typography variant='body1' sx={{ pb: 8 }} gutterBottom>
-            Get your creative and marketing tasks done efficiently without the hassle of unreliable freelancers or overpriced agencies. Benefit from a fixed, predictable monthly rate—no contracts, hidden fees, or surprises.
+                Get your creative and marketing tasks done efficiently without the hassle of unreliable freelancers or overpriced agencies. Benefit from a fixed, predictable monthly rate—no contracts, hidden fees, or surprises.
             </Typography>
-            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr 1fr', md: '1fr 1fr 1fr' }, gap: 4 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr ', md: '1fr 1fr 1fr' }, gap: 4 }}>
                 {cardsDetails.map((detail, index) => (
                     <SocialMediaPostImage key={index} cardImage={detail.image} modalDesc={detail.modalDesc} />
                 ))}
