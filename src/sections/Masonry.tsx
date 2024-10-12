@@ -1,38 +1,163 @@
 import React from 'react'
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
+import CloseIcon from '@mui/icons-material/Close';
+import DoneIcon from '@mui/icons-material/Done';
+import VerifiedIcon from '@mui/icons-material/Verified';
 
-const WaveItem = () => {
+interface ItemProps {
+    title: string
+}
+
+const pillStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 1,
+    p: 2,
+    background: 'white',
+    boxShadow: '0 32px 24px -24px rgba(0,0,0,.4)',
+    borderRadius: 64
+
+}
+const waveItems = [
+    'Limited Expertise',
+    'Inconsistent Quality',
+    'Unpredictable Availability',
+    'Limited Resources',
+    'Accountability Issues',
+    'Narrow Focus',
+    'Slow Turnaround Times',
+    'Lack of Support',
+]
+const SubscribeItems = [
+    'Cancel anytime',
+    'No contracts',
+    'Monthly subscription',
+    'Pause anytime',
+    'Upgrade/downgrade',
+]
+
+const WaveItem = ({ title }: ItemProps) => {
+
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, p: 2, background: 'white', boxShadow: '0 8px 12px -2px rgba(0,0,0,.5)', borderRadius: 64 }}>
+        <Box sx={pillStyle}>
             <CancelIcon sx={{ color: '#eb2027' }} />
-            <Typography variant='body2' sx={{ fontWeight: 600 }}>Limited Expertise</Typography>
+            <Typography variant='body1' sx={{ fontWeight: 600 }}>{title}</Typography>
+        </Box>
+    )
+}
+
+const SubscriptionModel = ({ title }: ItemProps) => {
+
+    return (
+        <Box sx={pillStyle}>
+            <VerifiedIcon sx={{ color: '#00b7ff' }} />
+            <Typography variant='body1' sx={{ fontWeight: 600 }}>{title}</Typography>
         </Box>
     )
 }
 
 export default function Masonry() {
     return (
-        <Container maxWidth='lg'>
-            <Grid container spacing={2}>
-                <Grid item xs={6}>
-                    <Paper elevation={2}>Item 1</Paper>
-                </Grid>
-                <Grid item xs={6}>
-                    <Box sx={{ background: 'linear-gradient(-45deg,#E9D3C8,#FAF9F7)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4, p: 6, borderRadius: 4 }}>
-                        {Array.from({ length: 8 }, (_, index) => (
-                            <WaveItem key={index} />
-                        ))}
+        <Container maxWidth='lg' sx={{ paddingBlock: 8, }}>
+            <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
+                Title
+            </Typography>
+            <Typography variant='body1' textAlign={'center'} gutterBottom>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cupiditate quibusdam repellendus, tenetur ipsum natus et hic placeat alias ex eaque. Enim cumque nesciunt molestiae velit minus! Ipsa nobis beatae aut autem velit necessitatibus ad, suscipit vel, labore alias doloribus.
+
+            </Typography>
+            <Box sx={{ pt: 8 }}>
+                <Box sx={{ display: 'flex', gap: 4, mb: 4 }}>
+                    <Box sx={{ p: 4, flex: '1 1 50%', aspectRatio: 1 / 1, backgroundImage: 'url(assets/earth.png)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 4, backgroundRepeat: 'no-repeat' }}>
                     </Box>
-                </Grid>
-                <Grid item xs={4}>
-                    <Paper elevation={2}>Item 3</Paper>
-                </Grid>
-                <Grid item xs={8}>
-                    <Paper elevation={2}>Item 4</Paper>
-                </Grid>
-            </Grid>
-        </Container>
+                    <Box sx={{ p: 4, flex: '1 1 50%', background: 'linear-gradient(225deg,#E9D3C8,#FAF9F7)', borderRadius: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>The traditional method</Box>
+                        <Typography component={'div'} variant='h3' gutterBottom>Wave goodbye to:</Typography>
+                        <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4 }}>
+                            {/* {Array.from({ length: 8 }, (_, index) => (
+                                <WaveItem key={index} />
+                            ))} */}
+                            {waveItems.map((title, index) => (
+                                <WaveItem key={index} title={title} />
+                            ))}
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box sx={{ display: 'flex', gap: 4 }}>
+                    <Box sx={{ p: 4, flex: '1', background: 'linear-gradient(180deg,#DDF5FF,#FAF9F7)', height: '100%', borderRadius: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>Collaboration</Box>
+                        <Typography component={'div'} variant='h3' gutterBottom>Seamless client interaction:</Typography>
+                        <Box sx={{ background: 'white', p: 2 }}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
+                                <Box sx={{ backgroundColor: '#94e1ff', flex: 1, p: 1, borderRadius: 2 }}>
+                                    <Typography sx={{ fontWeight: 700, color: '#111' }} variant='body2'>Sophia Delgado</Typography>
+                                    <Typography sx={{ color: '#111' }} variant='body2'>Hello Ethan, the content for next month is ready. Could you please check it?</Typography>
+                                </Box>
+                                <Box component={'img'} src='/assets/Sophia.jpg' sx={{ maxWidth: 64, aspectRatio: 1 / 1, borderRadius: 64 }} />
+                            </Box>
+
+
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                <Box component={'img'} src='/assets/Ethan2.jpeg' sx={{ maxWidth: 64, aspectRatio: 1 / 1, borderRadius: 64 }} />
+                                <Box sx={{ backgroundColor: '#ddd', flex: 1, p: 1, borderRadius: 2 }}>
+                                    <Typography sx={{ fontWeight: 700, color: '#111' }} variant='body2'>Ethan Parker</Typography>
+                                    <Typography sx={{ color: '#111' }} variant='body2'>Hi Sophia, I just checked the content, and we love it!
+                                        I approved every post.</Typography>
+                                </Box>
+
+                            </Box>
+                        </Box>
+                        <Box sx={{ ...pillStyle, ...{ width: 'fit-content', p: 1, boxShadow: '8px 8px 25px 0 rgba(0,0,0,.1),16px 16px 15px 0 rgba(0,0,0,.1)' } }}>
+                            <Box sx={{
+                                color: '#00b7ff', textTransform: 'uppercase', display: 'flex', alignItems: 'center', fontWeight: 600
+                            }}>
+                                <DoneIcon />Approve</Box>
+                            <span>|</span>
+                            <Box sx={{ color: '#eb2027', textTransform: 'uppercase', display: 'flex', alignItems: 'center', fontWeight: 600 }}>
+                                <CloseIcon />
+                                Decline</Box>
+                        </Box>
+                        <Box sx={{ position: 'relative', minHeight: 152 }}>
+
+                            <Box component={'img'} src='/assets/hservices1.webp' sx={{ position: 'absolute', borderRadius: 4, left: 0, bottom: 0, maxWidth: 96 }} />
+                            <Box component={'img'} src='/assets/hservices2.webp' sx={{ position: 'absolute', borderRadius: 4, left: '50%', bottom: 0, transform: 'translateX(-50%)', maxWidth: 120 }} />
+                            <Box component={'img'} src='/assets/hservices3.webp' sx={{ position: 'absolute', borderRadius: 4, right: -48, bottom: 0, maxWidth: 144 }} />
+                        </Box>
+
+                    </Box>
+                    <Box sx={{ backgroundImage: 'url(assets/featuresbg4.png)', backgroundSize: 'cover', minHeight: 60, flex: 2, borderRadius: 4 }}>
+                        <Box sx={{ p: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                            <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>Subscription based</Box>
+                            <Typography component={'div'} variant='h3' gutterBottom>Simple subscription model:</Typography>
+                            <Box sx={{ position: 'relative', m: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Box component={'img'} src='assets/calendar.png' sx={{ maxWidth: '75%' }} />
+
+                                <Box sx={{ position: 'absolute', top: 20, left: -25 }}>
+                                    <SubscriptionModel title={SubscribeItems[0]} />
+                                </Box>
+
+                                <Box sx={{ position: 'absolute', bottom: 20, left: -25 }}>
+                                    <SubscriptionModel title={SubscribeItems[1]} />
+                                </Box>
+                                <Box sx={{ position: 'absolute', bottom: -25, left: '50%', transform: 'translateX(-50%)' }}>
+                                    <SubscriptionModel title={SubscribeItems[2]} />
+                                </Box>
+                                <Box sx={{ position: 'absolute', bottom: 30, right: -25 }}>
+                                    <SubscriptionModel title={SubscribeItems[3]} />
+                                </Box>
+                                <Box sx={{ position: 'absolute', top: 30, right: -15 }}>
+                                    <SubscriptionModel title={SubscribeItems[4]} />
+                                </Box>
+                            </Box>
+                        </Box>
+
+                    </Box>
+                </Box>
+            </Box>
+
+        </Container >
 
     )
 }
