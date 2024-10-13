@@ -26,6 +26,7 @@ import { useRouter } from 'next/router';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import Link from 'next/link';
 
 const navItems = [
     { title: 'Home', link: routes.home },
@@ -110,12 +111,15 @@ export default function Header() {
 
     const DrawerList = (
         <Box sx={{ width: 300, p: 2 }} role="presentation" >
-            <Box
-                component='img'
-                src='./assets/headerLogo.png'
-                alt="Logo"
-                sx={{ maxHeight: 48, transition: 'max-height ease .2s' }}
-            />
+            <Link href={routes.home}>
+                <Box
+                    component='img'
+                    src='./assets/headerLogo.png'
+                    alt="Logo"
+                    sx={{ maxHeight: 48, transition: 'max-height ease .2s' }}
+                />
+            </Link>
+
             <Divider sx={{ my: 2 }} />
             <Box sx={{ display: { xs: 'flex', lg: 'none', flexDirection: 'column', alignItems: 'flex-start', gap: 4 } }}>
                 {navItems.map((item, index) => (
@@ -167,12 +171,15 @@ export default function Header() {
                     < Toolbar sx={{
                         justifyContent: 'space-between', alignItems: 'center'
                     }}>
-                        <Box
-                            component='img'
-                            src='./assets/headerLogo.png'
-                            alt="Logo"
-                            sx={{ maxHeight: { xs: 36, sm: 40, md: 48, lg: 56 }, transition: 'max-height ease .2s' }}
-                        />
+                        <Link href={routes.home}>
+                            <Box
+                                component='img'
+                                src='./assets/headerLogo.png'
+                                alt="Logo"
+                                sx={{ maxHeight: { xs: 36, sm: 40, md: 48, lg: 56 }, transition: 'max-height ease .2s' }}
+                            />
+                        </Link>
+
                         <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
                             {navItems.map((item, index) => (
                                 <Button
@@ -219,7 +226,7 @@ export default function Header() {
                 }}
             >
                 {servicesItems.map((item, index) => (
-                    <MenuItem className='menuItem' sx={{ p: 2 }} key={index} onClick={(event) => handleClick(event, item.link)} >
+                    <MenuItem className='menuItem' sx={{ p: 2 }} key={index} onClick={(event) => { handleClick(event, item.link); toggleDrawer(false)(event); }} >
                         <ListItemIcon>{item.icon}</ListItemIcon>
                         <ListItemText>
                             {item.title}

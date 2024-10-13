@@ -13,7 +13,7 @@ export default function ServicesHero({ title, description, link, image, video }:
     const theme = useTheme()
     return (
         <Box sx={{ mt: 4, minHeight: '60svh', alignItems: 'center', display: 'flex' }}>
-            <Container maxWidth='xl' >
+            <Container maxWidth='lg' >
                 <Grid container columnSpacing={18} sx={{ alignItems: 'center' }}>
                     <Grid item xs={12} md={6}>
                         <Typography variant='h1' sx={{ mb: 2 }} >

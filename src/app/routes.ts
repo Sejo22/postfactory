@@ -9,6 +9,7 @@ const routes = {
   howItWorks: "/HowItWorks",
   examples: "/Examples",
   pricing: "/Pricing",
+  contact: "/Contact",
 };
 
 export default routes;

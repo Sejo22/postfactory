@@ -105,7 +105,7 @@ export default function SocialPosts() {
             />
 
             <Box sx={{ background: theme.palette.primary.main, mt: 8 }}>
-                <Container maxWidth='xl' >
+                <Container maxWidth='lg' >
                     <Grid container columnSpacing={4} rowSpacing={{ xs: 4, md: 0 }} sx={{
                         alignItems: 'center',
                         py: 6,
@@ -118,7 +118,7 @@ export default function SocialPosts() {
                     </Grid>
                 </Container>
             </Box>
-            <Container maxWidth='xl'>
+            <Container maxWidth='lg'>
                 <Box sx={{ textAlign: 'center', my: 8 }}>
                     <Typography variant='h3' gutterBottom>Choose your social media package</Typography>
                     <Typography variant='body1' sx={{ maxWidth: { xs: 'inherit', md: '75%' }, mx: 'auto' }}>

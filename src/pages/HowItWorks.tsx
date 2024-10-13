@@ -62,7 +62,7 @@ export default function HowItWorks() {
                 video={true}
             />
             <Box sx={{ background: theme.palette.primary.main, mt: 8 }}>
-                <Container maxWidth='xl' >
+                <Container maxWidth='lg' >
                     <Grid container columnSpacing={4} rowSpacing={{ xs: 4, md: 0 }} sx={{
                         alignItems: 'center',
                         py: 6,

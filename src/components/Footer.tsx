@@ -3,18 +3,20 @@ import { Container, Grid, Box, Typography, Button, Link, TextField, useTheme } f
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import routes from '../app/routes';
 
 const quickLinks = [
-    { title: 'Home', link: '#' },
-    { title: 'Examples', link: '#' },
-    { title: 'Pricing', link: '#' },
-    { title: 'How it works', link: '#' },
-    { title: 'Contact', link: '#' }
+    { title: 'Home', link: routes.home },
+    { title: 'Examples', link: routes.examples },
+    { title: 'Pricing', link: routes.pricing },
+    { title: 'How it works', link: routes.howItWorks },
+    { title: 'Contact', link: routes.contact }
 ];
 const services = [
-    { title: 'Social Posts', link: '#' },
-    { title: 'Logo Design', link: '#' },
-    { title: 'Web Design', link: '#' }
+    { title: 'Social Posts', link: routes.services.socialPosts },
+    { title: 'Business Growth Package', link: routes.services.businessGrowth },
+    { title: 'SEO Blog Posts', link: routes.services.businessGrowth },
+    { title: 'Web Design', link: routes.services.webDesign }
 ];
 
 const socialLinks = [
@@ -30,7 +32,9 @@ export default function Footer() {
             <Container maxWidth='lg'>
                 <Grid container spacing={3}>
                     <Grid item xs={12} lg={3}>
-                        <Box component={'img'} src='assets/footerLogo.png' sx={{ maxWidth: '80%' }} />
+                        <Link href={routes.home}>
+                            <Box component={'img'} src='assets/footerLogo.png' sx={{ maxWidth: '80%' }} />
+                        </Link>
                         <Typography variant='body2' sx={{ mt: 3 }}>Post Factory excels in boosting your business&apos;s online presence through expert social media management, professional logo design, and innovative website design.</Typography>
                         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mt: 3 }}>
                             {socialLinks.map((socialLink, index) => (
