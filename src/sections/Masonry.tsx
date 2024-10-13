@@ -34,7 +34,7 @@ const SubscribeItems = [
     'No contracts',
     'Monthly subscription',
     'Pause anytime',
-    'Upgrade/downgrade',
+    'Upgrade / downgrade',
 ]
 
 const WaveItem = ({ title }: ItemProps) => {
@@ -74,10 +74,7 @@ export default function Masonry() {
                     <Box sx={{ p: 4, flex: '1 1 50%', background: 'linear-gradient(225deg,#E9D3C8,#FAF9F7)', borderRadius: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>The traditional method</Box>
                         <Typography component={'div'} variant='h3' gutterBottom>Wave goodbye to:</Typography>
-                        <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4 }}>
-                            {/* {Array.from({ length: 8 }, (_, index) => (
-                                <WaveItem key={index} />
-                            ))} */}
+                        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
                             {waveItems.map((title, index) => (
                                 <WaveItem key={index} title={title} />
                             ))}
@@ -132,22 +129,22 @@ export default function Masonry() {
                             <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>Subscription based</Box>
                             <Typography component={'div'} variant='h3' gutterBottom>Simple subscription model:</Typography>
                             <Box sx={{ position: 'relative', m: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 2 }}>
-                                <Box component={'img'} src='assets/calendar.png' sx={{ maxWidth: '75%' }} />
+                                <Box component={'img'} src='assets/calendar.png' sx={{ maxWidth: { xs: '100%', md: '75%' } }} />
 
-                                <Box sx={{ width: { xs: '75%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, top: { xs: 'inherit', md: 20 }, left: { xs: 'inherit', md: -25 } }}>
+                                <Box sx={{ width: { xs: '100%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, top: { xs: 'inherit', md: 20 }, left: { xs: 'inherit', md: -25 } }}>
                                     <SubscriptionModel title={SubscribeItems[0]} />
                                 </Box>
 
-                                <Box sx={{ width: { xs: '75%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, bottom: { xs: 'inherit', md: 20 }, left: { xs: 'inherit', md: -25 } }}>
+                                <Box sx={{ width: { xs: '100%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, bottom: { xs: 'inherit', md: 20 }, left: { xs: 'inherit', md: -25 } }}>
                                     <SubscriptionModel title={SubscribeItems[1]} />
                                 </Box>
-                                <Box sx={{ width: { xs: '75%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, bottom: { xs: 'inherit', md: -25 }, left: { xs: 'inherit', md: '50%' }, transform: { xs: 'unset', md: 'translateX(-50%)' } }}>
+                                <Box sx={{ width: { xs: '100%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, bottom: { xs: 'inherit', md: -25 }, left: { xs: 'inherit', md: '50%' }, transform: { xs: 'unset', md: 'translateX(-50%)' } }}>
                                     <SubscriptionModel title={SubscribeItems[2]} />
                                 </Box>
-                                <Box sx={{ width: { xs: '75%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, bottom: { xs: 'inherit', md: 30 }, right: { xs: 'inherit', md: -25 } }}>
+                                <Box sx={{ width: { xs: '100%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, bottom: { xs: 'inherit', md: 30 }, right: { xs: 'inherit', md: -25 } }}>
                                     <SubscriptionModel title={SubscribeItems[3]} />
                                 </Box>
-                                <Box sx={{ width: { xs: '75%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, top: { xs: 'inherit', md: 30 }, right: { xs: 'inherit', md: -15 } }}>
+                                <Box sx={{ width: { xs: '100%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, top: { xs: 'inherit', md: 30 }, right: { xs: 'inherit', md: -15 } }}>
                                     <SubscriptionModel title={SubscribeItems[4]} />
                                 </Box>
                             </Box>
