@@ -18,8 +18,8 @@ const Home: React.FC = () => {
             <Plans />
             {/* <Services /> */}
             <Reviews />
-            <FaqLandingPage />
             <Masonry />
+            <FaqLandingPage />
             <CTA />
         </>
     );
