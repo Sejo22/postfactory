@@ -27,7 +27,7 @@ export default function ServicesHero({ title, description, link, image, video }:
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ justifyContent: 'center', alignItems: 'center' }}>
                         {video ? (
-                            <iframe width="625" height="351" src="https://www.youtube.com/embed/DPt7tZrjl40" title="How It Works: Your Guide to Buying and Using Our Services ┃www.postfactory.co" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameBorder={0} allowFullScreen></iframe>
+                            <iframe width="100%" height={280} src="https://www.youtube.com/embed/DPt7tZrjl40" title="How It Works: Your Guide to Buying and Using Our Services ┃www.postfactory.co" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameBorder={0} allowFullScreen></iframe>
                         ) : (
                             <Box
                                 component={'img'}
@@ -39,6 +39,9 @@ export default function ServicesHero({ title, description, link, image, video }:
                         )}
                     </Grid>
                 </Grid>
+                <Box className='linear-gradient__bg-effect' sx={{
+                    background: 'linear-gradient(45deg, #fff 1%, #4285F4, #fff, #7832D1, #fff 80%)', position: 'absolute', width: '100%', height: '100%', maxHeight: '100vh', borderRadius: 256, top: 0, left: 0, zIndex: -1, filter: 'blur(110px)', opacity: .2
+                }} />
             </Container>
         </Box>
 

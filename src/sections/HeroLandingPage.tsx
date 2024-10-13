@@ -24,7 +24,7 @@ export default function HeroLandingPage() {
     const theme = useTheme()
     return (
         <Box sx={{ mt: 4, minHeight: '60svh', alignItems: 'center', display: 'flex' }}>
-            <Container maxWidth='lg' sx={{ '& *:not(button)': { color: '#000' } }}>
+            <Container maxWidth='lg' sx={{ '& *:not(button)': { color: '#111' } }}>
                 <Grid container sx={{ alignItems: 'center', minHeight: '100vh' }} spacing={6}>
                     <Grid item xs={12} md={6}>
                         <Typography variant='h1' sx={{ mb: 4 }} gutterBottom >
@@ -51,14 +51,44 @@ export default function HeroLandingPage() {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ justifyContent: 'center', alignItems: 'center', }}>
-                        <Box sx={{}}>
+                        <Box sx={{ display: 'grid', width: '100%', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto auto', gridAutoColumns: '1fr', gap: 2, position: 'relative', overflow: 'hidden', mb: { xs: 4, md: 'initial' } }}>
                             <Box
-                                component={'img'}
-                                src='./assets/heroImage.webp'
                                 sx={{
-                                    maxWidth: '100%'
+                                    width: '100%',
+                                    aspectRatio: 1,
+                                    gridArea: 'span 1/ span 1/ span 1/ span 1',
+                                    position: 'relative',
+                                    borderRadius: 4,
+                                    overflow: 'hidden'
                                 }}
-                            />
+                            >
+                                <video style={{ objectFit: 'cover', backgroundSize: 'cover', backgroundPosition: '-50%', width: '100%', height: '100%', margin: 'auto', position: 'absolute', inset: '-100%' }} autoPlay loop muted playsInline src="./assets/videos/Video_1.mp4"></video>
+                            </Box>
+
+                            <Box
+                                sx={{
+                                    width: '100%',
+                                    gridArea: 'span 2 / span 1 / span 2 / span 1',
+                                    position: 'relative',
+                                    borderRadius: 4,
+                                    overflow: 'hidden'
+                                }}
+                            >
+                                <video style={{ objectFit: 'cover', backgroundSize: 'cover', backgroundPosition: '-50%', width: '100%', height: '100%', margin: 'auto', position: 'absolute', inset: '-100%' }} autoPlay loop muted playsInline src="./assets/videos/Video_3.mp4"></video>
+                            </Box>
+
+                            <Box
+                                sx={{
+                                    width: '100%',
+                                    aspectRatio: 1,
+                                    gridArea: 'span 1/ span 1/ span 1/ span 1',
+                                    position: 'relative',
+                                    borderRadius: 4,
+                                    overflow: 'hidden'
+                                }}
+                            >
+                                <video style={{ objectFit: 'cover', backgroundSize: 'cover', backgroundPosition: '-50%', width: '100%', height: '100%', margin: 'auto', position: 'absolute', inset: '-100%' }} autoPlay loop muted playsInline src="./assets/videos/Video_2.mp4"></video>
+                            </Box>
                         </Box>
                     </Grid>
                 </Grid>
