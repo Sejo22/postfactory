@@ -50,6 +50,10 @@ export default function Header() {
         if (link) {
             router.push(link);
             handleClose();
+
+            if (openDrawer) {
+                setOpenDrawer(false);
+            }
         }
         else {
             setAnchorEl(event.currentTarget);
