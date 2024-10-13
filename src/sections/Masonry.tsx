@@ -69,9 +69,9 @@ export default function Masonry() {
             </Typography>
             <Box sx={{ pt: 8 }}>
                 <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 4 }}>
-                    <Box sx={{ p: 4, flex: '1 1 ', aspectRatio: 1 / 1, backgroundImage: 'url(assets/earth.png)', backgroundSize: 'cover', backgroundPosition: 'left', borderRadius: 4, backgroundRepeat: 'no-repeat' }}>
+                    <Box sx={{ p: 4, flex: ' 1 ', minHeight: 320, aspectRatio: 1 / 1, backgroundImage: 'url(assets/earth.png)', backgroundSize: 'cover', backgroundPosition: 'left', borderRadius: 4, backgroundRepeat: 'no-repeat' }}>
                     </Box>
-                    <Box sx={{ p: 4, flex: '1 1', background: 'linear-gradient(225deg,#E9D3C8,#FAF9F7)', borderRadius: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <Box sx={{ p: 4, flex: '1', background: 'linear-gradient(225deg,#E9D3C8,#FAF9F7)', borderRadius: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>The traditional method</Box>
                         <Typography component={'div'} variant='h3' gutterBottom>Wave goodbye to:</Typography>
                         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
