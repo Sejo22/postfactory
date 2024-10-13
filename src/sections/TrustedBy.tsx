@@ -29,9 +29,9 @@ function TrustedBy() {
     }, [controls]);
 
     return (
-        <Box component={'section'} sx={{ overflow: 'hidden', background: theme.palette.primary.main, py: 4 }}>
+        <Box component={'section'} sx={{ overflow: 'hidden', background: theme.palette.primary.main, py: 2 }}>
             <Container maxWidth='lg' >
-                <Typography variant='h2' sx={{ textAlign: 'center', marginBottom: 4, color: '#fff', pb: 4 }}>Trusted by 100+ Brands</Typography>
+                <Typography variant='h4' sx={{ textAlign: 'center', color: '#fff', pb: 4 }}>Trusted by 100+ Brands</Typography>
                 <Box
                     sx={{
                         overflow: 'hidden',
@@ -62,7 +62,7 @@ function TrustedBy() {
                                 component={'img'}
                                 src={brand}
                                 sx={{
-                                    width: '120px',
+                                    width: '80px',
                                     height: '100%',
                                     flexShrink: 0,
                                     opacity: .5,
