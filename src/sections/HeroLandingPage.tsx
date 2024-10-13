@@ -23,7 +23,7 @@ const channels = [
 export default function HeroLandingPage() {
     const theme = useTheme()
     return (
-        <Box>
+        <Box sx={{ mt: 4, minHeight: '60svh', alignItems: 'center', display: 'flex' }}>
             <Container maxWidth='lg' sx={{ '& *:not(button)': { color: '#000' } }}>
                 <Grid container sx={{ alignItems: 'center', minHeight: '100vh' }} spacing={6}>
                     <Grid item xs={12} md={6}>
