@@ -13,12 +13,12 @@ function SocialPostsAdditonal({ serviceTitle, servicePrice, serviceDescription }
         <>
             <Card variant='outlined' sx={{ position: 'relative', transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
                 <CardContent >
-                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <Box>
-                            <Typography variant='h6' gutterBottom>{serviceTitle}</Typography>
+                    <Box>
+                        <Box sx={{ mb: 4 }}>
+                            <Typography variant='body1' sx={{ fontWeight: 700 }} gutterBottom>{serviceTitle}</Typography>
                             <Typography variant='body1'>{serviceDescription}</Typography>
                         </Box>
-                        <Typography component={'div'} sx={{ display: 'flex', alignItems: 'center', gap: .7 }} variant='h5'>
+                        <Typography component={'div'} sx={{ display: 'flex', alignItems: 'center', fontWeight: 700 }} variant='body1'>
                             ${servicePrice}
                         </Typography>
                     </Box>

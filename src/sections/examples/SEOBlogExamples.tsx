@@ -1,6 +1,10 @@
 import React from 'react'
 import { Box, Container, Typography, useTheme } from '@mui/material'
 import SocialMediaPostImage from '@/components/SocialMediaPostImage';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 
 const seoBlogs = [{
@@ -51,11 +55,35 @@ function SEOBlogExamples() {
                     </Typography>
                 </Box>
 
-                <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 4, mb: 16 }}>
+                <Box >
+                    <Swiper
+                        modules={[Autoplay]}
+                        spaceBetween={16}
+                        autoplay={{
+                            delay: 5000,
+                            pauseOnMouseEnter: true,
+                        }}
+                        speed={200}
+                        slidesPerView={1}
+                        breakpoints={{
+                            576: {
+                                slidesPerView: 2
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        }}
+                        loop={true}
+                        style={{ overflow: 'unset' }}
+                    >
 
-                    {seoBlogs.map((blog, index) => (
-                        <SocialMediaPostImage blogCategory={blog.blogCategory} wordCount={blog.wordCount} isBlog key={index} isStory={false} disableBottomBar cardImage={blog.image} modalDesc={blog.modalDesc} modalTitle={blog.modalTitle} articleExcerpt={truncateText(blog.articleExcerpt, 10)} />
-                    ))}
+                        {seoBlogs.map((blog, index) => (
+                            <SwiperSlide key={index} style={{ maxHeight: 'auto', aspectRatio: 9 / 16, borderRadius: 16, overflow: 'hidden' }}>
+                                <SocialMediaPostImage blogCategory={blog.blogCategory} wordCount={blog.wordCount} isBlog key={index} isStory={false} disableBottomBar cardImage={blog.image} modalDesc={blog.modalDesc} modalTitle={blog.modalTitle} articleExcerpt={truncateText(blog.articleExcerpt, 10)} />
+
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </Box>
             </Container>
         </Box>

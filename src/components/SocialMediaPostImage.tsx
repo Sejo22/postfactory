@@ -58,7 +58,7 @@ export default function SocialMediaPostImage({ blogCategory, wordCount, cardImag
             width: { xs: '90%', md: '60%' },
             maxHeight: '80vh',
             overflow: 'auto',
-            p: 4,
+            px: 4,
             bgcolor: 'background.paper',
             borderRadius: { xs: 2, md: 4 },
             '&::-webkit-scrollbar': {
@@ -68,7 +68,7 @@ export default function SocialMediaPostImage({ blogCategory, wordCount, cardImag
         return (
             <Modal open={openBlog} onClose={handleCloseBlog}>
                 <Box sx={style}>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4, position: 'sticky', top: 0, background: '#fff', py: 2 }}>
                         <Typography component={'div'} variant='h6' sx={{ fontWeight: 700, color: '#4C76ED' }} >{modalTitle}</Typography>
 
 

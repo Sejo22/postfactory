@@ -77,11 +77,32 @@ const storiesPlans = [
 
 const carouselPlans = [
     {
-        title: 'Standard',
-        description: 'Up to 8 slides',
-        price: '9.99',
+        title: '2 Instagram Carousel Posts',
+        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        price: '9.99/month',
         link: '#'
-    }
+    },
+    {
+        title: '4 Instagram Carousel Posts',
+        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        price: '18.99/month',
+        link: '#'
+    }, {
+        title: '6 Instagram Carousel Posts',
+        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        price: '27.99/month',
+        link: '#'
+    }, {
+        title: '8 Instagram Carousel Posts',
+        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        price: '36.99/month',
+        link: '#'
+    }, {
+        title: '10 Instagram Carousel Posts',
+        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        price: '45.99/month',
+        link: '#'
+    },
 ]
 
 
@@ -121,9 +142,9 @@ export default function PricingTabs() {
                 </Box>
                 <CustomTabPanel value={value} index={0}>
                     <Grid container spacing={4}  >
-                        <Grid item xs={12} md={8}>
+                        <Grid item xs={12} md={8} sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr ' }, gap: 2 }}>
                             {reelsPlans.map((reels, index) => (
-                                <Box sx={{ mb: 4 }} key={index} >
+                                <Box key={index} >
                                     <SocialPostsAdditonal serviceDescription={reels.description} servicePrice={reels.price} serviceTitle={reels.title} />
                                 </Box>
 
@@ -143,9 +164,9 @@ export default function PricingTabs() {
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
                     <Grid container spacing={4}  >
-                        <Grid item xs={12} md={8}>
+                        <Grid item xs={12} md={8} sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr ' }, gap: 2 }}>
                             {storiesPlans.map((stories, index) => (
-                                <Box sx={{ mb: 4 }} key={index}>
+                                <Box key={index}>
                                     <SocialPostsAdditonal serviceDescription={stories.description} servicePrice={stories.price} serviceTitle={stories.title} />
                                 </Box>
 
@@ -165,9 +186,9 @@ export default function PricingTabs() {
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
                     <Grid container spacing={4}  >
-                        <Grid item xs={12} md={8}>
+                        <Grid item xs={12} md={8} sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr ' }, gap: 2 }}>
                             {carouselPlans.map((carousel, index) => (
-                                <Box sx={{ mb: 4 }} key={index}>
+                                <Box key={index}>
                                     <SocialPostsAdditonal serviceDescription={carousel.description} servicePrice={carousel.price} serviceTitle={carousel.title} />
                                 </Box>
 
@@ -187,6 +208,6 @@ export default function PricingTabs() {
                 </CustomTabPanel>
             </Container>
 
-        </Box>
+        </Box >
     );
 }
