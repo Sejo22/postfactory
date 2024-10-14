@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Card, CardMedia, Box, Typography, Modal, Grid, Divider } from '@mui/material'
+import { Card, CardMedia, Box, Typography, Modal, Grid, Divider, Button } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
@@ -8,21 +8,30 @@ import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import { useTheme } from '@mui/material/styles';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import parse from 'html-react-parser';
+import { m } from 'framer-motion';
 
 interface CardDetails {
     cardImage: string;
     modalDesc: string;
     modalTitle?: string;
     categoryName?: string;
+    articleExcerpt?: string;
+    wordCount?: string;
+    blogCategory?: string
     disableBottomBar?: boolean;
     isStory?: boolean;
+    isBlog?: boolean;
+    isWebdesign?: boolean;
 }
 
-export default function SocialMediaPostImage({ cardImage, modalDesc, disableBottomBar, isStory }: CardDetails) {
+export default function SocialMediaPostImage({ blogCategory, wordCount, cardImage, modalTitle, modalDesc, disableBottomBar, isStory, isBlog, articleExcerpt }: CardDetails) {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
+    const [openBlog, setOpenBlog] = useState(false);
     const handleOpen = () => setOpen(true);
+    const handleOpenBlog = () => setOpenBlog(true);
     const handleClose = () => setOpen(false);
+    const handleCloseBlog = () => setOpenBlog(false);
     const style = {
         position: 'absolute' as 'absolute',
         top: '50%',
@@ -37,8 +46,49 @@ export default function SocialMediaPostImage({ cardImage, modalDesc, disableBott
             display: 'none'
         }
     };
+
+    const BlogModal = () => {
+        const style = {
+            position: 'absolute' as 'absolute',
+            top: '50%',
+            left: '50%',
+            // display: 'flex',
+            // alignItems: 'center',
+            transform: 'translate(-50%, -50%)',
+            width: { xs: '90%', md: '60%' },
+            maxHeight: '80vh',
+            overflow: 'auto',
+            p: 4,
+            bgcolor: 'background.paper',
+            borderRadius: { xs: 2, md: 4 },
+            '&::-webkit-scrollbar': {
+                display: 'none'
+            }
+        };
+        return (
+            <Modal open={openBlog} onClose={handleCloseBlog}>
+                <Box sx={style}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
+                        <Typography component={'div'} variant='h6' sx={{ fontWeight: 700, color: '#4C76ED' }} >{modalTitle}</Typography>
+
+
+                        <Box onClick={handleCloseBlog} sx={{
+                            color: '#4C76ED', background: '#4C76ED22', borderRadius: 8, width: 20, height: 20, p: 1, display: 'grid', placeContent: 'center', cursor: 'pointer'
+                        }}>
+                            <CloseRoundedIcon />
+                        </Box>
+                    </Box>
+
+                    <Box sx={{ '& :not(p)': { color: '#222', mb: 1 }, '& p': { mb: 2, color: theme.palette.primary.text }, '& img': { mb: 2, maxWidth: '100%' } }}> {parse(modalDesc)}</Box>
+                </Box>
+            </Modal>
+        )
+    }
+
+
     return (<>
         <Card className='card__wrapper' sx={{ position: 'relative', boxShadow: '0 4px 24px -4px rgba(0,0,0,.2)', borderRadius: 4, aspectRatio: isStory ? 9 / 16 : undefined }}>
+            <Box sx={{ display: isBlog ? 'flex' : 'none', background: '#4C76ED', color: '#fff', position: 'absolute', top: 0, right: 0, m: 2, px: 2, py: 1, borderRadius: 100, fontWeight: 500, fontSize: 14, textTransform: 'uppercase' }}>{blogCategory}</Box>
             <CardMedia
                 component={'img'}
                 // height={{ xs: '345', md: '30' }}
@@ -47,7 +97,7 @@ export default function SocialMediaPostImage({ cardImage, modalDesc, disableBott
                 alt='img'
             />
             <Box sx={{
-                display: 'grid', position: 'absolute', top: '0', left: '0', width: '100%', height: disableBottomBar ? '100%' : 'calc(100% - 56px)', background: 'rgba(66,133,244,.8)', placeContent: 'center', pointerEvents: 'none', opacity: 0, transition: 'all ease .2s',
+                display: isBlog ? 'none' : 'grid', position: 'absolute', top: '0', left: '0', width: '100%', height: disableBottomBar ? '100%' : 'calc(100% - 56px)', background: 'rgba(66,133,244,.8)', placeContent: 'center', pointerEvents: 'none', opacity: 0, transition: 'all ease .2s',
                 '.card__wrapper:hover &': {
                     opacity: 1,
                     pointerEvents: 'all',
@@ -76,7 +126,20 @@ export default function SocialMediaPostImage({ cardImage, modalDesc, disableBott
                 </Box>
 
             </Box>
+            {isBlog === true ? (
+                <Box sx={{ p: 2 }}>
+                    <Typography variant='body1' gutterBottom sx={{ fontWeight: 700 }}>{modalTitle}</Typography>
+                    <Typography variant='body2' sx={{ mb: 4 }} >{parse(articleExcerpt ?? '')}</Typography>
+                    <Typography variant='body1' sx={{ fontWeight: 500 }}>{wordCount}</Typography>
+                    <Button onClick={handleOpenBlog} variant='contained' size='small' sx={{ mt: 1, width: '100%' }}>Read More</Button>
+                </Box>
+            ) : (
+                undefined
+            )}
+
         </Card >
+
+        <BlogModal />
 
         <Modal open={open} onClose={handleClose} >
             <Box sx={style}>

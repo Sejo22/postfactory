@@ -37,7 +37,7 @@ function ReelsExamples() {
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}
-                        speed={5000}
+                        speed={15000}
                         slidesPerView={1}
                         breakpoints={{
                             576: {
@@ -52,7 +52,7 @@ function ReelsExamples() {
                     >
 
                         {videos.map((video, index) => (
-                            <SwiperSlide key={index} style={{ maxHeight: 'auto', aspectRatio: 9 / 16 }}>
+                            <SwiperSlide key={index} style={{ maxHeight: 'auto', aspectRatio: 9 / 16, borderRadius: 16, overflow: 'hidden' }}>
                                 <Video path={video} />
                             </SwiperSlide>
                         ))}

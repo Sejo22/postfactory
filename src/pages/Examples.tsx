@@ -15,6 +15,7 @@ import PostExamples from '@/sections/examples/PostExamples'
 import StoryExamples from '@/sections/examples/StoryExamples'
 import ReelsExamples from '@/sections/examples/ReelsExamples'
 import WebsiteExamples from '@/sections/examples/WebDesignExamples'
+import SEOBlogExamples from '@/sections/examples/SEOBlogExamples'
 
 
 const styles =
@@ -69,6 +70,7 @@ export default function Examples() {
             <PostExamples />
             <StoryExamples />
             <ReelsExamples />
+            <SEOBlogExamples />
             <WebsiteExamples />
             <CTA />
 

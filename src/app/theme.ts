@@ -20,7 +20,7 @@ export const themeOptions: ThemeOptions = {
     mode: "light",
     primary: {
       main: "#09050e",
-      accentGradient: "linear-gradient(90deg,#4c76ed, #7832D1)",
+      accentGradient: "#4c76ed",
       iconColor: "#4c76ed",
       text: "#666",
     },

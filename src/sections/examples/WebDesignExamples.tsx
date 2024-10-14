@@ -5,21 +5,21 @@ import SocialMediaPostImage from '@/components/SocialMediaPostImage';
 
 const websites = [{
     image: 'assets/website1.png',
-    modalTitle: 'This is Title for card 1',
+    modalTitle: 'Assetise',
     modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
 },
 {
     image: 'assets/website2.png',
-    modalTitle: 'This is Title for card 2',
+    modalTitle: 'Conditionalis',
     modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
 }, {
     image: 'assets/website3.png',
-    modalTitle: 'This is Title for card 1',
+    modalTitle: 'Flexlists',
     modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
 },
 {
     image: 'assets/website4.png',
-    modalTitle: 'This is Title for card 2',
+    modalTitle: 'Quantum Innovations',
     modalDesc: "Explore our gallery of captivating static social media posts, complete with compelling captions and targeted hashtags, expertly designed to boost engagement and amplify your brand's message across platforms.",
 }]
 
@@ -43,7 +43,7 @@ function WebsiteExamples() {
                 <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', md: '1fr 1fr 1fr 1fr' }, gap: 4, mb: 16 }}>
 
                     {websites.map((website, index) => (
-                        <SocialMediaPostImage key={index} isStory={false} disableBottomBar cardImage={website.image} modalDesc={website.modalDesc} modalTitle={website.modalTitle} />
+                        <SocialMediaPostImage isWebdesign key={index} isStory={false} disableBottomBar cardImage={website.image} modalDesc={website.modalDesc} modalTitle={website.modalTitle} />
                     ))}
                 </Box>
             </Container>
