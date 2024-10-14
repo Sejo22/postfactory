@@ -78,7 +78,7 @@ function SEOBlogExamples() {
                     >
 
                         {seoBlogs.map((blog, index) => (
-                            <SwiperSlide key={index} style={{ maxHeight: 'auto', aspectRatio: 9 / 16, borderRadius: 16, overflow: 'hidden' }}>
+                            <SwiperSlide key={index} style={{ maxHeight: 'auto', borderRadius: 16 }}>
                                 <SocialMediaPostImage blogCategory={blog.blogCategory} wordCount={blog.wordCount} isBlog key={index} isStory={false} disableBottomBar cardImage={blog.image} modalDesc={blog.modalDesc} modalTitle={blog.modalTitle} articleExcerpt={truncateText(blog.articleExcerpt, 10)} />
 
                             </SwiperSlide>
