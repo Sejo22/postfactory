@@ -24,7 +24,7 @@ interface CardDetails {
     isWebdesign?: boolean;
 }
 
-export default function SocialMediaPostImage({ blogCategory, wordCount, cardImage, modalTitle, modalDesc, disableBottomBar, isStory, isBlog, articleExcerpt }: CardDetails) {
+export default function SocialMediaPostImage({ isWebdesign, blogCategory, wordCount, cardImage, modalTitle, modalDesc, disableBottomBar, isStory, isBlog, articleExcerpt }: CardDetails) {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [openBlog, setOpenBlog] = useState(false);
@@ -95,6 +95,9 @@ export default function SocialMediaPostImage({ blogCategory, wordCount, cardImag
                 // image='https://postfactory.co/wp-content/uploads/elementor/thumbs/2-45-qoiyeh9pnnnnknkk4efwlj5wwlkyj1wu91p02pbov4.webp'
                 image={cardImage}
                 alt='img'
+                sx={{
+                    width: '100%', height: isStory || isWebdesign ? '100%' : 'calc(100% - 56px)'
+                }}
             />
             <Box sx={{
                 display: isBlog ? 'none' : 'grid', position: 'absolute', top: '0', left: '0', width: '100%', height: disableBottomBar ? '100%' : 'calc(100% - 56px)', background: 'rgba(66,133,244,.8)', placeContent: 'center', pointerEvents: 'none', opacity: 0, transition: 'all ease .2s',

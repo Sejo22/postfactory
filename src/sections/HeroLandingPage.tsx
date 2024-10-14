@@ -52,7 +52,7 @@ export default function HeroLandingPage() {
                             <Typography variant='body2' gutterBottom>Supported social media channels</Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 2, mt: 1 }}>
                                 {channels.map((channel, index) => (
-                                    <Box component={'img'} src={channel.src} key={index} sx={{ maxWidth: 32 }} />
+                                    <Box component={'img'} src={channel.src} key={index} sx={{ width: 32, height: 32, maxWidth: 32 }} />
                                 ))}
                             </Box>
                         </Box>

@@ -116,7 +116,7 @@ export default function Header() {
                     component='img'
                     src='./assets/headerLogo.png'
                     alt="Logo"
-                    sx={{ maxHeight: 48, transition: 'max-height ease .2s' }}
+                    sx={{ maxHeight: 48, transition: 'max-height ease .2s', width: 180 }}
                 />
             </Link>
 
@@ -176,7 +176,7 @@ export default function Header() {
                                 component='img'
                                 src='./assets/headerLogo.png'
                                 alt="Logo"
-                                sx={{ maxHeight: { xs: 36, sm: 40, md: 48, lg: 56 }, transition: 'max-height ease .2s' }}
+                                sx={{ width: { xs: 150, md: 180 }, maxHeight: 'auto', transition: 'max-height ease .2s' }}
                             />
                         </Link>
 

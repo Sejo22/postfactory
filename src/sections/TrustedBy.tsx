@@ -62,7 +62,7 @@ function TrustedBy() {
                                 component={'img'}
                                 src={brand}
                                 sx={{
-                                    // width: '80px',
+                                    width: '90px',
                                     height: '100%',
                                     flexShrink: 0,
                                     opacity: .5,
@@ -81,7 +81,7 @@ function TrustedBy() {
                                 src={brand}
 
                                 sx={{
-                                    // width: '80px',
+                                    width: '90px',
                                     height: '100%',
                                     flexShrink: 0,
                                     opacity: .5,
