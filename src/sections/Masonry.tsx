@@ -1,12 +1,21 @@
-import React from 'react'
-import { Box, Container, Grid, Paper, Typography } from '@mui/material';
+import React, { useRef, useEffect, useState } from 'react'
+import { Box, Container, Grid, Paper, Typography, useTheme } from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
 import CloseIcon from '@mui/icons-material/Close';
 import DoneIcon from '@mui/icons-material/Done';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
+
 interface ItemProps {
-    title: string
+    title: string;
+}
+
+interface MemberProps {
+    memberName: string;
+    memberPosition: string;
+    memberAvatar: string;
+    cardTopPosition: number;
+    cardLeftPosition: number;
 }
 
 const pillStyle = {
@@ -57,7 +66,91 @@ const SubscriptionModel = ({ title }: ItemProps) => {
     )
 }
 
+const MembersCard = ({ memberAvatar, memberName, memberPosition, cardLeftPosition, cardTopPosition }: MemberProps) => {
+    const theme = useTheme();
+
+
+    return (
+        <Box sx={{ background: theme.palette.primary.iconColor, display: 'inline-flex', flexDirection: { xs: 'row', lg: 'column' }, alignItems: 'center', borderRadius: 4, p: { xs: 1, lg: 2 }, position: { xs: 'initial', lg: 'absolute' }, top: { xs: 'initial', lg: `${cardTopPosition}px` }, left: { xs: 'initial', lg: `${cardLeftPosition}%` }, width: { xs: '100%', sm: 'auto', lg: 80 }, gap: 1 }}>
+            <Box component={'img'} src={memberAvatar} sx={{ width: 64, height: 64, borderRadius: 80, border: 'solid 1px #fff' }} />
+            <Box>
+                <Typography variant='body1' sx={{ color: '#fff', textAlign: { xs: 'left', lg: 'center' } }}><b>{memberName}</b></Typography>
+                <Typography variant='body2' sx={{ color: '#fff', textAlign: { xs: 'left', lg: 'center' } }}>{memberPosition}</Typography>
+            </Box>
+        </Box>
+    )
+}
+const members = [
+    {
+        memberAvatar: 'assets/Isabella.jpg',
+        memberName: 'Stephan',
+        memberPosition: 'Designer',
+        cardTopPosition: 144,
+        cardLeftPosition: 10,
+    },
+    {
+        memberAvatar: 'assets/Isabella.jpg',
+        memberName: 'Ava',
+        memberPosition: 'Account Manager',
+        cardTopPosition: 72,
+        cardLeftPosition: 45,
+    },
+    {
+        memberAvatar: 'assets/Isabella.jpg',
+        memberName: 'Liam',
+        memberPosition: 'Designer',
+        cardTopPosition: 56,
+        cardLeftPosition: 75,
+    },
+    {
+        memberAvatar: 'assets/Isabella.jpg',
+        memberName: 'Lucas',
+        memberPosition: 'Designer',
+        cardTopPosition: 350,
+        cardLeftPosition: 10,
+    },
+    {
+        memberAvatar: 'assets/Isabella.jpg',
+        memberName: 'Mia',
+        memberPosition: 'Designer',
+        cardTopPosition: 300,
+        cardLeftPosition: 35,
+    },
+    {
+        memberAvatar: 'assets/Isabella.jpg',
+        memberName: 'Grace',
+        memberPosition: 'Content Strategist',
+        cardTopPosition: 250,
+        cardLeftPosition: 56,
+    },
+    {
+        memberAvatar: 'assets/Isabella.jpg',
+        memberName: 'Oliver',
+        memberPosition: 'Account Manager',
+        cardTopPosition: 350,
+        cardLeftPosition: 78,
+    },
+]
+
 export default function Masonry() {
+    const gridRef = useRef()
+    const [gridWidth, setGridWidth] = useState(0)
+
+    useEffect(() => {
+        if (gridRef.current) {
+            setGridWidth(gridRef.current.offsetWidth);
+        }
+        const handleResize = () => {
+            if (gridRef.current) {
+                setGridWidth(gridRef.current.offsetWidth);
+            }
+        }
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [])
     return (
         <Container maxWidth='lg' sx={{ paddingBlock: 8, }}>
             <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
@@ -69,10 +162,22 @@ export default function Masonry() {
             </Typography>
             <Box sx={{ pt: 8 }}>
                 <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 4 }}>
-                    <Box sx={{ p: 4, flex: ' 1 ', minHeight: 320, aspectRatio: 1 / 1, backgroundImage: 'url(assets/earth.png)', backgroundSize: 'cover', backgroundPosition: 'left', borderRadius: 4, backgroundRepeat: 'no-repeat' }}>
+                    <Box ref={gridRef} sx={{ p: 4, flex: ' 1 ', minHeight: 320, aspectRatio: { xs: 'unset', lg: 1 / 1 }, backgroundImage: 'url(assets/earth.png)', backgroundSize: 'cover', backgroundPosition: 'left', borderRadius: 4, backgroundRepeat: 'no-repeat', position: 'relative' }}>
+                        <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content', boxShadow: '0 8px 16px -4px rgba(0,0,0,.2)' } }}>Worldwide talent</Box>
+                        {/* TEAM MEMBERS */}
+                        <Box sx={{ display: { xs: 'flex', lg: 'initial' }, flexWrap: 'wrap', gap: 4, mt: { xs: 4, lg: 'initial' } }}>
+                            {members.map((member, index) => (
+                                <MembersCard key={index} memberAvatar={member.memberAvatar} memberName={member.memberName} memberPosition={member.memberPosition} cardLeftPosition={member.cardLeftPosition} cardTopPosition={member.cardTopPosition} />
+                            ))}
+                        </Box>
+
+
+
                     </Box>
+
+
                     <Box sx={{ p: 4, flex: '1', background: 'linear-gradient(225deg,#E9D3C8,#FAF9F7)', borderRadius: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>The traditional method</Box>
+                        <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content', boxShadow: '0 8px 16px -4px rgba(0,0,0,.2)' } }}>The traditional method</Box>
                         <Typography component={'div'} variant='h3' gutterBottom>Wave goodbye to:</Typography>
                         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 4 }}>
                             {waveItems.map((title, index) => (
@@ -84,7 +189,7 @@ export default function Masonry() {
 
                 <Box sx={{ display: 'flex', gap: 4, flexDirection: { xs: 'column', md: 'row' } }}>
                     <Box sx={{ p: 4, flex: '1', background: 'linear-gradient(180deg,#DDF5FF,#FAF9F7)', height: '100%', borderRadius: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>Collaboration</Box>
+                        <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content', boxShadow: '0 8px 16px -4px rgba(0,0,0,.2)' } }}>Collaboration</Box>
                         <Typography component={'div'} variant='h3' gutterBottom>Seamless client interaction:</Typography>
                         <Box sx={{ background: 'white', p: 2 }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
@@ -126,7 +231,7 @@ export default function Masonry() {
                     </Box>
                     <Box sx={{ backgroundImage: 'url(assets/featuresbg4.png)', backgroundSize: 'cover', minHeight: 60, flex: 2, borderRadius: 4 }}>
                         <Box sx={{ p: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                            <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content' } }}>Subscription based</Box>
+                            <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content', boxShadow: '0 8px 16px -4px rgba(0,0,0,.2)' } }}>Subscription based</Box>
                             <Typography component={'div'} variant='h3' gutterBottom>Simple subscription model:</Typography>
                             <Box sx={{ position: 'relative', m: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 2 }}>
                                 <Box component={'img'} src='assets/calendar.png' sx={{ maxWidth: { xs: '100%', md: '75%' } }} />
