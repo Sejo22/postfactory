@@ -133,7 +133,7 @@ const members = [
 ]
 
 export default function Masonry() {
-    const gridRef = useRef()
+    const gridRef = useRef<HTMLDivElement>(null)
     const [gridWidth, setGridWidth] = useState(0)
 
     useEffect(() => {
