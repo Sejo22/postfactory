@@ -15,12 +15,11 @@ interface ServicesHeroProps {
 
 export default function ServicesHero({ title, link, serviceFeature, video }: ServicesHeroProps) {
 
-    const features = ['feature', 'feature']
     const theme = useTheme()
     return (
         <Box sx={{ mt: 4, minHeight: '60svh', alignItems: 'center', display: 'flex' }}>
             <Container maxWidth='lg' >
-                <Grid container columnSpacing={18} sx={{ alignItems: 'center' }}>
+                <Grid container spacing={6} sx={{ alignItems: 'center' }}>
                     <Grid item xs={12} md={6}>
                         <Typography variant='h1' sx={{ mb: 2 }} >
                             {title}
