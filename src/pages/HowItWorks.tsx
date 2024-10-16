@@ -26,7 +26,7 @@ const styles =
 
 const serviceHeroDetails = {
     title: 'From Concept to Completion.',
-    description: <span>Everything you need to know about purchasing and utilizing our services is demonstrated in the video.<br /><br /> For any additional questions, feel free to reach out to us through our contact form.</span>,
+    features: ['feature', 'feature', 'feature'],
     link: '#',
 }
 
@@ -57,7 +57,7 @@ export default function HowItWorks() {
 
             <ServicesHero
                 title={serviceHeroDetails.title}
-                description={serviceHeroDetails.description}
+                serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}
                 video={true}
             />

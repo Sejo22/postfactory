@@ -26,7 +26,7 @@ const styles =
 
 const serviceHeroDetails = {
     title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
-    description: 'Well-designed website not only attracts attention but also communicates professionalism, credibility, and reliability to your audience.',
+    features: ['feature', 'feature', 'feature'],
     link: '#',
     image: './assets/webDesignService.gif'
 }
@@ -100,7 +100,7 @@ export default function SocialPosts() {
 
             <ServicesHero
                 title={serviceHeroDetails.title}
-                description={serviceHeroDetails.description}
+                serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}
                 image={serviceHeroDetails.image}
             />

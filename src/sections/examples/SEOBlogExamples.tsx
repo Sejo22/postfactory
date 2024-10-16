@@ -45,8 +45,8 @@ function SEOBlogExamples() {
 
     return (
         <Box>
-            <Container maxWidth='lg'>
-                <Box sx={{ margin: '64px auto 0 auto', maxWidth: { xs: '100%', md: '75%' }, py: 8 }}>
+            <Container maxWidth='lg' sx={{ py: 8 }}>
+                <Box sx={{ m: '0 auto', maxWidth: { xs: '100%', md: '75%' }, py: 8 }}>
                     <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
                         SEO Blog Examples
                     </Typography>
@@ -58,7 +58,7 @@ function SEOBlogExamples() {
                 <Box >
                     <Swiper
                         modules={[Autoplay]}
-                        spaceBetween={16}
+                        spaceBetween={32}
                         autoplay={{
                             delay: 5000,
                             pauseOnMouseEnter: true,

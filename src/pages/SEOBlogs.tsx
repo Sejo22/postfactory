@@ -9,6 +9,13 @@ import BrushIcon from '@mui/icons-material/Brush';
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import { Grid, Container, Box, useTheme, Typography } from '@mui/material'
 import PricingWithFeatures from '@/components/PricingWithFeatures'
+import SEOBlogExamples from '@/sections/examples/SEOBlogExamples'
+import FaqLandingPage from '@/sections/FaqLandingPage'
+import Reviews from '@/sections/Reviews'
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import DoneIcon from '@mui/icons-material/Done';
+import PaidIcon from '@mui/icons-material/Paid';
 
 
 const styles =
@@ -26,7 +33,7 @@ const styles =
 
 const serviceHeroDetails = {
     title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
-    description: 'Well-designed website not only attracts attention but also communicates professionalism, credibility, and reliability to your audience.',
+    features: ['feature', 'feature', 'feature'],
     link: '#',
     image: './assets/webDesignService.gif'
 }
@@ -91,6 +98,34 @@ const pricingPlans = [
 ]
 
 
+const iconStyle = {
+    color: '#4C76ED',
+    fontSize: 40
+}
+
+
+
+const blogFeaturesCards = [
+    { icon: <FavoriteIcon sx={iconStyle} />, feature: 'Get Qualified Buyers' },
+    { icon: <KeyboardDoubleArrowUpIcon sx={iconStyle} />, feature: 'Rank Higher on Google' },
+    { icon: <DoneIcon sx={iconStyle} />, feature: 'Get Verified on Social' },
+    { icon: <PaidIcon sx={iconStyle} />, feature: 'Increase Sales' },
+]
+
+const BlogFeatures = ({ feature, icon }: { feature: string, icon: any; }) => {
+    const theme = useTheme()
+    return (
+        <Box sx={{ borderRadius: 4, transition: 'all ease .2s', p: 2, flex: 1, display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center' }}>
+            <Box sx={{ background: '#fff', borderRadius: 1, p: 1, display: 'grid', placeContent: 'center' }}>
+                {icon}
+            </Box>
+            <Typography variant='body1' sx={{ color: theme.palette.primary.main, fontWeight: 700, textAlign: 'center' }} >{feature}</Typography>
+        </Box>
+    )
+
+}
+
+
 
 
 export default function SocialPosts() {
@@ -100,7 +135,7 @@ export default function SocialPosts() {
 
             <ServicesHero
                 title={serviceHeroDetails.title}
-                description={serviceHeroDetails.description}
+                serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}
                 image={serviceHeroDetails.image}
             />
@@ -136,7 +171,32 @@ export default function SocialPosts() {
                         </Grid>
                     ))}
                 </Grid>
+
+
+
             </Container>
+            <Box sx={{ backgroundColor: 'rgba(76,118,237,.15)', py: 4 }}>
+                <Container maxWidth='lg' >
+                    <Typography variant='h3' textAlign={'center'} gutterBottom>
+                        Why you need SEO blogs?
+                    </Typography>
+                    <Typography textAlign={'center'} color={'#222'} variant='body1' gutterBottom>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque?
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 4, justifyContent: 'space-between', mt: 4 }}>
+                        {blogFeaturesCards.map((card, index) => (
+                            <BlogFeatures key={index} icon={card.icon} feature={card.feature} />
+                        ))}
+                    </Box>
+                </Container>
+            </Box>
+            <SEOBlogExamples />
+
+            <Reviews />
+
+            <FaqLandingPage />
+
+
 
             {/* <FaqSocialPosts /> */}
             <CTA />

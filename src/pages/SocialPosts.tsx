@@ -25,9 +25,9 @@ const styles =
 
 const serviceHeroDetails = {
     title: 'Affordable social media management: Start boosting your brand from $89.99!',
-    description: 'High-quality social media content, customized for your business and posted with your approval. Save 10+ hours each week with Post Factory!',
     link: '#',
-    image: './assets/socialPostsGIF.gif'
+    image: './assets/socialPostsGIF.webp',
+    features: ['feature', 'feature', 'feature']
 }
 
 const serviceFeatureDetails = [
@@ -99,7 +99,7 @@ export default function SocialPosts() {
         <>
             <ServicesHero
                 title={serviceHeroDetails.title}
-                description={serviceHeroDetails.description}
+                serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}
                 image={serviceHeroDetails.image}
             />

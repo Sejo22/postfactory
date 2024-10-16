@@ -45,7 +45,7 @@ function Reviews() {
     const theme = useTheme();
 
     return (
-        <Container maxWidth='lg'>
+        <Container maxWidth='lg' sx={{ py: 8 }}>
             <Box sx={{
                 py: 8
             }}>
