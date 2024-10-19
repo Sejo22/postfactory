@@ -27,7 +27,7 @@ const serviceHeroDetails = {
     title: 'Professional Social Media Management from $99.99/month',
     link: '#',
     image: './assets/socialPostsGIF.webp',
-    features: ['<strong>High-Quality</strong> Content Created by Experts', 'Analytics & Reporting', 'Multi-Platform Management']
+    features: ['<strong>High-Quality</strong> Content Created by Experts', '<strong>Analytics & Reporting</strong> on Key Metrics', 'Multi-Platform <strong>Management and Optimization</strong>']
 }
 
 const serviceFeatureDetails = [
@@ -50,42 +50,48 @@ const serviceFeatureDetails = [
 
 const pricingPlans = [
     {
-        title: 'Essential Suite',
-        price: '89.99',
+        title: 'Beginner Package',
+        price: '99.99',
         features: [
-            '10 posts',
-            'Up to 2 revisions per post',
-            'Captions',
-            'AI – analyzed, engagement hashtags',
-            'One free scheduling channel',
+            '10 Static Posts',
+            'Engaging Captions',
+            'AI – Analyzed, Engagement Hashtags',
+            'Content Calendar',
+            'Unlimited Revisions',
+            'One Free Scheduling Channel',
+            'No Hidden Costs',
             'Feed preview',
         ],
         link: '#',
         isStrikethrough: true,
     },
     {
-        title: 'Executive Package',
-        price: '159.99',
+        title: 'Standard Package',
+        price: '189.99',
         features: [
-            '10 posts',
-            'Up to 2 revisions per post',
-            'Captions',
-            'AI – analyzed, engagement hashtags',
+            '20 Static Posts',
+            'Engaging Captions',
+            'AI – Analyzed, Engagement Hashtagss',
+            'Content Calendar',
+            'Unlimited Revisions',
             'One free scheduling channel',
+            'No Hidden Costs',
             'Feed preview',
         ],
         link: '#',
         isStrikethrough: true,
     },
     {
-        title: 'Elite Portfolio',
-        price: '259.99',
+        title: 'Premium Package',
+        price: '279.99',
         features: [
-            '10 posts',
-            'Up to 2 revisions per post',
-            'Captions',
-            'AI – analyzed, engagement hashtags',
+            '30 Static Posts',
+            'Engaging Captions',
+            'AI – Analyzed, Engagement Hashtags',
+            'Content Calendar',
+            'Unlimited Revisions',
             'One free scheduling channel',
+            'No Hidden Costs',
             'Feed preview',
         ],
         link: '#',
