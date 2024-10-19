@@ -19,7 +19,7 @@ export default function PricingWithFeatures({ serviceTitle, servicePrice, servic
             <Card variant='outlined' sx={{ position: 'relative', transition: 'all ease .2s', p: 2, borderRadius: 4, '&:hover': { borderColor: theme.palette.primary.iconColor, boxShadow: '0 24px 24px -8px rgba(0,0,0,.1)', transform: 'translateY(-8px)' } }} >
                 <CardContent >
                     <Typography variant='h6' gutterBottom>{serviceTitle}</Typography>
-                    <Typography variant='caption' gutterBottom>Starting from</Typography>
+                    {/* {!monthly && <Typography variant='caption' gutterBottom>Starting from</Typography>} */}
                     <Typography component={'div'} sx={{ display: 'flex', alignItems: 'center', gap: .7 }} variant='h5'>
                         ${servicePrice}
                         {monthly && (

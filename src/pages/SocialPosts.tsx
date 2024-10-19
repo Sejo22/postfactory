@@ -9,6 +9,8 @@ import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import { Grid, Container, Box, useTheme, Typography } from '@mui/material';
 import PricingWithFeatures from '@/components/PricingWithFeatures'
 import PricingTabs from '@/components/PricingTabs'
+import PostExamples from '@/sections/examples/PostExamples'
+import Masonry from '@/sections/Masonry'
 
 const styles =
 {
@@ -125,6 +127,8 @@ export default function SocialPosts() {
                     </Grid>
                 </Container>
             </Box>
+            <PostExamples />
+
             <Container maxWidth='lg'>
                 <Box sx={{ textAlign: 'center', my: 8 }}>
                     <Typography variant='h3' gutterBottom>Choose your social media package</Typography>
@@ -144,6 +148,7 @@ export default function SocialPosts() {
                 </Grid>
             </Container>
             <PricingTabs />
+            <Masonry />
             <FaqSocialPosts />
             <CTA />
 
