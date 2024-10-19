@@ -106,7 +106,7 @@ export const themeOptions: ThemeOptions = {
         root: {
           boxShadow: "none",
           borderRadius: 8,
-          textTransform: "capitalize",
+          textTransform: "initial",
           fontWeight: 500,
           fontSize: 15,
           paddingInline: "32px",

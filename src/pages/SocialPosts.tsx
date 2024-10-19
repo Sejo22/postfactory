@@ -98,6 +98,7 @@ export default function SocialPosts() {
     return (
         <>
             <ServicesHero
+                isSocialPosts
                 title={serviceHeroDetails.title}
                 serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}

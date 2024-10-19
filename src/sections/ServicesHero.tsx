@@ -10,10 +10,21 @@ interface ServicesHeroProps {
     link: string;
     image?: string;
     video?: boolean;
+    isSocialPosts?: boolean;
 }
 
+const channels = [
+    { src: 'assets/facebookSVG.svg' },
+    { src: 'assets/instagramSVG.svg' },
+    { src: 'assets/linkedinSVG.svg' },
+    { src: 'assets/pinterestSVG.svg' },
+    { src: 'assets/youtubeSVG.svg' },
+    { src: 'assets/tiktokSVG.svg' },
+    { src: 'assets/twitterSVG.svg' },
+]
 
-export default function ServicesHero({ title, link, serviceFeature, video }: ServicesHeroProps) {
+
+export default function ServicesHero({ title, link, serviceFeature, video, isSocialPosts }: ServicesHeroProps) {
 
     const theme = useTheme()
     return (
@@ -37,6 +48,17 @@ export default function ServicesHero({ title, link, serviceFeature, video }: Ser
                         </Box>
 
                         <Button size='large' variant='contained' sx={{ background: theme.palette.primary.accentGradient }} href={link}>Get started</Button>
+                        {isSocialPosts && (
+                            <Box sx={{ mt: 4 }}>
+                                <Typography variant='body2' gutterBottom>Supported social media channels</Typography>
+                                <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 2, mt: 1 }}>
+                                    {channels.map((channel, index) => (
+                                        <Box component={'img'} src={channel.src} key={index} sx={{ width: 32, height: 32, maxWidth: 32 }} />
+                                    ))}
+                                </Box>
+                            </Box>
+                        )}
+
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ justifyContent: 'center', alignItems: 'center' }}>
                         {video ? (

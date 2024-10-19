@@ -1,6 +1,8 @@
 import React from 'react'
 import { Typography, Accordion, AccordionDetails, AccordionSummary, useTheme } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import parse from 'html-react-parser'
+
 
 interface FaqAccordionProps {
     question: string;
@@ -16,7 +18,7 @@ export default function FaqAccordion({ question, answer }: FaqAccordionProps) {
                     <Typography variant='body1' sx={{ color: theme.palette.primary.main, '.MuiAccordionSummary-root.Mui-expanded &': { color: theme.palette.primary.iconColor } }}><strong>{question}</strong></Typography>
                 </AccordionSummary>
                 <AccordionDetails >
-                    <Typography variant='body1'>{answer}</Typography>
+                    <Typography variant='body1'>{parse(answer)}</Typography>
                 </AccordionDetails>
             </Accordion>
         </>
