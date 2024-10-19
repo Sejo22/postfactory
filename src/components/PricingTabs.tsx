@@ -35,42 +35,42 @@ function a11yProps(index: number) {
 
 const reelsPlans = [
     {
-        title: 'Silver',
-        description: '4 Reels per month',
-        price: '89.99',
+        title: '4 Reel Videos',
+        description: 'Short-form videos ranging from 15 to 60 seconds',
+        price: '99.99/month',
         link: '#'
     },
     {
-        title: 'Gold',
-        description: '8 Reels per month',
-        price: '159.99',
+        title: '8 Reel Videos',
+        description: 'Short-form videos ranging from 15 to 60 seconds',
+        price: '189.99/month',
         link: '#'
     },
     {
-        title: 'Platinum',
-        description: '12 Reels per month',
-        price: '259.99',
+        title: '12 Reel Videos',
+        description: 'Short-form videos ranging from 15 to 60 seconds',
+        price: '269.99/month',
         link: '#'
     }
 ]
 
 const storiesPlans = [
     {
-        title: 'Silver',
-        description: '10 stories per month',
-        price: '49.99',
+        title: '10 Instagram Stories',
+        description: 'Increase engagement and connect with your audience',
+        price: '49.99/month',
         link: '#'
     },
     {
-        title: 'Gold',
-        description: '20 stories per month',
-        price: '89.99',
+        title: '20 Instagram Stories',
+        description: 'Increase engagement and connect with your audience',
+        price: '89.99/month',
         link: '#'
     },
     {
-        title: 'Platinum',
-        description: '30 stories per month',
-        price: '129.99',
+        title: '30 Instagram Stories',
+        description: 'Increase engagement and connect with your audience',
+        price: '129.99/month',
         link: '#'
     }
 ]
@@ -78,28 +78,28 @@ const storiesPlans = [
 const carouselPlans = [
     {
         title: '2 Instagram Carousel Posts',
-        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each',
         price: '9.99/month',
         link: '#'
     },
     {
         title: '4 Instagram Carousel Posts',
-        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        description: 'Replace four regular Instagram posts with four carousel posts that have 4-8 posts each',
         price: '18.99/month',
         link: '#'
     }, {
         title: '6 Instagram Carousel Posts',
-        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        description: 'Replace six regular Instagram posts with six carousel posts that have 4-8 posts each',
         price: '27.99/month',
         link: '#'
     }, {
         title: '8 Instagram Carousel Posts',
-        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        description: 'Replace eight regular Instagram posts with eight carousel posts that have 4-8 posts each',
         price: '36.99/month',
         link: '#'
     }, {
         title: '10 Instagram Carousel Posts',
-        description: 'Replace two regular Instagram posts with two carousel posts that have 4-8 posts each.',
+        description: 'Replace ten regular Instagram posts with ten carousel posts that have 4-8 posts each',
         price: '45.99/month',
         link: '#'
     },
@@ -120,10 +120,10 @@ export default function PricingTabs() {
         <Box sx={{ width: '100%' }}>
             <Container maxWidth='lg'>
                 <Box sx={{ textAlign: 'center', my: 8 }}>
-                    <Typography variant='h3' gutterBottom>Additional boost for your content with exclusive add-ons
+                    <Typography variant='h3' gutterBottom>Optional add-ons
                     </Typography>
                     <Typography variant='body1'>
-                        Enhance your engagement with our add-on options: reels, stories, and carousel posts. Customize your package further to capture more attention and engage effectively with your audience!
+                    Boost Your Social Media Engagement with Reels, Stories, and Carousel Posts
                     </Typography>
                 </Box>
 
@@ -151,7 +151,7 @@ export default function PricingTabs() {
                             ))}
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Typography variant='body1' sx={{ mb: 2 }}>We provide additional items for social media posts text goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut, molestiae doloribus dicta, esse minima in culpa tempora exercitationem delectus corrupti error amet rerum neque consectetur ad explicabo magnam aliquid.</Typography>
+                            <Typography variant='body1' sx={{ mb: 2 }}>Short-form videos like Reels can increase engagement by up to 90%, making your content more shareable and likable.</Typography>
                             <Button variant='contained' size='large' sx={{
                                 background: theme.palette.primary.accentGradient, px: 4, transition: 'unset',
                                 '&:hover': {
@@ -173,7 +173,7 @@ export default function PricingTabs() {
                             ))}
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Typography variant='body1' sx={{ mb: 2 }}>We provide additional items for social media posts text goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut, molestiae doloribus dicta, esse minima in culpa tempora exercitationem delectus corrupti error amet rerum neque consectetur ad explicabo magnam aliquid.</Typography>
+                            <Typography variant='body1' sx={{ mb: 2 }}>Instagram Stories have over 500 million daily users, giving you a prime space to keep your audience engaged in real-time.</Typography>
                             <Button variant='contained' size='large' sx={{
                                 background: theme.palette.primary.accentGradient, px: 4, transition: 'unset',
                                 '&:hover': {
@@ -195,7 +195,7 @@ export default function PricingTabs() {
                             ))}
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Typography variant='body1' sx={{ mb: 2 }}>We provide additional items for social media posts text goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut, molestiae doloribus dicta, esse minima in culpa tempora exercitationem delectus corrupti error amet rerum neque consectetur ad explicabo magnam aliquid.</Typography>
+                            <Typography variant='body1' sx={{ mb: 2 }}>Carousels get up to 3 times more engagement than regular posts, as users swipe through multiple images or videos.</Typography>
                             <Button variant='contained' size='large' sx={{
                                 background: theme.palette.primary.accentGradient, px: 4, transition: 'unset',
                                 '&:hover': {

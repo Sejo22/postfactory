@@ -21,7 +21,7 @@ const faqs = [
     },
     {
         question: "How often will you post on our social media accounts?",
-        answer: 'The frequency of posts varies by package. Our Essential Suite includes 10 posts per month, our Executive Package offers 20 posts, and our Elite Portfolio provides 30 posts. Custom schedules can be arranged to meet your specific needs.'
+        answer: 'The frequency of posts varies by package. Biginner Package includes 10 posts per month, our Standard Package offers 20 posts, and our Premium Portfolio provides 30 posts. Custom schedules can be arranged to meet your specific needs.'
     },
     {
         question: "Can I approve posts before they are published?",
@@ -36,7 +36,7 @@ const faqs = [
         answer: 'Consider your goals, budget, and the level of engagement you want to maintain. Our team can also help assess your needs and recommend the best package to maximize your social media presence.'
     }, {
         question: "What results can I expect from your social media management?",
-        answer: 'While results vary, typical benefits include increased follower growth, higher engagement rates, and improved brand visibility. We focus on strategic content that aligns with your marketing goals. Anyways, there are much more factors that affect all of the above, because of which we cannot guarantee with certainty what results you can expect'
+        answer: 'While results vary, typical benefits include increased follower growth, higher engagement rates, and improved brand visibility. We focus on strategic content that aligns with your marketing goals. Anyways, there are much more factors that affect all of the above, because of which we can not guarantee with certainty what results you can expect'
     },
 ]
 
