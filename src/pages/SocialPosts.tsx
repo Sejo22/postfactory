@@ -24,10 +24,10 @@ const styles =
 
 
 const serviceHeroDetails = {
-    title: 'Affordable social media management: Start boosting your brand from $89.99!',
+    title: 'Professional Social Media Management from $99.99/month',
     link: '#',
     image: './assets/socialPostsGIF.webp',
-    features: ['feature', 'feature', 'feature']
+    features: ['<strong>High-Quality</strong> Content Created by Experts', 'Analytics & Reporting', 'Multi-Platform Management']
 }
 
 const serviceFeatureDetails = [
