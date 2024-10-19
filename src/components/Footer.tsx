@@ -35,7 +35,7 @@ export default function Footer() {
                         <Link href={routes.home}>
                             <Box component={'img'} src='assets/footerLogo.png' sx={{ maxWidth: '80%' }} />
                         </Link>
-                        <Typography variant='body2' sx={{ mt: 3 }}>Post Factory excels in boosting your business&apos;s online presence through expert social media management, professional logo design, and innovative website design.</Typography>
+                        <Typography variant='body2' sx={{ mt: 3 }}>Post Factory excels in boosting your business&apos;s online presence through expert social media management, well written SEO-optimized blog posts, accelerate business strategies and innovative website design.</Typography>
                         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mt: 3 }}>
                             {socialLinks.map((socialLink, index) => (
                                 <Link href={socialLink.link} key={index}>

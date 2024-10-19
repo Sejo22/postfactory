@@ -82,49 +82,49 @@ const MembersCard = ({ memberAvatar, memberName, memberPosition, cardLeftPositio
 }
 const members = [
     {
-        memberAvatar: 'assets/Isabella.jpg',
+        memberAvatar: 'assets/marketing-agency-member-stephan.webp',
         memberName: 'Stephan',
         memberPosition: 'Designer',
         cardTopPosition: 144,
         cardLeftPosition: 10,
     },
     {
-        memberAvatar: 'assets/Isabella.jpg',
+        memberAvatar: 'assets/marketing-agency-member-ava.webp',
         memberName: 'Ava',
         memberPosition: 'Account Manager',
         cardTopPosition: 72,
         cardLeftPosition: 45,
     },
     {
-        memberAvatar: 'assets/Isabella.jpg',
+        memberAvatar: 'assets/marketing-agency-member-liam.webp',
         memberName: 'Liam',
-        memberPosition: 'Designer',
+        memberPosition: 'Web Designer',
         cardTopPosition: 56,
         cardLeftPosition: 75,
     },
     {
-        memberAvatar: 'assets/Isabella.jpg',
+        memberAvatar: 'assets/marketing-agency-member-lucas.webp',
         memberName: 'Lucas',
-        memberPosition: 'Designer',
+        memberPosition: 'SEO Expert',
         cardTopPosition: 350,
         cardLeftPosition: 10,
     },
     {
-        memberAvatar: 'assets/Isabella.jpg',
+        memberAvatar: 'assets/marketing-agency-member-mia.webp',
         memberName: 'Mia',
         memberPosition: 'Designer',
         cardTopPosition: 300,
         cardLeftPosition: 35,
     },
     {
-        memberAvatar: 'assets/Isabella.jpg',
+        memberAvatar: 'assets/marketing-agency-member-grace.webp',
         memberName: 'Grace',
         memberPosition: 'Content Strategist',
         cardTopPosition: 250,
         cardLeftPosition: 56,
     },
     {
-        memberAvatar: 'assets/Isabella.jpg',
+        memberAvatar: 'assets/marketing-agency-member-oliver.webp',
         memberName: 'Oliver',
         memberPosition: 'Account Manager',
         cardTopPosition: 350,
@@ -154,10 +154,10 @@ export default function Masonry() {
     return (
         <Container maxWidth='lg' sx={{ paddingBlock: 8, }}>
             <Typography variant='h2' sx={{ pb: 2, textAlign: 'center' }} >
-                Title
+            Why Us Over Others?
             </Typography>
             <Typography variant='body1' textAlign={'center'} gutterBottom>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas cupiditate quibusdam repellendus, tenetur ipsum natus et hic placeat alias ex eaque. Enim cumque nesciunt molestiae velit minus! Ipsa nobis beatae aut autem velit necessitatibus ad, suscipit vel, labore alias doloribus.
+            Discover the benefits of partnering with an agency that delivers more than just results - we offer expertise, consistency, and customized solutions that freelancers and other agencies can&apos;t match.
 
             </Typography>
             <Box sx={{ pt: 8 }}>

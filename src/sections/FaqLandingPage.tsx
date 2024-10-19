@@ -5,19 +5,19 @@ import FaqAccordion from '@/components/FaqAccordion'
 const faqs = [
     {
         question: "What services does Post Factory offer?",
-        answer: 'Post Factory specializes in social media management, logo design, and website design. We provide comprehensive solutions to elevate your brand’s online presence and visual identity.'
+        answer: 'Post Factory specializes in social media management, SEO-optimized blog posts, strategies for business growth, video content with UGC, and web design.'
     },
     {
         question: "How does the process work?",
-        answer: 'Once you select a service and complete the payment process, we’ll send you a brief to fill out. This helps us better understand your specific needs and expectations. Based on your input, we move on to the design or content creation phase. After creating initial drafts, we send them to you for review and approval. Our goal is to ensure your complete satisfaction with the final product.'
+        answer: 'Once you select a service and complete the payment process, we&apos;ll send you a brief to fill out. This helps us better understand your specific needs and expectations. Based on your input, we move on to the design or content creation phase. After creating initial drafts, we send them to you for review and approval. Our goal is to ensure your complete satisfaction with the final product.'
     },
     {
         question: "How can I get a quote for my project?",
-        answer: 'Our pricing is transparently listed on our website to help you choose the best option for your needs. If you require further customization or have specific requirements, please contact us through the form on our website. We’ll get back to you promptly to discuss your project in detail and provide any additional information you need.'
+        answer: 'Our pricing is transparently listed on our website to help you choose the best option for your needs. If you require further customization or have specific requirements, please contact us through the form on our website. We&apos;ll get back to you promptly to discuss your project in detail and provide any additional information you need.'
     },
     {
         question: "What is the turnaround time for a project?",
-        answer: 'Turnaround times vary depending on the service and project complexity. Generally, social media content is ready within 5 working days after the brief is completed, while logo and website design projects may take longer. We strive to meet your timelines and will discuss specific deadlines during the consultation phase.'
+        answer: 'Turnaround times vary based on the service and the complexity of the project. Generally, social media content, SEO-optimized blogs, and UGC video content are ready in five working days after the completion of a brief. <br /><br /> The business growth strategy and website design projects might take some more time. We try to fit within your timelines; this we will discuss during the consultation phase.'
     },
     {
         question: "How are revisions handled?",

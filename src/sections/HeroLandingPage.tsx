@@ -31,15 +31,15 @@ export default function HeroLandingPage() {
                         <Box sx={{ mb: 4 }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: .5, mb: 1 }}>
                                 <VerifiedIcon sx={{ color: theme.palette.primary.iconColor }} />
-                                <Typography variant='body1' sx={{ color: '#111', fontWeight: 500 }}>Unlock your <strong>business&apos;s</strong> full potential</Typography>
+                                <Typography variant='body1' sx={{ color: '#111', fontWeight: 500 }}><strong>Personalized content</strong> for your brand</Typography>
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: .5, mb: 1 }}>
                                 <VerifiedIcon sx={{ color: theme.palette.primary.iconColor }} />
-                                <Typography variant='body1' sx={{ color: '#111', fontWeight: 500 }}>With our <strong>comprehensive</strong> suite</Typography>
+                                <Typography variant='body1' sx={{ color: '#111', fontWeight: 500 }}><strong>Cheaper</strong> than your current agency</Typography>
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: .5, mb: 1 }}>
                                 <VerifiedIcon sx={{ color: theme.palette.primary.iconColor }} />
-                                <Typography variant='body1' sx={{ color: '#111', fontWeight: 500 }}><strong>All designed</strong> to elevate your brand</Typography>
+                                <Typography variant='body1' sx={{ color: '#111', fontWeight: 500 }}>Crafted by <strong>marketing professionals</strong></Typography>
                             </Box>
                         </Box>
 
