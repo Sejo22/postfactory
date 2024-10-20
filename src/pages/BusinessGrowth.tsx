@@ -1,6 +1,6 @@
 import MainLayout from '@/components/MainLayout'
 import SocialPostsFeature from '@/components/serviceFeatures/SocialPostsFeature'
-import ServicesHero from '@/sections/ServicesHero'
+import ServicesHero, { serviceHeroDetails } from '@/sections/ServicesHero'
 import React from 'react'
 import CTA from '@/components/CTA'
 import FaqSocialPosts from '@/sections/faqs/FaqSocialPosts'
@@ -23,13 +23,6 @@ const styles =
 }
 
 
-
-const serviceHeroDetails = {
-    title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
-    features: ['feature', 'feature', 'feature'],
-    link: '#',
-    image: './assets/webDesignService.gif'
-}
 
 const serviceFeatureDetails = [
     {

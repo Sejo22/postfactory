@@ -35,7 +35,7 @@ const serviceHeroDetails = {
     title: 'SEO Blog Posts for Organic Growth From $59.99',
     features: ['<strong>Keyword Research</strong> & Integration', 'Content <strong>Optimization for Conversion</strong>', ' <strong>Original</strong> & Plagiarism-Free Content'],
     link: '#',
-    image: "/assets/webDesignService.gif"
+    image: "/assets/seo-blog-posts-featured-image.png"
 }
 
 const serviceFeatureDetails = [
