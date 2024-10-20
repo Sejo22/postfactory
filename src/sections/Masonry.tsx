@@ -162,7 +162,7 @@ export default function Masonry() {
             </Typography>
             <Box sx={{ pt: 8 }}>
                 <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 4 }}>
-                    <Box ref={gridRef} sx={{ p: 4, flex: ' 1 ', minHeight: 320, aspectRatio: { xs: 'unset', lg: 1 / 1 }, backgroundImage: 'url(assets/earth.png)', backgroundSize: 'cover', backgroundPosition: 'left', borderRadius: 4, backgroundRepeat: 'no-repeat', position: 'relative' }}>
+                    <Box ref={gridRef} sx={{ p: 4, flex: ' 1 ', minHeight: 320, aspectRatio: { xs: 'unset', lg: 1 / 1 }, backgroundImage: 'url(assets/earth.webp)', backgroundSize: 'cover', backgroundPosition: 'left', borderRadius: 4, backgroundRepeat: 'no-repeat', position: 'relative' }}>
                         <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content', boxShadow: '0 8px 16px -4px rgba(0,0,0,.2)' } }}>Worldwide talent</Box>
                         {/* TEAM MEMBERS */}
                         <Box sx={{ display: { xs: 'flex', lg: 'initial' }, flexWrap: 'wrap', gap: 4, mt: { xs: 4, lg: 'initial' } }}>
@@ -202,7 +202,7 @@ export default function Masonry() {
 
 
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                <Box component={'img'} src='/assets/Ethan2.jpeg' sx={{ maxWidth: 64, aspectRatio: 1 / 1, borderRadius: 64 }} />
+                                <Box component={'img'} src='/assets/Ethan2.webp' sx={{ maxWidth: 64, aspectRatio: 1 / 1, borderRadius: 64 }} />
                                 <Box sx={{ backgroundColor: '#ddd', flex: 1, p: 1, borderRadius: 2 }}>
                                     <Typography sx={{ fontWeight: 700, color: '#111' }} variant='body2'>Ethan Parker</Typography>
                                     <Typography sx={{ color: '#111' }} variant='body2'>Hi Sophia, I just checked the content, and we love it!
@@ -229,12 +229,12 @@ export default function Masonry() {
                         </Box>
 
                     </Box>
-                    <Box sx={{ backgroundImage: 'url(assets/featuresbg4.png)', backgroundSize: 'cover', minHeight: 60, flex: 2, borderRadius: 4 }}>
+                    <Box sx={{ backgroundImage: 'url(assets/featuresbg4.webp)', backgroundSize: 'cover', minHeight: 60, flex: 2, borderRadius: 4 }}>
                         <Box sx={{ p: 4, gap: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <Box sx={{ ...pillStyle, ...{ textTransform: 'uppercase', fontWeight: 600, px: 2, py: 1, fontSize: 14, color: '#666', width: 'fit-content', boxShadow: '0 8px 16px -4px rgba(0,0,0,.2)' } }}>Subscription based</Box>
                             <Typography component={'div'} variant='h3' gutterBottom>Simple subscription model:</Typography>
                             <Box sx={{ position: 'relative', m: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 2 }}>
-                                <Box component={'img'} src='assets/calendar.png' sx={{ maxWidth: { xs: '100%', md: '75%' } }} />
+                                <Box component={'img'} src='assets/calendar.webp' sx={{ maxWidth: { xs: '100%', md: '75%' } }} />
 
                                 <Box sx={{ width: { xs: '100%', md: 'initial' }, position: { xs: 'inherit', md: 'absolute' }, top: { xs: 'inherit', md: 20 }, left: { xs: 'inherit', md: -25 } }}>
                                     <SubscriptionModel title={SubscribeItems[0]} />
