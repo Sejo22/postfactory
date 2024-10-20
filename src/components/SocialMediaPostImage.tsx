@@ -129,9 +129,9 @@ export default function SocialMediaPostImage({ isWebdesign, blogCategory, wordCo
                 </Box>
 
             </Box>
-            {isBlog === true ? (
+            {isBlog ? (
                 <Box sx={{ p: 2 }}>
-                    <Typography variant='body1' gutterBottom sx={{ fontWeight: 700 }}>{modalTitle}</Typography>
+                    <Typography variant='body1' gutterBottom sx={{ fontWeight: 700 }}>{parse(modalTitle ?? '')}</Typography>
                     <Typography variant='body2' sx={{ mb: 4 }} >{parse(articleExcerpt ?? '')}</Typography>
                     <Typography variant='body1' sx={{ fontWeight: 500 }}>{wordCount}</Typography>
                     <Button onClick={handleOpenBlog} variant='contained' size='small' sx={{ mt: 1, width: '100%' }}>Read More</Button>
