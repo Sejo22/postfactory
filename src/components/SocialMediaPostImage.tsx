@@ -166,7 +166,7 @@ export default function SocialMediaPostImage({ isWebdesign, blogCategory, wordCo
                             <Typography variant='body2' sx={{ fontWeight: 700 }}>PostFactory</Typography>
                         </Box>
                         <Divider sx={{ my: 2 }} />
-                        <Typography variant='body2' sx={{ fontWeight: 700 }} gutterBottom>Caption:</Typography>
+                        <Typography variant='body2' sx={{ fontWeight: 700 }} gutterBottom>{isWebdesign ? modalTitle : 'Caption:'}</Typography>
                         <Typography variant='body1' > {parse(modalDesc)}</Typography>
                     </Box>
                 </Box>
