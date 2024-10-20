@@ -11,6 +11,7 @@ import PricingWithFeatures from '@/components/PricingWithFeatures'
 import PricingTabs from '@/components/PricingTabs'
 import PostExamples from '@/sections/examples/PostExamples'
 import Masonry from '@/sections/Masonry'
+import SMMProcess from '@/sections/SMMProcess'
 
 const styles =
 {
@@ -128,7 +129,7 @@ export default function SocialPosts() {
                 </Container>
             </Box>
             <PostExamples />
-
+            <SMMProcess />
             <Container maxWidth='lg'>
                 <Box sx={{ textAlign: 'center', my: 8 }}>
                     <Typography variant='h3' gutterBottom>Choose your social media package</Typography>
