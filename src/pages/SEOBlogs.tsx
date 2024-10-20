@@ -32,65 +32,68 @@ const styles =
 
 
 const serviceHeroDetails = {
-    title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
-    features: ['feature', 'feature', 'feature'],
+    title: 'SEO Blog Posts for Organic Growth From $59.99',
+    features: ['<strong>Keyword Research</strong> & Integration', 'Content <strong>Optimization for Conversion</strong>', ' <strong>Original</strong> & Plagiarism-Free Content'],
     link: '#',
-    image: './assets/webDesignService.gif'
+    image: './assets/Liam.jpg'
 }
 
 const serviceFeatureDetails = [
     {
-        title: 'Time Efficiency',
-        description: 'Save valuable hours each with our comprehensive web design.',
+        title: 'Complete SEO Strategies',
+        description: 'Included on-page optimization, proper use of headers, meta descriptions, and internal linking.',
         icon: <AccessTimeIcon sx={styles.icon} />,
     },
     {
-        title: 'Customized Content Creation',
-        description: 'Receive tailor-made web design that resonate with your target audience.',
+        title: 'Expertly Crafted Content',
+        description: 'Experienced writers who specialize in creating high-quality, engaging, and SEO-optimized blog posts.',
         icon: <BrushIcon sx={styles.icon} />,
     },
     {
-        title: 'Affordable Pricing',
-        description: 'Get the most cost-effective web design services available.',
+        title: 'Customizable Packages',
+        description: 'We offer customizable blogging packages that cater to your specific needs and budget.',
         icon: <PaidOutlinedIcon sx={styles.icon} />,
     },
 ]
 const pricingPlans = [
     {
-        title: 'Web Design Starter',
-        price: '199.99',
+        title: '500 Words SEO Blog',
+        price: '59.99',
         features: [
-            'Up to 5 pages',
-            'Up to 2 revisions per page',
-            'Basic wireframe prototyping',
-            'Static design elements',
-            'Basic user flow mapping',
+            'SEO-Optimized',
+            'Premium Images',
+            'Keyword research',
+            'Relevant Links',
+            'High-Quality, Original Content',
+            'Professional Writers',
         ],
         link: '#',
         isStrikethrough: false,
     },
     {
-        title: 'Web Design Standard',
-        price: '349.99',
+        title: '1000 Words SEO Blog',
+        price: '89.99',
         features: [
-            'Up to 10 pages',
-            'Up to 4 revisions per page',
-            'Interactive prototypes',
-            'Basic animations/transitions',
-            'Usability testing',
+            'SEO-Optimized',
+            'Premium Images',
+            'Keyword research',
+            'Relevant Links',
+            'High-Quality, Original Content',
+            'Professional Writers',
         ],
         link: '#',
         isStrikethrough: false,
     },
     {
-        title: 'Web Design Premium',
-        price: '699.99',
+        title: '1500 Words SEO Blog',
+        price: '109.99',
         features: [
-            'Unlimited pages',
-            'Up to 8 revisions per page',
-            'Advanced interactive prototypes',
-            'Advanced animations/effects',
-            'Comprehensive user testing and feedback',
+            'SEO-Optimized',
+            'Premium Images',
+            'Keyword research',
+            'Relevant Links',
+            'High-Quality, Original Content',
+            'Professional Writers',
         ],
         link: '#',
         isStrikethrough: false
@@ -178,10 +181,10 @@ export default function SocialPosts() {
             <Box sx={{ backgroundColor: 'rgba(76,118,237,.15)', py: 4 }}>
                 <Container maxWidth='lg' >
                     <Typography variant='h3' textAlign={'center'} gutterBottom>
-                        Why you need SEO blogs?
+                        Why You Need SEO Blogs for Your Business?
                     </Typography>
                     <Typography textAlign={'center'} color={'#222'} variant='body1' gutterBottom>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, doloremque?
+                    Drive Organic Traffic, Increase Visibility, and Boost Your Search Rankings with Optimized Content
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 4, justifyContent: 'space-between', mt: 4 }}>
                         {blogFeaturesCards.map((card, index) => (
