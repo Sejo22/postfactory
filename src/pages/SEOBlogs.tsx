@@ -35,7 +35,7 @@ const serviceHeroDetails = {
     title: 'SEO Blog Posts for Organic Growth From $59.99',
     features: ['<strong>Keyword Research</strong> & Integration', 'Content <strong>Optimization for Conversion</strong>', ' <strong>Original</strong> & Plagiarism-Free Content'],
     link: '#',
-    image: './assets/Liam.jpg'
+    image: "/assets/webDesignService.gif"
 }
 
 const serviceFeatureDetails = [
@@ -131,7 +131,7 @@ const BlogFeatures = ({ feature, icon }: { feature: string, icon: any; }) => {
 
 
 
-export default function SocialPosts() {
+export default function SEOBlogs() {
     const theme = useTheme()
     return (
         <>
@@ -141,6 +141,7 @@ export default function SocialPosts() {
                 serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}
                 image={serviceHeroDetails.image}
+                showImage
             />
 
             <Box sx={{ background: theme.palette.primary.main, mt: 8 }}>
@@ -184,7 +185,7 @@ export default function SocialPosts() {
                         Why You Need SEO Blogs for Your Business?
                     </Typography>
                     <Typography textAlign={'center'} color={'#222'} variant='body1' gutterBottom>
-                    Drive Organic Traffic, Increase Visibility, and Boost Your Search Rankings with Optimized Content
+                        Drive Organic Traffic, Increase Visibility, and Boost Your Search Rankings with Optimized Content
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 4, justifyContent: 'space-between', mt: 4 }}>
                         {blogFeaturesCards.map((card, index) => (
