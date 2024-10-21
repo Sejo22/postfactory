@@ -84,25 +84,25 @@ export default function Header() {
         {
             title: 'Social Media Management',
             icon: <AccountBoxOutlinedIcon sx={iconStyle} />,
-            description: 'We are the best at Social Posts',
+            description: 'Curated content for social success',
             link: routes.services.socialPosts
         },
         {
             title: 'Business Growth Package',
             icon: <TrendingUpIcon sx={iconStyle} />,
-            description: 'We are the best at Business Growth',
+            description: 'Boost sales and scale efficiently',
             link: routes.services.businessGrowth
         },
         {
             title: 'SEO Blog Posts',
             icon: <ArticleOutlinedIcon sx={iconStyle} />,
-            description: 'We are the best at SEO Blog Posts',
+            description: 'Rank higher with optimized content',
             link: routes.services.seoBlogs
         },
         {
             title: 'Web Design',
             icon: <DashboardOutlinedIcon sx={iconStyle} />,
-            description: 'We are the best at Web Design',
+            description: 'Create stunning, responsive websites',
             link: routes.services.webDesign
         }
     ]
