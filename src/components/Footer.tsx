@@ -15,7 +15,7 @@ const quickLinks = [
 const services = [
     { title: 'Social Posts', link: routes.services.socialPosts },
     { title: 'Business Growth Package', link: routes.services.businessGrowth },
-    { title: 'SEO Blog Posts', link: routes.services.businessGrowth },
+    { title: 'SEO Blog Posts', link: routes.services.seoBlogs },
     { title: 'Web Design', link: routes.services.webDesign }
 ];
 
