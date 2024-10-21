@@ -26,8 +26,8 @@ const styles =
 }
 
 const serviceHeroDetails = {
-    title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
-    features: ['feature', 'feature', 'feature'],
+    title: 'Our Strategy = Your Success',
+    features: ['<b>Tailored Strategies</b> for Your Business Needs', 'Proven Results and <b>ROI</b> ', '<b>Ongoing Support</b> and Adaptability'],
     link: '#',
     image: '/assets/business-growth-featured-image.png'
 }
@@ -35,61 +35,43 @@ const serviceHeroDetails = {
 
 const serviceFeatureDetails = [
     {
-        title: 'Time Efficiency',
-        description: 'Save valuable hours each with our comprehensive web design.',
+        title: 'Luxury Branding & Design',
+        description: ' Access a team of high-caliber designers and brand consultants who craft visually stunning and conversion-driven digital experiences.',
         icon: <AccessTimeIcon sx={styles.icon} />,
     },
     {
-        title: 'Customized Content Creation',
-        description: 'Receive tailor-made web design that resonate with your target audience.',
+        title: 'High-Conversion Copywriting',
+        description: 'Get premium-level copywriting tailored to your industry, crafted by senior writers who specialize in high-conversion strategies.',
         icon: <BrushIcon sx={styles.icon} />,
     },
     {
-        title: 'Affordable Pricing',
-        description: 'Get the most cost-effective web design services available.',
+        title: 'Priority Support',
+        description: 'Enjoy round-the-clock priority support from a dedicated team, ensuring your web platform is always running smoothly.',
         icon: <PaidOutlinedIcon sx={styles.icon} />,
     },
 ]
 const pricingPlans = [
     {
-        title: 'Web Design Starter',
-        price: '199.99',
+        title: 'Luxury Progress',
+        price: '1999.99',
         features: [
-            'Up to 5 pages',
-            'Up to 2 revisions per page',
-            'Basic wireframe prototyping',
-            'Static design elements',
-            'Basic user flow mapping',
+            'Premium Social Media Management',
+            'Full-Funnel Digital Marketing Strategy',
+            'Brand Positioning & Luxury Rebranding',
+            'Advanced SEO Strategy',
+            'Content Creation & Luxury Copywriting',
+            'Social Media Strategy Development',
+            'Exclusive Access to Partner Networks',
+            'Video Marketing & Luxury Visuals',
+            'Email Campaign for 2,000 Potential Clients',
+            'Lead Generation and Nurturing',
+            'Reputation Management',
+            'Monthly Social Media Report',
+            'Optional Onboarding & Monthly Content Review Call',
         ],
         link: '#',
         isStrikethrough: false,
     },
-    {
-        title: 'Web Design Standard',
-        price: '349.99',
-        features: [
-            'Up to 10 pages',
-            'Up to 4 revisions per page',
-            'Interactive prototypes',
-            'Basic animations/transitions',
-            'Usability testing',
-        ],
-        link: '#',
-        isStrikethrough: false,
-    },
-    {
-        title: 'Web Design Premium',
-        price: '699.99',
-        features: [
-            'Unlimited pages',
-            'Up to 8 revisions per page',
-            'Advanced interactive prototypes',
-            'Advanced animations/effects',
-            'Comprehensive user testing and feedback',
-        ],
-        link: '#',
-        isStrikethrough: false
-    }
 ]
 
 
@@ -126,9 +108,9 @@ export default function BusinessGrowth() {
             <BusinessPartners />
             <Container maxWidth='lg'>
                 <Box sx={{ textAlign: 'center', my: 8 }}>
-                    <Typography variant='h3' gutterBottom>Choose your web design package</Typography>
+                    <Typography variant='h3' gutterBottom>Business Growth Package</Typography>
                     <Typography variant='body1' sx={{ maxWidth: { xs: 'inherit', md: '75%' }, mx: 'auto' }}>
-                        Find the perfect fit with our range of budget-friendly web design packages. Each plan is designed to maximize your online visibility and engagement. Start saving time and boosting your brand today!
+                    Step into the future of your brand—choose our Business Growth package and enjoy bespoke strategies designed for lasting, elegant success
                     </Typography>
                 </Box>
                 <Grid container columnSpacing={4} rowSpacing={{ xs: 4, md: 0 }} sx={{

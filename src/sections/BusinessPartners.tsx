@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react'
 
 const brands = [
-    '/assets/brand1.png',
+    '/assets/rolex_logo.png',
     '/assets/brand2.png',
     '/assets/brand3.png',
     '/assets/brand4.png',
@@ -13,7 +13,7 @@ const brands = [
 
 export default function BusinessPartners() {
     return (
-        <Box sx={{ background: '#122620', py: 4 }}>
+        <Box sx={{ background: '#000000', py: 4 }}>
             <Container maxWidth='lg'>
                 <Grid container>
                     <Grid item xs={12} md={5}>
