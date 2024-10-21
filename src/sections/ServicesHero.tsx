@@ -77,8 +77,8 @@ export default function ServicesHero({ title, link, serviceFeature, video, isSoc
                                 <Image
                                     src={`${image}`}
                                     alt=""
-                                    width={0}
-                                    height={0}
+                                    width={512}
+                                    height={512}
                                     style={{
                                         objectFit: 'cover',
                                         width: '100%',
@@ -136,10 +136,5 @@ export default function ServicesHero({ title, link, serviceFeature, video, isSoc
         </Box>
 
     )
-}export const serviceHeroDetails = {
-    title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
-    features: ['feature', 'feature', 'feature'],
-    link: '#',
-    image: 'assets/business-growth-featured-image.png'
 }
 

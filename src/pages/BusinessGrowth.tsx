@@ -1,6 +1,6 @@
 import MainLayout from '@/components/MainLayout'
 import SocialPostsFeature from '@/components/serviceFeatures/SocialPostsFeature'
-import ServicesHero, { serviceHeroDetails } from '@/sections/ServicesHero'
+import ServicesHero from '@/sections/ServicesHero'
 import React from 'react'
 import CTA from '@/components/CTA'
 import FaqSocialPosts from '@/sections/faqs/FaqSocialPosts'
@@ -22,6 +22,12 @@ const styles =
     }
 }
 
+const serviceHeroDetails = {
+    title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
+    features: ['feature', 'feature', 'feature'],
+    link: '#',
+    image: '/assets/business-growth-featured-image.png'
+}
 
 
 const serviceFeatureDetails = [
@@ -86,7 +92,7 @@ const pricingPlans = [
 
 
 
-export default function SocialPosts() {
+export default function BusinessGrowth() {
     const theme = useTheme()
     return (
         <>
@@ -96,6 +102,7 @@ export default function SocialPosts() {
                 serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}
                 image={serviceHeroDetails.image}
+                showImage
             />
 
             <Box sx={{ background: theme.palette.primary.main, mt: 8 }}>
