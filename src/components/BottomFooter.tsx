@@ -1,11 +1,13 @@
 import React from 'react'
 import { Box, Container, Grid, Typography, Button, useTheme } from '@mui/material'
+import routes from '../app/routes';
+
 
 
 const links = [
-    { title: 'Privacy Policy', link: '#' },
-    { title: 'Terms and Conditions', link: '#' },
-    { title: 'Refund Policy', link: '#' },
+    { title: 'Privacy Policy', link: routes.privacyPolicy },
+    { title: 'Terms and Conditions', link: routes.termsAndConditions },
+    { title: 'Refund Policy', link: routes.refundPolicy },
 ]
 
 

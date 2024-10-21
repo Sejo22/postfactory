@@ -10,6 +10,9 @@ const routes = {
   examples: "/Examples",
   pricing: "/Pricing",
   contact: "/Contact",
+  privacyPolicy: "/PrivacyPolicy",
+  refundPolicy: "/RefundPolicy",
+  termsAndConditions: "/TermsAndConditions",
 };
 
 export default routes;

@@ -20,9 +20,9 @@ const services = [
 ];
 
 const socialLinks = [
-    { icon: <FacebookRoundedIcon />, link: '#' },
-    { icon: <XIcon />, link: '#' },
-    { icon: <InstagramIcon />, link: '#' },
+    { icon: <FacebookRoundedIcon />, link: 'https://www.facebook.com/postfactory.co/' },
+    { icon: <XIcon />, link: 'https://twitter.com/postfactoryco' },
+    { icon: <InstagramIcon />, link: 'https://www.instagram.com/postfactory.co' },
 ]
 
 export default function Footer() {
@@ -38,7 +38,7 @@ export default function Footer() {
                         <Typography variant='body2' sx={{ mt: 3 }}>Post Factory excels in boosting your business&apos;s online presence through expert social media management, well written SEO-optimized blog posts, accelerate business strategies and innovative website design.</Typography>
                         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mt: 3 }}>
                             {socialLinks.map((socialLink, index) => (
-                                <Link href={socialLink.link} key={index}>
+                                <Link href={socialLink.link} key={index} target='_blank' >
                                     {socialLink.icon}
                                 </Link>
                             ))}
