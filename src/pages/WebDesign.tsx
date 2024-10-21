@@ -83,7 +83,7 @@ const pricingPlans = [
             'Up to 8 revisions per page',
             'Advanced interactive prototypes',
             'Advanced animations/effects',
-            'Comprehensive user testing and feedback',
+            'Extensive user evaluation and feedback',
         ],
         link: '#',
         isStrikethrough: false
