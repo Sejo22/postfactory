@@ -9,6 +9,9 @@ import BrushIcon from '@mui/icons-material/Brush';
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import { Grid, Container, Box, useTheme, Typography } from '@mui/material'
 import PricingWithFeatures from '@/components/PricingWithFeatures'
+import BusinessStats from '@/sections/BusinessStats'
+import BusinessPartners from '@/sections/BusinessPartners'
+import FaqLandingPage from '@/sections/FaqLandingPage'
 
 
 const styles =
@@ -119,6 +122,8 @@ export default function BusinessGrowth() {
                     </Grid>
                 </Container>
             </Box>
+            <BusinessStats />
+            <BusinessPartners />
             <Container maxWidth='lg'>
                 <Box sx={{ textAlign: 'center', my: 8 }}>
                     <Typography variant='h3' gutterBottom>Choose your web design package</Typography>
@@ -138,7 +143,8 @@ export default function BusinessGrowth() {
                 </Grid>
             </Container>
 
-            {/* <FaqSocialPosts /> */}
+            <FaqLandingPage />
+
             <CTA />
 
         </>

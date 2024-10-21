@@ -48,7 +48,7 @@ export default function FaqLandingPage() {
                 <Typography variant='body1' textAlign={'center'} gutterBottom>If you can&apos;t find the answer you&apos;re looking for in our FAQ section, please don&apos;t hesitate to reach out via the contact form below. We&apos;re here to help with any additional inquiries you may have!
 
                 </Typography>
-                <Box sx={{ maxWidth: { xs: 'inherit', md: '75%' }, mx: 'auto', mt: 4 }}>
+                <Box sx={{ maxWidth: { xs: 'inherit', md: '85%' }, mx: 'auto', mt: 4 }}>
                     {faqs.map((faq, index) => (
                         <FaqAccordion key={index} question={faq.question} answer={faq.answer} />
                     ))}
