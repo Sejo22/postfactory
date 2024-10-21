@@ -25,16 +25,16 @@ const styles =
 
 
 const serviceHeroDetails = {
-    title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
-    features: ['feature', 'feature', 'feature'],
+    title: 'Custom Web Design Packages Starting at $199.99!',
+    features: [' Responsive and <b>Mobile-Friendly Design</b>', 'User-Centric, <b>Intuitive UX/UI Design</b>', '<b>SEO-Optimized</b> and Performance-Focused'],
     link: '#',
-    image: './assets/webDesignService.gif'
+    image: "/assets/seo-blog-posts-featured-image.png"
 }
 
 const serviceFeatureDetails = [
     {
         title: 'Time Efficiency',
-        description: 'Save valuable hours each with our comprehensive web design.',
+        description: 'Save valuable time with our complete web design.',
         icon: <AccessTimeIcon sx={styles.icon} />,
     },
     {
