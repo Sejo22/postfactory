@@ -79,7 +79,7 @@ export default function SocialMediaPostImage({ isWebdesign, blogCategory, wordCo
                         </Box>
                     </Box>
 
-                    <Box sx={{ '& :not(p)': { color: '#222', mb: 1 }, '& p': { mb: 2, color: theme.palette.primary.text }, '& img': { mb: 2, maxWidth: '100%' } }}> {parse(modalDesc)}</Box>
+                    <Box sx={{ px: 8, '& :not(p)': { color: '#222', mb: 2 }, '& p': { mb: 4, color: theme.palette.primary.text }, '& img': { mb: 2, width: '100%' } }}> {parse(modalDesc)}</Box>
                 </Box>
             </Modal>
         )
@@ -154,7 +154,7 @@ export default function SocialMediaPostImage({ isWebdesign, blogCategory, wordCo
                     display: 'flex',
                     flexDirection: { xs: 'column', md: 'row' },
                     maxHeight: '80vh',
-                    aspectRatio: isStory === true ? 9 / 16 : 'inherit'
+                    aspectRatio: isStory === true ? 9 / 16 : 'inherit',
                 }
                 } >
                     <Box sx={{ position: 'relative', display: 'flex', flex: 4, aspectRatio: isStory === true ? 9 / 16 : 1 / 1, minHeight: isStory === true ? '66vh' : 'auto' }}>
@@ -167,7 +167,7 @@ export default function SocialMediaPostImage({ isWebdesign, blogCategory, wordCo
                         </Box>
                         <Divider sx={{ my: 2 }} />
                         <Typography variant='body2' sx={{ fontWeight: 700 }} gutterBottom>{isWebdesign ? modalTitle : 'Caption:'}</Typography>
-                        <Typography variant='body1' > {parse(modalDesc)}</Typography>
+                        <Typography variant='body1'> {parse(modalDesc)}</Typography>
                     </Box>
                 </Box>
             </Box>
