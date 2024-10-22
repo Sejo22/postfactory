@@ -117,17 +117,17 @@ export default function SocialPosts() {
             <Box sx={{ background: theme.palette.primary.main, mt: 8 }}>
                 <Container maxWidth='lg' >
                     <Grid container columnSpacing={4} rowSpacing={{ xs: 4, md: 0 }} sx={{
-                        alignItems: 'center',
+                        alignItems: 'stretch',
                         py: 6,
                     }}>
                         {serviceFeatureDetails.map((feature, index) => (
-                            <Grid item xs={12} sm={4} key={index}>
+                            <Grid item xs={12} sm={4} key={index} sx={{ display: 'flex' }}  >
                                 <SocialPostsFeature icon={feature.icon} title={feature.title} description={feature.description} />
                             </Grid>
                         ))}
                     </Grid>
                 </Container>
-            </Box>
+            </Box >
             <PostExamples />
             <SMMProcess />
             <Container maxWidth='lg'>

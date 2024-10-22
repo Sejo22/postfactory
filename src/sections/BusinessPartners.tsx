@@ -25,7 +25,7 @@ export default function BusinessPartners() {
                 <Grid container spacing={4}>
                     {brands.map((brand, index) => (
                         <Grid item key={index} xs={12} md={4} sx={{ display: 'grid', placeContent: 'center' }}>
-                            <Image src={brand} width={220} height={220} alt='brand' style={{ filter: 'invert(1)' }} />
+                            <Image src={brand} width={220} height={220} alt='brand' />
                         </Grid>
 
                     ))}

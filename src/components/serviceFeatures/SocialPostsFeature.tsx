@@ -9,14 +9,17 @@ interface featuresProps {
 
 export default function SocialPostsFeature({ icon, title, description }: featuresProps) {
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+        <Box sx={{
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'start', flexGrow: 1, gap: 4
+
+        }}>
             <Box>
                 {icon}
             </Box>
             <Box sx={{ color: '#fff' }}>
-                <Typography variant='h6' gutterBottom sx={{ color: '#fff' }}>{title}</Typography>
-                <Typography variant='body1' sx={{ color: '#fff' }}>{description}</Typography>
+                <Typography variant='h6' gutterBottom sx={{ color: '#fff', textAlign: 'center' }}>{title}</Typography>
+                <Typography variant='body1' sx={{ color: '#fff', textAlign: 'center' }}>{description}</Typography>
             </Box>
-        </Box>
+        </Box >
     )
 }

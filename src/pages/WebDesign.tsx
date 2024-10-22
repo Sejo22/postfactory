@@ -9,6 +9,9 @@ import BrushIcon from '@mui/icons-material/Brush';
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import { Grid, Container, Box, useTheme, Typography } from '@mui/material'
 import PricingWithFeatures from '@/components/PricingWithFeatures'
+import FaqLandingPage from '@/sections/FaqLandingPage'
+import WebsiteExamples from '@/sections/examples/WebDesignExamples'
+import Masonry from '@/sections/Masonry'
 
 
 const styles =
@@ -28,7 +31,7 @@ const serviceHeroDetails = {
     title: 'Craft Your Online Presence - Custom Web Design Packages Starting at $199.99!',
     features: ['feature', 'feature', 'feature'],
     link: '#',
-    image: './assets/webDesignService.gif'
+    image: '/assets/webDesign.webp'
 }
 
 const serviceFeatureDetails = [
@@ -103,22 +106,24 @@ export default function SocialPosts() {
                 serviceFeature={serviceHeroDetails.features}
                 link={serviceHeroDetails.link}
                 image={serviceHeroDetails.image}
+                showImage
             />
 
             <Box sx={{ background: theme.palette.primary.main, mt: 8 }}>
                 <Container maxWidth='lg' >
                     <Grid container columnSpacing={4} rowSpacing={{ xs: 4, md: 0 }} sx={{
-                        alignItems: 'center',
+                        alignItems: 'stretch',
                         py: 6,
                     }}>
                         {serviceFeatureDetails.map((feature, index) => (
-                            <Grid item xs={12} sm={4} key={index}>
+                            <Grid item xs={12} sm={4} key={index} sx={{ display: 'flex' }}  >
                                 <SocialPostsFeature icon={feature.icon} title={feature.title} description={feature.description} />
                             </Grid>
                         ))}
                     </Grid>
                 </Container>
-            </Box>
+            </Box >
+            <WebsiteExamples />
             <Container maxWidth='lg'>
                 <Box sx={{ textAlign: 'center', my: 8 }}>
                     <Typography variant='h3' gutterBottom>Choose your web design package</Typography>
@@ -137,8 +142,8 @@ export default function SocialPosts() {
                     ))}
                 </Grid>
             </Container>
-
-            {/* <FaqSocialPosts /> */}
+            <Masonry />
+            <FaqLandingPage />
             <CTA />
 
         </>

@@ -137,8 +137,7 @@ export default function Header() {
                         }}
                         sx={{
                             paddingInline: 2,
-                            color: theme.palette.primary.main
-
+                            color: theme.palette.primary.main,
                         }}
                     >
                         {item.title}
@@ -226,9 +225,15 @@ export default function Header() {
                 }}
             >
                 {servicesItems.map((item, index) => (
-                    <MenuItem className='menuItem' sx={{ p: 2 }} key={index} onClick={(event) => { handleClick(event, item.link); toggleDrawer(false)(event); }} >
+                    <MenuItem className='menuItem' sx={{
+                        p: 2,
+                        '&:hover span': { color: theme.palette.primary.iconColor }
+
+                    }} key={index} onClick={(event) => { handleClick(event, item.link); toggleDrawer(false)(event); }} >
                         <ListItemIcon>{item.icon}</ListItemIcon>
-                        <ListItemText>
+                        <ListItemText sx={{
+                            '& span': { fontWeight: 600 },
+                        }}>
                             {item.title}
                             <br />
                             <Typography sx={{ wordWrap: 'break-word', whiteSpace: 'collapse' }} variant='body2'>{item.description}</Typography>
